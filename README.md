@@ -1,6 +1,6 @@
 # Team Name: **Lost Map Studios**
 
-**Discord Link:** https://discord.gg/uVKyKDxe
+Game Name: **Where's My Spaceship**
 -------------------------------------------------------
 **Team Leaders:**
 1) IT Manager: **Adam**
@@ -12,12 +12,13 @@
 
 -------------------------------------------------------
 
-Game Name: **Where's My Spaceship**
+Discord Link: https://discord.gg/uVKyKDxe
 
 -------------------------------------------------------
 
-Gnatt Chart link: [Insert here]
+Gnatt Chart link: 
+[Insert here]
 
 -------------------------------------------------------
 
-Logo: <img width="1024" height="1024" alt="Where_is_SpaceShip" src="https://github.com/user-attachments/assets/a0566342-0b79-4467-9181-3eecff1dde80" />
+Logo: <img width="628" height="628" alt="Where_is_SpaceShip" src="https://github.com/user-attachments/assets/a0566342-0b79-4467-9181-3eecff1dde80" />
