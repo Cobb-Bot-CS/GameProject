@@ -1,7 +1,7 @@
 # Lost Map Studios
 
 **Discord Link:** https://discord.gg/uVKyKDxe
-------------------------------------------------
+
 **Team Leaders:**
 1) IT Manager: **Adam**
 2) Software Architect: **Gabe**
@@ -10,4 +10,4 @@
 5) AI Specialist: **AJ**
 6) Version Control Manager: **Qiwei**
 
-------------------------------------------------
+
