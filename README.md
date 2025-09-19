@@ -23,5 +23,6 @@ Gnatt Chart link:
 
 Logo:
 
-<img width="288" height="288" alt="Where_is_SpaceShip" src="https://github.com/user-attachments/assets/a0566342-0b79-4467-9181-3eecff1dde80" />
+<img width="288" height="288" alt="FinalLogo" src="https://github.com/user-attachments/assets/3af23d65-bbd5-4c53-8b95-741eaa1a939a" />
+
 
