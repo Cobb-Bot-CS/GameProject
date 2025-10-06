@@ -1,1 +1,37 @@
+[Library]
+[Library]/
+[Library]/**
 
+# Ignore Unity-generated folders
+[Library]/
+Temp/
+Obj/
+Build/
+Builds/
+Library/
+Logs/
+MemoryCaptures/
+
+# Ignore user-specific files
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.pidb
+*.suo
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore crash reports
+*.stacktrace
+
+# Ignore Rider project files
+.idea/
+*.sln.iml
