@@ -35,3 +35,4 @@ Thumbs.db
 # Ignore Rider project files
 .idea/
 *.sln.iml
+Platformer.V6000.1.17f1/UserSettings/EditorUserSettings.asset
