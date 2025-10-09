@@ -1544,6 +1544,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!1 &935857194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 935857195}
+  m_Layer: 0
+  m_Name: MenuParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &935857195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935857194}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 74.3184, y: 23.84366, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978102259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1591,7 @@ GameObject:
   - component: {fileID: 978102265}
   - component: {fileID: 978102266}
   - component: {fileID: 978102267}
+  - component: {fileID: 978102268}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1783,6 +1815,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: {fileID: 978102266}
   playerAnimator: {fileID: 978102261}
+--- !u!114 &978102268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978102259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c55618d694ff0841b0463228a901555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1070172203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,3 +3014,4 @@ SceneRoots:
   - {fileID: 1285194532}
   - {fileID: 2049838999}
   - {fileID: 1787440748}
+  - {fileID: 935857195}

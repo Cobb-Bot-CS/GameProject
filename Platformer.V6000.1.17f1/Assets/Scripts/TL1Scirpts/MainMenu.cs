@@ -4,9 +4,13 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        LevelManager.instance.StartLevelWithMenu(101); 
     }
 
+    void Start()
+    {
+
+    }
+    
     public void QuitGame()
     {
         Application.Quit();
