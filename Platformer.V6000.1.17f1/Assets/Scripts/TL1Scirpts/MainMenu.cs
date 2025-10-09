@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
         if (levelManager != null)
         {
             // Load Level 100 (SceneV1)
-            levelManager.LoadLevel(101, 100); // 0 = no previous level
+            levelManager.LoadLevel(100, 0); // 0 = no previous level
         }
         else
         {
