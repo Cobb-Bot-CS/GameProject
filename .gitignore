@@ -1,6 +1,9 @@
 [Library]
 [Library]/
 [Library]/**
+[UserSettings]
+[UserSettings]/
+[UserSettings]/**
 
 # Ignore Unity-generated folders
 [Library]/
@@ -11,6 +14,8 @@ Builds/
 Library/
 Logs/
 MemoryCaptures/
+
+[UserSettings]/
 
 # Ignore user-specific files
 *.csproj
