@@ -6,12 +6,12 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Use FindObjectOfType to get your LevelManager instance
-        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        LevelManager levelManager = Object.FindAnyObjectByType<LevelManager>();
 
         if (levelManager != null)
         {
             // Load Level 100 (SceneV1)
-            levelManager.LoadLevel(100, 0); // 0 = no previous level
+            levelManager.LoadLevel(101, 100); // 0 = no previous level
         }
         else
         {
