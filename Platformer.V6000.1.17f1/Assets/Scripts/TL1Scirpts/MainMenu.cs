@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private LevelManager levelManager;
     public void PlayGame()
     {
         // Use FindObjectOfType to get your LevelManager instance
