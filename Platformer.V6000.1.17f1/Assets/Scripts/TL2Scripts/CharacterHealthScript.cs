@@ -1,16 +1,26 @@
+using System.Data.Common;
 using UnityEngine;
 
 public class CharacterHealthScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Health Related Variables
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int minHealth = 0;
+    [SerializeField] private int currentHealth;
+    private bool ishurt = false;
+
+    //Movement While Hurt / Animation
+    [SerializeField] private Animator animator;
+    [SerializeField] private CharacterMove movement;
+
     void Start()
     {
-        
+        currentHealth = 100;
     }
 
-    // Update is called once per frame
-    void Update()
+    void CharacterHurt()
     {
-        
+        animator.SetBool("IsHurt", true);
+        movement.CharacterHurtCooldown();
     }
 }

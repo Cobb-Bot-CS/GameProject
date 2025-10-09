@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
     // accepts positive integers
     // nextLevel is the level player is going to
     // currentLevel is the level player is leaving
-    public void LoadLevel (int nextLevel, int currentLevel)
+    public void LoadLevel(int nextLevel, int currentLevel)
     {
         switch (nextLevel)
         {
