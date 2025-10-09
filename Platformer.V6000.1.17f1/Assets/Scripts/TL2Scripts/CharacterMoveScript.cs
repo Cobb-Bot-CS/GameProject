@@ -1,11 +1,6 @@
-using System.Runtime.CompilerServices;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Callbacks;
+
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
-using UnityEngine.TextCore.Text;
 using System.Collections;
 
 public class CharacterMove : MonoBehaviour
@@ -24,9 +19,6 @@ public class CharacterMove : MonoBehaviour
     //Animator Variables
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
-
-    //Damage Variables
-    private bool characterdown = false;
 
     void Start()
     {
@@ -87,8 +79,13 @@ public class CharacterMove : MonoBehaviour
     {
         if(animator.GetBool("IsHurt") == true)
         {
-            yield return new WaitForSeconds(1f);
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            
+            yield return new WaitForSeconds(2f);
+
+
             animator.SetBool("IsHurt", false);
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
     }

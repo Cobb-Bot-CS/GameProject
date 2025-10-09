@@ -7,7 +7,6 @@ public class CharacterHealthScript : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int minHealth = 0;
     [SerializeField] private int currentHealth;
-    private bool ishurt = false;
 
     //Movement While Hurt / Animation
     [SerializeField] private Animator animator;
@@ -18,9 +17,27 @@ public class CharacterHealthScript : MonoBehaviour
         currentHealth = 100;
     }
 
-    void CharacterHurt()
+    public void CharacterHurt(int amount)
     {
         animator.SetBool("IsHurt", true);
-        movement.CharacterHurtCooldown();
+        StartCoroutine(movement.CharacterHurtCooldown());
+    }
+
+    private void Die()
+    {
+        if (currentHealth <= minHealth)
+        {
+            animator.SetBool("IsHurt", true);
+            //trigger game over screen]
+            //restart game
+        }
+    }
+    
+    private void NoOverhealing()
+    {
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = 100;
+        }
     }
 }
