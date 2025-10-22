@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1108.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 47
+  controlID: 101
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 48
+  controlID: 44
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 45
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 311.2
     height: 762.4
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -246,14 +246,14 @@ MonoBehaviour:
     y: 762.4
     width: 1512.8
     height: 290.40002
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -273,14 +273,14 @@ MonoBehaviour:
     y: 0
     width: 535.19995
     height: 1052.8
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 19}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 246
+    ID: 251
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_TestListGUIs:
   - m_Window: {fileID: 12}
     runProgress:
-      RunGuid: 826a65c0-40cb-419f-a8a0-3320ea2b13e5
+      RunGuid: 15a53d70-dd6d-4d6c-bcb9-7eb1730cd340
       ExecutionSettings:
         m_TargetPlatform: 0
         m_HasTargetPlatform: 0
@@ -358,7 +358,8 @@ MonoBehaviour:
           assemblyNames: []
         filters:
         - testMode: 2
-          testNames: []
+          testNames:
+          - BoulderStressTest.MaxBoulderStack
           groupNames: []
           categoryNames: []
           assemblyNames: []
@@ -373,7 +374,7 @@ MonoBehaviour:
           disableNestedEnumeratorBugfix: 0
         randomOrderSeed: 0
       HasFinished: 1
-      Progress: 0.99999994
+      Progress: 0.9999999
       CurrentStepName: Unlock Reload Assemblies
       CurrentStageName: 
     m_NewResultList:
@@ -429,7 +430,7 @@ MonoBehaviour:
     m_SelectedOption: 0
   - m_Window: {fileID: 12}
     runProgress:
-      RunGuid: 826a65c0-40cb-419f-a8a0-3320ea2b13e5
+      RunGuid: 15a53d70-dd6d-4d6c-bcb9-7eb1730cd340
       ExecutionSettings:
         m_TargetPlatform: 0
         m_HasTargetPlatform: 0
@@ -441,7 +442,8 @@ MonoBehaviour:
           assemblyNames: []
         filters:
         - testMode: 2
-          testNames: []
+          testNames:
+          - BoulderStressTest.MaxBoulderStack
           groupNames: []
           categoryNames: []
           assemblyNames: []
@@ -456,16 +458,16 @@ MonoBehaviour:
           disableNestedEnumeratorBugfix: 0
         randomOrderSeed: 0
       HasFinished: 1
-      Progress: 0.99999994
+      Progress: 0.9999999
       CurrentStepName: Unlock Reload Assemblies
       CurrentStageName: 
     m_NewResultList:
-    - id: 1012
+    - id: 1014
       uniqueId: '[Platformer][suite]'
       name: Platformer
       fullName: Platformer
       resultStatus: 1
-      duration: 5.703773
+      duration: 12.454253
       messages: 
       output: 
       stacktrace: 
@@ -476,12 +478,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1007
+    - id: 1009
       uniqueId: '[PlayMode][C:/Users/Alex/UnityProjects/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
       name: PlayMode.dll
       fullName: C:/Users/Alex/UnityProjects/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll
       resultStatus: 1
-      duration: 5.703773
+      duration: 12.454253
       messages: 
       output: 
       stacktrace: 
@@ -490,14 +492,14 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1012
+      parentId: 1014
       parentUniqueId: '[Platformer][suite]'
     - id: 1001
-      uniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
-      name: EnemyStressTest
-      fullName: EnemyStressTest
+      uniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
+      name: BoulderStressTest
+      fullName: BoulderStressTest
       resultStatus: 1
-      duration: 3.3167017
+      duration: 6.2987657
       messages: 
       output: 
       stacktrace: 
@@ -506,18 +508,136 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1007
+      parentId: 1009
       parentUniqueId: '[PlayMode][C:/Users/Alex/UnityProjects/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1002
-      uniqueId: 'PlayMode.dll/EnemyStressTest/[PlayMode][EnemyStressTest.EnemyStressTest_Continuous]'
-      name: EnemyStressTest_Continuous
-      fullName: EnemyStressTest.EnemyStressTest_Continuous
+      uniqueId: 'PlayMode.dll/BoulderStressTest/[PlayMode][BoulderStressTest.MaxBoulderStack]'
+      name: MaxBoulderStack
+      fullName: BoulderStressTest.MaxBoulderStack
       resultStatus: 1
-      duration: 3.3167017
+      duration: 6.2987657
       messages: 
-      output: 'Max enemy count:
+      output: 'Current boulder count:1
 
-        474
+        Current boulder count:2
+
+        Current
+        boulder count:3
+
+        Current boulder count:4
+
+        Current boulder
+        count:5
+
+        Current boulder count:6
+
+        Current boulder count:7
+
+        Current
+        boulder count:8
+
+        Current boulder count:9
+
+        Current boulder
+        count:10
+
+        Current boulder count:11
+
+        Current boulder count:12
+
+        Current
+        boulder count:13
+
+        Current boulder count:14
+
+        Current boulder
+        count:15
+
+        Current boulder count:16
+
+        Current boulder count:17
+
+        Current
+        boulder count:18
+
+        Current boulder count:19
+
+        Current boulder
+        count:20
+
+        Current boulder count:21
+
+        Current boulder count:22
+
+        Current
+        boulder count:23
+
+        Current boulder count:24
+
+        Current boulder
+        count:25
+
+        Current boulder count:26
+
+        Current boulder count:27
+
+        Current
+        boulder count:28
+
+        Current boulder count:29
+
+        Current boulder
+        count:30
+
+        Current boulder count:31
+
+        Current boulder count:32
+
+        Current
+        boulder count:33
+
+        Current boulder count:34
+
+        Current boulder
+        count:35
+
+        Current boulder count:36
+
+        Current boulder count:37
+
+        Current
+        boulder count:38
+
+        Current boulder count:39
+
+        Current boulder
+        count:40
+
+        Current boulder count:41
+
+        Current boulder count:42
+
+        Current
+        boulder count:43
+
+        Current boulder count:44
+
+        Current boulder
+        count:45
+
+        Current boulder count:46
+
+        Current boulder count:47
+
+        Current
+        boulder count:48
+
+        Current boulder count:49
+
+        Current boulder
+        count:50
+
+        Max boulder count:51
 
 '
       stacktrace: 
@@ -528,8 +648,1191 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentId: 1001
-      parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
     - id: 1003
+      uniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
+      name: EnemyStressTest
+      fullName: EnemyStressTest
+      resultStatus: 1
+      duration: 3.7684164
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1009
+      parentUniqueId: '[PlayMode][C:/Users/Alex/UnityProjects/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1004
+      uniqueId: 'PlayMode.dll/EnemyStressTest/[PlayMode][EnemyStressTest.MaxEnemyCount]'
+      name: MaxEnemyCount
+      fullName: EnemyStressTest.MaxEnemyCount
+      resultStatus: 1
+      duration: 3.7684164
+      messages: 
+      output: 'Current enemy count:2
+
+        Current enemy count:3
+
+        Current
+        enemy count:4
+
+        Current enemy count:5
+
+        Current enemy count:6
+
+        Current
+        enemy count:7
+
+        Current enemy count:8
+
+        Current enemy count:9
+
+        Current
+        enemy count:10
+
+        Current enemy count:11
+
+        Current enemy count:12
+
+        Current
+        enemy count:13
+
+        Current enemy count:14
+
+        Current enemy count:15
+
+        Current
+        enemy count:16
+
+        Current enemy count:17
+
+        Current enemy count:18
+
+        Current
+        enemy count:19
+
+        Current enemy count:20
+
+        Current enemy count:21
+
+        Current
+        enemy count:22
+
+        Current enemy count:23
+
+        Current enemy count:24
+
+        Current
+        enemy count:25
+
+        Current enemy count:26
+
+        Current enemy count:27
+
+        Current
+        enemy count:28
+
+        Current enemy count:29
+
+        Current enemy count:30
+
+        Current
+        enemy count:31
+
+        Current enemy count:32
+
+        Current enemy count:33
+
+        Current
+        enemy count:34
+
+        Current enemy count:35
+
+        Current enemy count:36
+
+        Current
+        enemy count:37
+
+        Current enemy count:38
+
+        Current enemy count:39
+
+        Current
+        enemy count:40
+
+        Current enemy count:41
+
+        Current enemy count:42
+
+        Current
+        enemy count:43
+
+        Current enemy count:44
+
+        Current enemy count:45
+
+        Current
+        enemy count:46
+
+        Current enemy count:47
+
+        Current enemy count:48
+
+        Current
+        enemy count:49
+
+        Current enemy count:50
+
+        Current enemy count:51
+
+        Current
+        enemy count:52
+
+        Current enemy count:53
+
+        Current enemy count:54
+
+        Current
+        enemy count:55
+
+        Current enemy count:56
+
+        Current enemy count:57
+
+        Current
+        enemy count:58
+
+        Current enemy count:59
+
+        Current enemy count:60
+
+        Current
+        enemy count:61
+
+        Current enemy count:62
+
+        Current enemy count:63
+
+        Current
+        enemy count:64
+
+        Current enemy count:65
+
+        Current enemy count:66
+
+        Current
+        enemy count:67
+
+        Current enemy count:68
+
+        Current enemy count:69
+
+        Current
+        enemy count:70
+
+        Current enemy count:71
+
+        Current enemy count:72
+
+        Current
+        enemy count:73
+
+        Current enemy count:74
+
+        Current enemy count:75
+
+        Current
+        enemy count:76
+
+        Current enemy count:77
+
+        Current enemy count:78
+
+        Current
+        enemy count:79
+
+        Current enemy count:80
+
+        Current enemy count:81
+
+        Current
+        enemy count:82
+
+        Current enemy count:83
+
+        Current enemy count:84
+
+        Current
+        enemy count:85
+
+        Current enemy count:86
+
+        Current enemy count:87
+
+        Current
+        enemy count:88
+
+        Current enemy count:89
+
+        Current enemy count:90
+
+        Current
+        enemy count:91
+
+        Current enemy count:92
+
+        Current enemy count:93
+
+        Current
+        enemy count:94
+
+        Current enemy count:95
+
+        Current enemy count:96
+
+        Current
+        enemy count:97
+
+        Current enemy count:98
+
+        Current enemy count:99
+
+        Current
+        enemy count:100
+
+        Current enemy count:101
+
+        Current enemy
+        count:102
+
+        Current enemy count:103
+
+        Current enemy count:104
+
+        Current
+        enemy count:105
+
+        Current enemy count:106
+
+        Current enemy
+        count:107
+
+        Current enemy count:108
+
+        Current enemy count:109
+
+        Current
+        enemy count:110
+
+        Current enemy count:111
+
+        Current enemy
+        count:112
+
+        Current enemy count:113
+
+        Current enemy count:114
+
+        Current
+        enemy count:115
+
+        Current enemy count:116
+
+        Current enemy
+        count:117
+
+        Current enemy count:118
+
+        Current enemy count:119
+
+        Current
+        enemy count:120
+
+        Current enemy count:121
+
+        Current enemy
+        count:122
+
+        Current enemy count:123
+
+        Current enemy count:124
+
+        Current
+        enemy count:125
+
+        Current enemy count:126
+
+        Current enemy
+        count:127
+
+        Current enemy count:128
+
+        Current enemy count:129
+
+        Current
+        enemy count:130
+
+        Current enemy count:131
+
+        Current enemy
+        count:132
+
+        Current enemy count:133
+
+        Current enemy count:134
+
+        Current
+        enemy count:135
+
+        Current enemy count:136
+
+        Current enemy
+        count:137
+
+        Current enemy count:138
+
+        Current enemy count:139
+
+        Current
+        enemy count:140
+
+        Current enemy count:141
+
+        Current enemy
+        count:142
+
+        Current enemy count:143
+
+        Current enemy count:144
+
+        Current
+        enemy count:145
+
+        Current enemy count:146
+
+        Current enemy
+        count:147
+
+        Current enemy count:148
+
+        Current enemy count:149
+
+        Current
+        enemy count:150
+
+        Current enemy count:151
+
+        Current enemy
+        count:152
+
+        Current enemy count:153
+
+        Current enemy count:154
+
+        Current
+        enemy count:155
+
+        Current enemy count:156
+
+        Current enemy
+        count:157
+
+        Current enemy count:158
+
+        Current enemy count:159
+
+        Current
+        enemy count:160
+
+        Current enemy count:161
+
+        Current enemy
+        count:162
+
+        Current enemy count:163
+
+        Current enemy count:164
+
+        Current
+        enemy count:165
+
+        Current enemy count:166
+
+        Current enemy
+        count:167
+
+        Current enemy count:168
+
+        Current enemy count:169
+
+        Current
+        enemy count:170
+
+        Current enemy count:171
+
+        Current enemy
+        count:172
+
+        Current enemy count:173
+
+        Current enemy count:174
+
+        Current
+        enemy count:175
+
+        Current enemy count:176
+
+        Current enemy
+        count:177
+
+        Current enemy count:178
+
+        Current enemy count:179
+
+        Current
+        enemy count:180
+
+        Current enemy count:181
+
+        Current enemy
+        count:182
+
+        Current enemy count:183
+
+        Current enemy count:184
+
+        Current
+        enemy count:185
+
+        Current enemy count:186
+
+        Current enemy
+        count:187
+
+        Current enemy count:188
+
+        Current enemy count:189
+
+        Current
+        enemy count:190
+
+        Current enemy count:191
+
+        Current enemy
+        count:192
+
+        Current enemy count:193
+
+        Current enemy count:194
+
+        Current
+        enemy count:195
+
+        Current enemy count:196
+
+        Current enemy
+        count:197
+
+        Current enemy count:198
+
+        Current enemy count:199
+
+        Current
+        enemy count:200
+
+        Current enemy count:201
+
+        Current enemy
+        count:202
+
+        Current enemy count:203
+
+        Current enemy count:204
+
+        Current
+        enemy count:205
+
+        Current enemy count:206
+
+        Current enemy
+        count:207
+
+        Current enemy count:208
+
+        Current enemy count:209
+
+        Current
+        enemy count:210
+
+        Current enemy count:211
+
+        Current enemy
+        count:212
+
+        Current enemy count:213
+
+        Current enemy count:214
+
+        Current
+        enemy count:215
+
+        Current enemy count:216
+
+        Current enemy
+        count:217
+
+        Current enemy count:218
+
+        Current enemy count:219
+
+        Current
+        enemy count:220
+
+        Current enemy count:221
+
+        Current enemy
+        count:222
+
+        Current enemy count:223
+
+        Current enemy count:224
+
+        Current
+        enemy count:225
+
+        Current enemy count:226
+
+        Current enemy
+        count:227
+
+        Current enemy count:228
+
+        Current enemy count:229
+
+        Current
+        enemy count:230
+
+        Current enemy count:231
+
+        Current enemy
+        count:232
+
+        Current enemy count:233
+
+        Current enemy count:234
+
+        Current
+        enemy count:235
+
+        Current enemy count:236
+
+        Current enemy
+        count:237
+
+        Current enemy count:238
+
+        Current enemy count:239
+
+        Current
+        enemy count:240
+
+        Current enemy count:241
+
+        Current enemy
+        count:242
+
+        Current enemy count:243
+
+        Current enemy count:244
+
+        Current
+        enemy count:245
+
+        Current enemy count:246
+
+        Current enemy
+        count:247
+
+        Current enemy count:248
+
+        Current enemy count:249
+
+        Current
+        enemy count:250
+
+        Current enemy count:251
+
+        Current enemy
+        count:252
+
+        Current enemy count:253
+
+        Current enemy count:254
+
+        Current
+        enemy count:255
+
+        Current enemy count:256
+
+        Current enemy
+        count:257
+
+        Current enemy count:258
+
+        Current enemy count:259
+
+        Current
+        enemy count:260
+
+        Current enemy count:261
+
+        Current enemy
+        count:262
+
+        Current enemy count:263
+
+        Current enemy count:264
+
+        Current
+        enemy count:265
+
+        Current enemy count:266
+
+        Current enemy
+        count:267
+
+        Current enemy count:268
+
+        Current enemy count:269
+
+        Current
+        enemy count:270
+
+        Current enemy count:271
+
+        Current enemy
+        count:272
+
+        Current enemy count:273
+
+        Current enemy count:274
+
+        Current
+        enemy count:275
+
+        Current enemy count:276
+
+        Current enemy
+        count:277
+
+        Current enemy count:278
+
+        Current enemy count:279
+
+        Current
+        enemy count:280
+
+        Current enemy count:281
+
+        Current enemy
+        count:282
+
+        Current enemy count:283
+
+        Current enemy count:284
+
+        Current
+        enemy count:285
+
+        Current enemy count:286
+
+        Current enemy
+        count:287
+
+        Current enemy count:288
+
+        Current enemy count:289
+
+        Current
+        enemy count:290
+
+        Current enemy count:291
+
+        Current enemy
+        count:292
+
+        Current enemy count:293
+
+        Current enemy count:294
+
+        Current
+        enemy count:295
+
+        Current enemy count:296
+
+        Current enemy
+        count:297
+
+        Current enemy count:298
+
+        Current enemy count:299
+
+        Current
+        enemy count:300
+
+        Current enemy count:301
+
+        Current enemy
+        count:302
+
+        Current enemy count:303
+
+        Current enemy count:304
+
+        Current
+        enemy count:305
+
+        Current enemy count:306
+
+        Current enemy
+        count:307
+
+        Current enemy count:308
+
+        Current enemy count:309
+
+        Current
+        enemy count:310
+
+        Current enemy count:311
+
+        Current enemy
+        count:312
+
+        Current enemy count:313
+
+        Current enemy count:314
+
+        Current
+        enemy count:315
+
+        Current enemy count:316
+
+        Current enemy
+        count:317
+
+        Current enemy count:318
+
+        Current enemy count:319
+
+        Current
+        enemy count:320
+
+        Current enemy count:321
+
+        Current enemy
+        count:322
+
+        Current enemy count:323
+
+        Current enemy count:324
+
+        Current
+        enemy count:325
+
+        Current enemy count:326
+
+        Current enemy
+        count:327
+
+        Current enemy count:328
+
+        Current enemy count:329
+
+        Current
+        enemy count:330
+
+        Current enemy count:331
+
+        Current enemy
+        count:332
+
+        Current enemy count:333
+
+        Current enemy count:334
+
+        Current
+        enemy count:335
+
+        Current enemy count:336
+
+        Current enemy
+        count:337
+
+        Current enemy count:338
+
+        Current enemy count:339
+
+        Current
+        enemy count:340
+
+        Current enemy count:341
+
+        Current enemy
+        count:342
+
+        Current enemy count:343
+
+        Current enemy count:344
+
+        Current
+        enemy count:345
+
+        Current enemy count:346
+
+        Current enemy
+        count:347
+
+        Current enemy count:348
+
+        Current enemy count:349
+
+        Current
+        enemy count:350
+
+        Current enemy count:351
+
+        Current enemy
+        count:352
+
+        Current enemy count:353
+
+        Current enemy count:354
+
+        Current
+        enemy count:355
+
+        Current enemy count:356
+
+        Current enemy
+        count:357
+
+        Current enemy count:358
+
+        Current enemy count:359
+
+        Current
+        enemy count:360
+
+        Current enemy count:361
+
+        Current enemy
+        count:362
+
+        Current enemy count:363
+
+        Current enemy count:364
+
+        Current
+        enemy count:365
+
+        Current enemy count:366
+
+        Current enemy
+        count:367
+
+        Current enemy count:368
+
+        Current enemy count:369
+
+        Current
+        enemy count:370
+
+        Current enemy count:371
+
+        Current enemy
+        count:372
+
+        Current enemy count:373
+
+        Current enemy count:374
+
+        Current
+        enemy count:375
+
+        Current enemy count:376
+
+        Current enemy
+        count:377
+
+        Current enemy count:378
+
+        Current enemy count:379
+
+        Current
+        enemy count:380
+
+        Current enemy count:381
+
+        Current enemy
+        count:382
+
+        Current enemy count:383
+
+        Current enemy count:384
+
+        Current
+        enemy count:385
+
+        Current enemy count:386
+
+        Current enemy
+        count:387
+
+        Current enemy count:388
+
+        Current enemy count:389
+
+        Current
+        enemy count:390
+
+        Current enemy count:391
+
+        Current enemy
+        count:392
+
+        Current enemy count:393
+
+        Current enemy count:394
+
+        Current
+        enemy count:395
+
+        Current enemy count:396
+
+        Current enemy
+        count:397
+
+        Current enemy count:398
+
+        Current enemy count:399
+
+        Current
+        enemy count:400
+
+        Current enemy count:401
+
+        Current enemy
+        count:402
+
+        Current enemy count:403
+
+        Current enemy count:404
+
+        Current
+        enemy count:405
+
+        Current enemy count:406
+
+        Current enemy
+        count:407
+
+        Current enemy count:408
+
+        Current enemy count:409
+
+        Current
+        enemy count:410
+
+        Current enemy count:411
+
+        Current enemy
+        count:412
+
+        Current enemy count:413
+
+        Current enemy count:414
+
+        Current
+        enemy count:415
+
+        Current enemy count:416
+
+        Current enemy
+        count:417
+
+        Current enemy count:418
+
+        Current enemy count:419
+
+        Current
+        enemy count:420
+
+        Current enemy count:421
+
+        Current enemy
+        count:422
+
+        Current enemy count:423
+
+        Current enemy count:424
+
+        Current
+        enemy count:425
+
+        Current enemy count:426
+
+        Current enemy
+        count:427
+
+        Current enemy count:428
+
+        Current enemy count:429
+
+        Current
+        enemy count:430
+
+        Current enemy count:431
+
+        Current enemy
+        count:432
+
+        Current enemy count:433
+
+        Current enemy count:434
+
+        Current
+        enemy count:435
+
+        Current enemy count:436
+
+        Current enemy
+        count:437
+
+        Current enemy count:438
+
+        Current enemy count:439
+
+        Current
+        enemy count:440
+
+        Current enemy count:441
+
+        Current enemy
+        count:442
+
+        Current enemy count:443
+
+        Current enemy count:444
+
+        Current
+        enemy count:445
+
+        Current enemy count:446
+
+        Current enemy
+        count:447
+
+        Current enemy count:448
+
+        Current enemy count:449
+
+        Current
+        enemy count:450
+
+        Current enemy count:451
+
+        Current enemy
+        count:452
+
+        Current enemy count:453
+
+        Current enemy count:454
+
+        Current
+        enemy count:455
+
+        Current enemy count:456
+
+        Current enemy
+        count:457
+
+        Current enemy count:458
+
+        Current enemy count:459
+
+        Current
+        enemy count:460
+
+        Current enemy count:461
+
+        Current enemy
+        count:462
+
+        Current enemy count:463
+
+        Current enemy count:464
+
+        Current
+        enemy count:465
+
+        Current enemy count:466
+
+        Current enemy
+        count:467
+
+        Current enemy count:468
+
+        Current enemy count:469
+
+        Current
+        enemy count:470
+
+        Current enemy count:471
+
+        Current enemy
+        count:472
+
+        Current enemy count:473
+
+        Current enemy count:474
+
+        Current
+        enemy count:475
+
+        Current enemy count:476
+
+        Current enemy
+        count:477
+
+        Current enemy count:478
+
+        Current enemy count:479
+
+        Current
+        enemy count:480
+
+        Current enemy count:481
+
+        Current enemy
+        count:482
+
+        Max enemy count:482
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
+    - id: 1005
       uniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
       name: LevelManagerTests
       fullName: LevelManagerTests
@@ -543,7 +1846,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1007
+      parentId: 1009
       parentUniqueId: '[PlayMode][C:/Users/Alex/UnityProjects/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1004
       uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadInvalidLevel]'
@@ -596,20 +1899,134 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
-    m_ResultText: 'EnemyStressTest_Continuous (3.317s)
+    m_ResultText: 'MaxBoulderStack (6.299s)
 
       ---
 
-      Max enemy
-      count:
+      Current boulder count:1
 
-      474'
+      Current
+      boulder count:2
+
+      Current boulder count:3
+
+      Current boulder count:4
+
+      Current
+      boulder count:5
+
+      Current boulder count:6
+
+      Current boulder count:7
+
+      Current
+      boulder count:8
+
+      Current boulder count:9
+
+      Current boulder count:10
+
+      Current
+      boulder count:11
+
+      Current boulder count:12
+
+      Current boulder count:13
+
+      Current
+      boulder count:14
+
+      Current boulder count:15
+
+      Current boulder count:16
+
+      Current
+      boulder count:17
+
+      Current boulder count:18
+
+      Current boulder count:19
+
+      Current
+      boulder count:20
+
+      Current boulder count:21
+
+      Current boulder count:22
+
+      Current
+      boulder count:23
+
+      Current boulder count:24
+
+      Current boulder count:25
+
+      Current
+      boulder count:26
+
+      Current boulder count:27
+
+      Current boulder count:28
+
+      Current
+      boulder count:29
+
+      Current boulder count:30
+
+      Current boulder count:31
+
+      Current
+      boulder count:32
+
+      Current boulder count:33
+
+      Current boulder count:34
+
+      Current
+      boulder count:35
+
+      Current boulder count:36
+
+      Current boulder count:37
+
+      Current
+      boulder count:38
+
+      Current boulder count:39
+
+      Current boulder count:40
+
+      Current
+      boulder count:41
+
+      Current boulder count:42
+
+      Current boulder count:43
+
+      Current
+      boulder count:44
+
+      Current boulder count:45
+
+      Current boulder count:46
+
+      Current
+      boulder count:47
+
+      Current boulder count:48
+
+      Current boulder count:49
+
+      Current
+      boulder count:50
+
+      Max boulder count:51'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b07fe480
-      m_LastClickedID: -2132508752
-      m_ExpandedIDs: 74de8b93b5d4b7363d90b26a15934475ffffff7f
+      m_SelectedIDs: 9966c8d1
+      m_LastClickedID: -775395687
+      m_ExpandedIDs: 74de8b938cec56aab5d4b7363d90b26a15934475ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -639,7 +2056,7 @@ MonoBehaviour:
     m_SelectedOption: 0
   - m_Window: {fileID: 0}
     runProgress:
-      RunGuid: 826a65c0-40cb-419f-a8a0-3320ea2b13e5
+      RunGuid: 15a53d70-dd6d-4d6c-bcb9-7eb1730cd340
       ExecutionSettings:
         m_TargetPlatform: 0
         m_HasTargetPlatform: 0
@@ -651,7 +2068,8 @@ MonoBehaviour:
           assemblyNames: []
         filters:
         - testMode: 2
-          testNames: []
+          testNames:
+          - BoulderStressTest.MaxBoulderStack
           groupNames: []
           categoryNames: []
           assemblyNames: []
@@ -666,7 +2084,7 @@ MonoBehaviour:
           disableNestedEnumeratorBugfix: 0
         randomOrderSeed: 0
       HasFinished: 1
-      Progress: 0.99999994
+      Progress: 0.9999999
       CurrentStepName: Unlock Reload Assemblies
       CurrentStageName: 
     m_NewResultList: []
@@ -867,7 +2285,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f6a1ffff5aadffff98d9ffff82daffff9adbffff96e0ffff72e1ffff9ee5ffffdefaffff
+      m_ExpandedIDs: 2c64fdff646bfdff9c72fdffca79fdff5c86fdff9095fdffdc99fdff0ea1fdfff4a4fdff08aafdff0ab2fdffe6c0fdff28c5fdffcad5fdfff481feff9284feff5086feffac41ffff646cffffc09cffffd6a3fffffea8ffff04fbffff20b500003cb500008ab50000a0b50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1373,9 +2791,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.048533514, y: 1.2932817, z: 0.007987294}
+    m_Target: {x: 2.2296507, y: 0.21629083, z: 0.07808918}
     speed: 2
-    m_Value: {x: 0.048533514, y: 1.2932817, z: 0.007987294}
+    m_Value: {x: 2.2296507, y: 0.21629083, z: 0.07808918}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1425,9 +2843,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.201562
+    m_Target: 2.0685787
     speed: 2
-    m_Value: 9.201562
+    m_Value: 2.0685787
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1611,7 +3029,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/BossAsset/Prefabs/LevelManagement
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1621,16 +3039,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/BossAsset/Prefabs/LevelManagement
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Alex\UnityProjects\GameProject\Platformer.V6000.1.17f1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 08b60000
-    m_LastClickedID: 46600
-    m_ExpandedIDs: 0000000008b600000ab600000cb600000eb6000010b6000012b6000014b6000016b6000018b6000054b7000076b8000038c5000074c5000080c5000000ca9a3b
+    m_SelectedIDs: 58ce0000
+    m_LastClickedID: 52824
+    m_ExpandedIDs: 000000006ab700006cb700006eb7000070b7000072b7000074b7000076b7000078b700007ab700007cb700007eb7000080b7000082b70000bcb80000c6b80000e0b8000054ce000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1659,7 +3077,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000008b600000ab600000cb600000eb6000010b6000012b6000014b6000016b6000018b60000
+    m_ExpandedIDs: 000000006ab700006cb700006eb7000070b7000072b7000074b7000076b7000078b700007ab700007cb700007eb7000080b7000082b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1688,7 +3106,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000fcbe00007ab5000000000000a44e0000d6b50000eeb90000e8b900009eb800000ab9000020ba0000c0b600004e3e0100
+    m_ExpandedInstanceIDs: c6230000fcbe00007ab5000000000000a44e0000d6b50000eeb90000e8b900009eb800000ab9000020ba0000c0b600004e3e010042b90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1738,10 +3156,10 @@ MonoBehaviour:
     m_TextWithWhitespace: "Console\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1281
-    y: 1051
-    width: 943
-    height: 342
+    x: 0
+    y: 841.60004
+    width: 1511.8
+    height: 264.40002
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
