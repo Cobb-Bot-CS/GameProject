@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CharacterInventory.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T19:04:50.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
