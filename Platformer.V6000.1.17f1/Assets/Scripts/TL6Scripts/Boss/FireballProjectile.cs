@@ -1,34 +1,34 @@
 using UnityEngine;
 
 /// <summary>
-/// Ö±Ïß·ÉÐÐµÄ»ðÇòÍ¶ÉäÎï£º
-/// - Launch(dir, faceRight) Æô¶¯
-/// - ÃüÖÐ targetLayers ÉÏµÄ¶ÔÏóÊ±£¬³¢ÊÔµ÷ÓÃÆä Health.Damage(damage)
-/// - ÃüÖÐµã¿ÉÉú³É±¬Õ¨Ô¤ÖÆÌå£¨¿ÉÑ¡£©
-/// ×é¼þÒªÇó£ºRigidbody2D + Collider2D£¨Trigger£©
+/// Ö±ï¿½ß·ï¿½ï¿½ÐµÄ»ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½ï£º
+/// - Launch(dir, faceRight) ï¿½ï¿½ï¿½ï¿½
+/// - ï¿½ï¿½ï¿½ï¿½ targetLayers ï¿½ÏµÄ¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ Health.Damage(damage)
+/// - ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½É±ï¿½Õ¨Ô¤ï¿½ï¿½ï¿½å£¨ï¿½ï¿½Ñ¡ï¿½ï¿½
+/// ï¿½ï¿½ï¿½Òªï¿½ï¿½Rigidbody2D + Collider2Dï¿½ï¿½Triggerï¿½ï¿½
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class FireballProjectile : MonoBehaviour
 {
     [Header("Flight")]
-    public float speed = 8f;          // ·ÉÐÐËÙ¶È
-    public float lifeTime = 3f;       // ¶àÉÙÃëºó×Ô¶¯Ïú»Ù
+    public float speed = 8f;          // ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
+    public float lifeTime = 3f;       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
 
     [Header("Damage")]
-    public int damage = 20;           // ÉËº¦ÊýÖµ
-    public LayerMask targetLayers;    // Ö»ÃüÖÐÕâÐ©²ã£¨ÔÚ Inspector ¹´ Player µÈ£©
+    public int damage = 20;           // ï¿½Ëºï¿½ï¿½ï¿½Öµ
+    public LayerMask targetLayers;    // Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ã£¨ï¿½ï¿½ Inspector ï¿½ï¿½ Player ï¿½È£ï¿½
 
     [Header("VFX (optional)")]
-    public GameObject explosionPrefab; // ÃüÖÐÊ±Éú³ÉµÄ±¬Õ¨Ô¤ÖÆÌå£¨¿ÉÑ¡£©
+    public GameObject explosionPrefab; // ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ÉµÄ±ï¿½Õ¨Ô¤ï¿½ï¿½ï¿½å£¨ï¿½ï¿½Ñ¡ï¿½ï¿½
 
-    // ÄÚ²¿×´Ì¬
+    // ï¿½Ú²ï¿½×´Ì¬
     private Vector2 dir = Vector2.right;
-    private Transform ownerRoot;       // ·¢ÉäÕß£¨ÓÃÓÚºöÂÔ×Ô¼º£©
+    private Transform ownerRoot;       // ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½
     private bool inited;
 
     void Reset()
     {
-        // È·±£¸ÕÌåÓëÅö×²Æ÷ÅäÖÃÕýÈ·
+        // È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·
         var rb = GetComponent<Rigidbody2D>();
         if (rb)
         {
@@ -43,12 +43,12 @@ public class FireballProjectile : MonoBehaviour
 
     void OnEnable()
     {
-        // ×Ô¶¯Ïú»Ù
+        // ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
         if (lifeTime > 0f) Destroy(gameObject, lifeTime);
     }
 
     /// <summary>
-    /// ³õÊ¼»¯£¨¿ÉÑ¡£©£ºÉèÖÃ·¢ÉäÕß£¨ÓÃÓÚºöÂÔ×ÔÉíÃüÖÐ£©ÓëÄ¿±ê²ã¡£
+    /// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ã¡£
     /// </summary>
     public void Init(Transform owner, LayerMask mask)
     {
@@ -58,13 +58,13 @@ public class FireballProjectile : MonoBehaviour
     }
 
     /// <summary>
-    /// ·¢Éä¡£direction »á±»¹éÒ»»¯£»faceRight ÓÃÓÚ·­×ªÍâ¹Û£¨ÈçÐèÒª£©¡£
+    /// ï¿½ï¿½ï¿½ä¡£direction ï¿½á±»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½faceRight ï¿½ï¿½ï¿½Ú·ï¿½×ªï¿½ï¿½Û£ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void Launch(Vector2 direction, bool faceRight)
     {
         dir = direction.sqrMagnitude > 0.0001f ? direction.normalized : Vector2.right;
 
-        // ·­×ªÏÔÊ¾£¨Èç¹ûÌùÍ¼×óÓÒ²»Í¬£©
+        // ï¿½ï¿½×ªï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½Ò²ï¿½Í¬ï¿½ï¿½
         var s = transform.localScale;
         transform.localScale = new Vector3(Mathf.Abs(s.x) * (faceRight ? 1f : -1f), s.y, s.z);
     }
@@ -76,22 +76,22 @@ public class FireballProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // ºöÂÔ×ÔÉí»òÍ¬Ò»¸ù½Úµã£¨·¢ÉäÕß£©
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½Úµã£¨ï¿½ï¿½ï¿½ï¿½ï¿½ß£ï¿½
         if (ownerRoot && other.transform.root == ownerRoot) return;
 
-        // ²ã¹ýÂË
+        // ï¿½ï¿½ï¿½ï¿½ï¿½
         if (((1 << other.gameObject.layer) & targetLayers) == 0)
         {
-            // ÐèÒªÊ±¿É×¢ÊÍµôÈÕÖ¾ÒÔ¼õÉÙÔëÒô
+            // ï¿½ï¿½ÒªÊ±ï¿½ï¿½×¢ï¿½Íµï¿½ï¿½ï¿½Ö¾ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             Debug.Log($"[Fireball] Ignore {other.name} (layer {LayerMask.LayerToName(other.gameObject.layer)})");
             return;
         }
 
-        // ÉËº¦£º³¢ÊÔÑ°ÕÒ Health ×é¼þ£¨ÇëÈ·±£ÄãµÄ±»»÷¶ÔÏóÓÐ Health.cs£©
-        var hp = other.GetComponent<Health>();
+        // ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ°ï¿½ï¿½ Health ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Health.csï¿½ï¿½
+        var hp = other.GetComponent<CharacterHealthScript>();
         if (hp != null)
         {
-            hp.Damage(damage);
+            hp.CharacterHurt(damage);
             Debug.Log($"[Fireball] Hit {other.name} for {damage}");
         }
         else
@@ -99,7 +99,7 @@ public class FireballProjectile : MonoBehaviour
             Debug.Log($"[Fireball] {other.name} has no Health component");
         }
 
-        // ÃüÖÐÌØÐ§
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
         if (explosionPrefab)
             Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 

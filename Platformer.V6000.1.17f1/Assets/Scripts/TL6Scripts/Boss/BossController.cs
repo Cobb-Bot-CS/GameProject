@@ -4,39 +4,39 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     [Header("Refs")]
-    [Tooltip("Boss ÉíÉÏµÄ Animator£¨×´Ì¬»ú AC_Boss ¹ÒÔÚÕâ£©")]
+    [Tooltip("Boss ï¿½ï¿½ï¿½Ïµï¿½ Animatorï¿½ï¿½×´Ì¬ï¿½ï¿½ AC_Boss ï¿½ï¿½ï¿½ï¿½ï¿½â£©")]
     public Animator anim;
-    [Tooltip("Åç»ðÕûÌ×¶¯»­µÄ AnimationClip£¨ÓÃÓÚ¼ÆËã×ÜÊ±³¤×öÀäÈ´£©")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½ AnimationClipï¿½ï¿½ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½")]
     public AnimationClip breathClip;
 
     [Header("VFX (optional)")]
-    [Tooltip("Åç»ðÇ°/ÖÐ/ºóÈôÐèÒª¿ª¹ØµÄÃüÖÐÌå£¨½üÕ½»ðÑæÉÈÐÎµÈ£¬¿ÉÎª¿Õ£©")]
+    [Tooltip("ï¿½ï¿½ï¿½Ç°/ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¨ï¿½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎµÈ£ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½")]
     public GameObject fireCone;
-    [Tooltip("Á£×ÓÌØÐ§£¨¿ÉÎª¿Õ£©")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½")]
     public ParticleSystem fireFX;
 
     [Header("Fireball Projectile")]
-    [Tooltip("»ðÇòµÄ³öÉúµã£¨·ÅÔÚ×ìÇ°£©")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ã£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½")]
     public Transform fireMuzzle;
-    [Tooltip("»ðÇòÔ¤ÖÆÌå£¨¹ÒÓÐ FireballProjectile.cs£©")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½å£¨ï¿½ï¿½ï¿½ï¿½ FireballProjectile.csï¿½ï¿½")]
     public GameObject fireballPrefab;
-    [Tooltip("»ðÇòÃüÖÐÄÄÐ©²ã£¨Îñ±Ø¹´ Player£©")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ã£¨ï¿½ï¿½Ø¹ï¿½ Playerï¿½ï¿½")]
     public LayerMask fireballTargetLayers = ~0;
 
     [Header("Control / Test")]
-    [Tooltip("¿ì½Ý¼ü£º°´ K ´¥·¢Åç»ð")]
+    [Tooltip("ï¿½ï¿½Ý¼ï¿½ï¿½ï¿½ï¿½ï¿½ K ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public KeyCode breathKey = KeyCode.K;
 
     [Header("Facing (optional)")]
-    [Tooltip("ÈôÖ¸¶¨£¬Boss »á×Ô¶¯³¯ÏòÍæ¼Ò")]
+    [Tooltip("ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Boss ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public Transform player;
-    public bool autoFacePlayer = false;
+    public bool autoFacePlayer;
 
     [Header("Cooldown")]
-    [Tooltip("Åç»ð¼¼ÄÜµÄ×îÐ¡ÀäÈ´£¨Ãë£©¡£ÈôÐ¡ÓÚ¶¯»­Ê±³¤£¬»áÊ¹ÓÃ¶¯»­Ê±³¤£©")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½Ð¡ï¿½ï¿½È´ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ú¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½")]
     public float breathCooldown = 1.0f;
 
-    // ÄÚ²¿×´Ì¬
+    // ï¿½Ú²ï¿½×´Ì¬
     bool busy = false;
     float nextBreathTime = 0f;
     Rigidbody2D rb;
@@ -49,7 +49,7 @@ public class BossController : MonoBehaviour
 
     void Update()
     {
-        // ×Ô¶¯ÃæÏòÍæ¼Ò
+        // ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (autoFacePlayer && player)
         {
             float dx = player.position.x - transform.position.x;
@@ -61,23 +61,23 @@ public class BossController : MonoBehaviour
             }
         }
 
-        // ²âÊÔ¼ü´¥·¢Åç»ð
+        // ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (Input.GetKeyDown(breathKey))
             TriggerBreath();
     }
 
-    /// <summary>¶ÔÍâ½Ó¿Ú£ºÇëÇóÒ»´ÎÅç»ð¡£</summary>
+    /// <summary>ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½</summary>
     public void TriggerBreath()
     {
         if (!anim || !breathClip) return;
-        if (Time.time < nextBreathTime) return; // ÀäÈ´ÖÐ
+        if (Time.time < nextBreathTime) return; // ï¿½ï¿½È´ï¿½ï¿½
 
         busy = true;
 
         anim.ResetTrigger("Breath");
-        anim.SetTrigger("Breath");              // ×´Ì¬»úÀï AnyState ¡ú Boss_Breath Ê¹ÓÃ Trigger: Breath
+        anim.SetTrigger("Breath");              // ×´Ì¬ï¿½ï¿½ï¿½ï¿½ AnyState ï¿½ï¿½ Boss_Breath Ê¹ï¿½ï¿½ Trigger: Breath
 
-        // ÀäÈ´ = max(¶¯»­Ê±³¤, Éè¶¨ÀäÈ´)
+        // ï¿½ï¿½È´ = max(ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½, ï¿½è¶¨ï¿½ï¿½È´)
         float total = breathClip.length / Mathf.Max(0.0001f, anim.speed);
         nextBreathTime = Time.time + Mathf.Max(total, breathCooldown);
         Invoke(nameof(EndBusy), total);
@@ -85,17 +85,17 @@ public class BossController : MonoBehaviour
 
     void EndBusy() => busy = false;
 
-    // ========= ±»¶¯»­ÊÂ¼þµ÷ÓÃ =========
-    // ÔÚ Boss_Breath ¶¯»­Àï¹Ø¼üÖ¡Ìí¼ÓÊÂ¼þ£ºAnimEvent_StartBreath / AnimEvent_SpawnFireball / AnimEvent_StopBreath
+    // ========= ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ =========
+    // ï¿½ï¿½ Boss_Breath ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½AnimEvent_StartBreath / AnimEvent_SpawnFireball / AnimEvent_StopBreath
 
-    /// <summary>Ç°Ò¡½áÊø£¬¿ªÊ¼Åç»ð£¨´ò¿ª½üÕ½»ðÑæ/Á£×Ó£©</summary>
+    /// <summary>Ç°Ò¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ð£¨´ò¿ª½ï¿½Õ½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½Ó£ï¿½</summary>
     public void AnimEvent_StartBreath()
     {
         if (fireCone) fireCone.SetActive(true);
         if (fireFX) fireFX.Play();
     }
 
-    /// <summary>³öÕÐÖ¡£ºÉú³É»ðÇò£¨Ô¶³Ìµ¯£©</summary>
+    /// <summary>ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½É»ï¿½ï¿½ï¿½Ô¶ï¿½Ìµï¿½ï¿½ï¿½</summary>
     public void AnimEvent_SpawnFireball()
     {
         if (!fireballPrefab) return;
@@ -108,13 +108,13 @@ public class BossController : MonoBehaviour
         var proj = go.GetComponent<FireballProjectile>();
         if (proj)
         {
-            // °Ñ·¢ÉäÕßÓëÃüÖÐ²ã´«¸øÍ¶ÉäÎï£¬±ÜÃâÃüÖÐ×Ô¼º & ÕýÈ·¹ýÂË²ã
+            // ï¿½Ñ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ã´«ï¿½ï¿½Í¶ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ & ï¿½ï¿½È·ï¿½ï¿½ï¿½Ë²ï¿½
             proj.Init(transform, fireballTargetLayers);
             proj.Launch(dir, faceRight);
         }
     }
 
-    /// <summary>ÊÕÕÐ£º¹Ø±Õ»ðÑæ/Á£×Ó</summary>
+    /// <summary>ï¿½ï¿½ï¿½Ð£ï¿½ï¿½Ø±Õ»ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½</summary>
     public void AnimEvent_StopBreath()
     {
         if (fireCone) fireCone.SetActive(false);

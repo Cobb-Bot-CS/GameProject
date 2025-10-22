@@ -1,8 +1,7 @@
-using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.Callbacks;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -74,5 +73,20 @@ public class CharacterMove : MonoBehaviour
     {
         //Allows For Smooth Horizontal Movement 
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
+    }
+
+    public IEnumerator CharacterHurtCooldown()
+    {
+        if(animator.GetBool("IsHurt") == true)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            
+            yield return new WaitForSeconds(2f);
+
+
+            animator.SetBool("IsHurt", false);
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+
     }
 }
