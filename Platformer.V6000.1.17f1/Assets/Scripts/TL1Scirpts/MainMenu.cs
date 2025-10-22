@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private LevelManager levelManager;
     public void PlayGame()
     {
         // Use FindObjectOfType to get your LevelManager instance
-        LevelManager levelManager = FindObjectOfType<LevelManager>();
+        LevelManager levelManager = Object.FindAnyObjectByType<LevelManager>();
 
         if (levelManager != null)
         {
