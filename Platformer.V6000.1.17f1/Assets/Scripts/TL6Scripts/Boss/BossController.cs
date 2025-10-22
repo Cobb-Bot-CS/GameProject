@@ -69,6 +69,7 @@ public class BossController : MonoBehaviour
     /// <summary>ï¿½ï¿½ï¿½ï¿½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½</summary>
     public void TriggerBreath()
     {
+        if (busy) return; // <-- ÒÑÐÞ¸´£ºÈç¹ûÕýÃ¦£¬¾ÍÖ±½ÓÍË³ö
         if (!anim || !breathClip) return;
         if (Time.time < nextBreathTime) return; // ï¿½ï¿½È´ï¿½ï¿½
 

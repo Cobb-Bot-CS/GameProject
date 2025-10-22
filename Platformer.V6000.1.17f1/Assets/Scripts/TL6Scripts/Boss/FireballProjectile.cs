@@ -23,8 +23,13 @@ public class FireballProjectile : MonoBehaviour
 
     // 锟节诧拷状态
     private Vector2 dir = Vector2.right;
+<<<<<<< Updated upstream
     private Transform ownerRoot;       // 锟斤拷锟斤拷锟竭ｏ拷锟斤拷锟节猴拷锟斤拷锟皆硷拷锟斤拷
     private bool inited;
+=======
+    private Transform ownerRoot;       // 发射者（用于忽略自己）
+    // private bool inited; // <-- 已删除：这个变量没有被使用
+>>>>>>> Stashed changes
 
     void Reset()
     {
@@ -54,7 +59,7 @@ public class FireballProjectile : MonoBehaviour
     {
         ownerRoot = owner ? owner.root : null;
         targetLayers = mask;
-        inited = true;
+        // inited = true; // <-- 已删除：这个变量没有被使用
     }
 
     /// <summary>
