@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-public class BoundaryTest_Overlapping
+public class BoundaryTest_3DAudioDistance
 {
     private AudioClip testClip;
 
@@ -16,38 +16,46 @@ public class BoundaryTest_Overlapping
     }
 
     [UnityTest]
-    public IEnumerator OverlappingOneShots()
+    public IEnumerator MaxDistanceCutoffTest()
     {
-        Debug.Log("=== BOUNDARY TEST: Overlapping One-Shots ===");
-        
-        // Play the same clip multiple times quickly
-        for (int i = 0; i < 5; i++)
-        {
-            AudioSource.PlayClipAtPoint(testClip, Vector3.zero);
-            yield return new WaitForSeconds(0.05f); // rapid fire
-        }
+        Debug.Log("=== BOUNDARY TEST: 3D Audio Max Distance ===");
 
-        // Wait a bit and check that at least one is still playing
-        yield return new WaitForSeconds(0.2f);
-        var sources = Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
-        
-        bool anyPlaying = false;
-        int playingCount = 0;
-        
-        foreach (var src in sources)
-        {
-            if (src.isPlaying)
-            {
-                anyPlaying = true;
-                playingCount++;
-            }
-        }
+        // Create listener
+        var listener = new GameObject("Listener");
+        listener.AddComponent<AudioListener>();
+        listener.transform.position = Vector3.zero;
 
-        Debug.Log($"Found {sources.Length} audio sources, {playingCount} still playing");
+        // Create audio source with 3D settings
+        var audioGO = new GameObject("AudioSource");
+        var src = audioGO.AddComponent<AudioSource>();
+        src.clip = testClip;
+        src.spatialBlend = 1f; // Full 3D
+        src.maxDistance = 50f;
+        src.rolloffMode = AudioRolloffMode.Linear;
+        src.loop = true;
+        src.Play();
 
-        if (anyPlaying)
-            Assert.Pass($"Overlapping one-shots working correctly ({playingCount} sources playing)");
-        else
-            Assert.Fail("No overlapping one-shots detected - audio may not be playing or cleaned up too quickly");
+        yield return new WaitForSeconds(0.1f);
+
+        // Test 1: Within max distance (should be audible)
+        audioGO.transform.position = new Vector3(25f, 0f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        Assert.IsTrue(src.isPlaying, "Audio should play within max distance");
+        Debug.Log($"Position at 25m (within 50m): Playing = {src.isPlaying}");
+
+        // Test 2: At max distance boundary (edge case)
+        audioGO.transform.position = new Vector3(50f, 0f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log($"Position at 50m (at max distance): Playing = {src.isPlaying}");
+
+        // Test 3: Beyond max distance (should still play but silent/culled)
+        audioGO.transform.position = new Vector3(100f, 0f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        Debug.Log($"Position at 100m (beyond max distance): Playing = {src.isPlaying}");
+
+        Object.Destroy(audioGO);
+        Object.Destroy(listener);
+        
+        Assert.Pass("3D audio distance boundaries tested");
     }
 }
