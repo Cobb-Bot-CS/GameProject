@@ -16,42 +16,72 @@ public class StressTest_VoiceLimit
     }
 
     [UnityTest]
-    public IEnumerator RealVoiceLimit()
+    public IEnumerator FindVoiceLimit()
     {
-        int failureAt = -1;
-
-        for (int voices = 4; voices <= 64; voices += 4)
+        Debug.Log("=== STRESS TEST: Finding Voice Limit ===");
+        
+        int failurePoint = -1;
+        int maxVoices = 128; // Test up to 128 voices
+        
+        for (int voiceCount = 4; voiceCount <= maxVoices; voiceCount += 4)
         {
-            var sources = new AudioSource[voices];
-            for (int i = 0; i < voices; i++)
+            Debug.Log($"Testing {voiceCount} simultaneous voices...");
+            
+            var sources = new AudioSource[voiceCount];
+            
+            // Create all audio sources
+            for (int i = 0; i < voiceCount; i++)
             {
-                var go = new GameObject("Src_" + i);
+                var go = new GameObject($"Voice_{i}");
                 var src = go.AddComponent<AudioSource>();
                 src.clip = testClip;
                 src.Play();
                 sources[i] = src;
             }
 
-            // Let them play a few frames
-            for (int f = 0; f < 30; f++) yield return null;
+            // Wait for audio to start
+            yield return new WaitForSeconds(0.2f);
 
-            int realPlaying = 0;
+            // Count how many are actually playing
+            int reallyPlaying = 0;
             foreach (var src in sources)
-                if (src.isPlaying && src.time > 0f) realPlaying++;
-
-            if (realPlaying < voices)
             {
-                failureAt = voices;
-                Debug.LogWarning($"Virtualization started at {voices} voices (real={realPlaying})");
+                if (src != null && src.isPlaying && src.time > 0f)
+                    reallyPlaying++;
+            }
+
+            Debug.Log($"Voices requested: {voiceCount}, Actually playing: {reallyPlaying}");
+
+            // Check if we hit the limit
+            if (reallyPlaying < voiceCount)
+            {
+                failurePoint = voiceCount;
+                Debug.LogWarning($"⚠️ LIMIT REACHED: Virtualization started at {voiceCount} voices");
+                Debug.LogWarning($"Only {reallyPlaying}/{voiceCount} voices actually playing");
+                
+                // Cleanup
+                foreach (var src in sources)
+                    if (src != null) Object.Destroy(src.gameObject);
+                
                 break;
             }
 
-            foreach (var src in sources) Object.Destroy(src.gameObject);
+            // Cleanup
+            foreach (var src in sources)
+                if (src != null) Object.Destroy(src.gameObject);
+
+            yield return new WaitForSeconds(0.1f);
         }
 
-        if (failureAt == -1)
-            Assert.Pass("No virtualization detected up to 64 voices");
+        // Report results
+        if (failurePoint == -1)
+        {
+            Assert.Fail($"Stress test did not find voice limit up to {maxVoices} voices. Test may need adjustment.");
+        }
         else
-            Assert.Fail("Virtualization began at " + failureAt + " voices");
+        {
+            Assert.Fail($"VOICE LIMIT FOUND: System failed at {failurePoint} simultaneous voices. " +
+                       $"This is the expected behavior - reporting maximum capacity.");
+        }
     }
 }
