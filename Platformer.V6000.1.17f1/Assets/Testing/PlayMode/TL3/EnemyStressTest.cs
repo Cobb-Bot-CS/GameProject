@@ -17,7 +17,7 @@ public class EnemyStressTest
     }
 
     [UnityTest]
-    public IEnumerator EnemyStressTest_Continuous()
+    public IEnumerator MaxEnemyCount()
     {
         // get the enemy object to duplicate
         enemyObject = GameObject.Find("EnemyParent");
@@ -35,9 +35,9 @@ public class EnemyStressTest
             xPos -= 0.05f;
             enemyObject = Object.Instantiate(enemyObject, new Vector3(xPos, -0.1f, 0), Quaternion.identity);
             enemyCount++;
+            Debug.Log("Current enemy count:" + enemyCount);
 
         }
-        Debug.Log("Max enemy count:");
-        Debug.Log(enemyCount);
+        Debug.Log("Max enemy count:" + enemyCount);
     }
 }

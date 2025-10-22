@@ -2650,7 +2650,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3178,7 +3178,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 9.3, y: -2.18}
+  m_Offset: {x: 9.299999, y: -2.2140126}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3188,7 +3188,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 35.18, y: 3.19}
+  m_Size: {x: 35.18, y: 3.121975}
   m_EdgeRadius: 0
 --- !u!483693784 &2117317407
 TilemapRenderer:
@@ -6374,6 +6374,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &4572124053576730846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251321243278413767, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956063695312180625, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
+      propertyPath: m_Name
+      value: BoulderMoveable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 250a68b7aa9fd7c499b83e291bd297c2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6386,3 +6443,4 @@ SceneRoots:
   - {fileID: 1397186966}
   - {fileID: 195262588}
   - {fileID: 2086400254}
+  - {fileID: 4572124053576730846}
