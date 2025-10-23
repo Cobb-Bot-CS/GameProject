@@ -6,12 +6,26 @@ using UnityEngine.TestTools;
 public class StressTest_VoiceLimit
 {
     private AudioClip testClip;
+    private GameObject listener;
 
     [UnitySetUp]
     public IEnumerator Setup()
     {
         testClip = Resources.Load<AudioClip>("SFX/MusicSFX/DinoArea");
         Assert.IsNotNull(testClip, "Test clip not found in Resources/SFX/MusicSFX");
+        
+        // Create Audio Listener - CRITICAL for audio to work!
+        listener = new GameObject("TestAudioListener");
+        listener.AddComponent<AudioListener>();
+        
+        yield return null;
+    }
+
+    [UnityTearDown]
+    public IEnumerator Teardown()
+    {
+        if (listener != null)
+            Object.Destroy(listener);
         yield return null;
     }
 
