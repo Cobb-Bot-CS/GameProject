@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class CharacterMove : MonoBehaviour
     private float moveSpeed = 2f;
     private float jumpStrength = 5f;
     private float jumpLimiter = 0.1f;
+
+
+
+    //BOUNDRY TEST TEMPORARY VARIABLE
+    [SerializeField] private Slider speedTest;
+
+
 
     //Attack Variables
     private float cooldownTime = 1f;
@@ -77,10 +85,10 @@ public class CharacterMove : MonoBehaviour
 
     public IEnumerator CharacterHurtCooldown()
     {
-        if(animator.GetBool("IsHurt") == true)
+        if (animator.GetBool("IsHurt") == true)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            
+
             yield return new WaitForSeconds(2f);
 
 
@@ -88,5 +96,12 @@ public class CharacterMove : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
+    }
+    
+    //BOUNDS TEST ONLY TEMPORARY
+
+    public void IncreaseMoveSpeed()
+    {
+        moveSpeed = speedTest.value;
     }
 }
