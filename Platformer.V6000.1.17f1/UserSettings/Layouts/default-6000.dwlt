@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 109
+  controlID: 82
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 56
+  controlID: 165
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -246,14 +246,14 @@ MonoBehaviour:
     y: 606
     width: 1168.6666
     height: 314
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 1034
+    ID: 115
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -467,7 +467,7 @@ MonoBehaviour:
       name: Platformer
       fullName: Platformer
       resultStatus: 0
-      duration: 1.8589698
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -593,12 +593,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1005
       parentUniqueId: 'AudioTest.dll/[AudioTest][StressTest_VoiceLimit][suite]'
-    - id: 1025
+    - id: 1027
       uniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
       name: PlayMode.dll
       fullName: C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll
       resultStatus: 0
-      duration: 1.8589698
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -609,12 +609,12 @@ MonoBehaviour:
       categories: []
       parentId: 1000
       parentUniqueId: '[Platformer][suite]'
-    - id: 1021
+    - id: 1023
       uniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
       name: BossHealthTests_TL6
       fullName: BossHealthTests_TL6
-      resultStatus: 2
-      duration: 1.8589698
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -623,18 +623,16 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1025
+      parentId: 1027
       parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1016
+    - id: 1025
       uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.BoundaryTest_DamageAfterDeath_IsIgnored]'
       name: BoundaryTest_DamageAfterDeath_IsIgnored
       fullName: BossHealthTests_TL6.BoundaryTest_DamageAfterDeath_IsIgnored
-      resultStatus: 1
-      duration: 0.193675
+      resultStatus: 0
+      duration: 0
       messages: 
-      output: '[Health] Boss_Warden(Clone) died
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -642,18 +640,16 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1023
       parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
-    - id: 1015
+    - id: 1024
       uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.BoundaryTest_Overkill_HPClampsToZero]'
       name: BoundaryTest_Overkill_HPClampsToZero
       fullName: BossHealthTests_TL6.BoundaryTest_Overkill_HPClampsToZero
-      resultStatus: 1
-      duration: 0.306606
+      resultStatus: 0
+      duration: 0
       messages: 
-      output: '[Health] Boss_Warden(Clone) died
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -661,108 +657,24 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1014
+      parentId: 1023
       parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
-    - id: 1012
+    - id: 1026
       uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.StressTest_FindPerformanceLimit]'
       name: StressTest_FindPerformanceLimit
       fullName: BossHealthTests_TL6.StressTest_FindPerformanceLimit
-      resultStatus: 2
-      duration: 1.3586888
-      messages: 'Performance stress test failed at 3001 calls: Frame took 0.60ms
-        (Budget was 0.40ms)'
-      output: '--- [Stress Test] Started: Looking for call count that exceeds 0.40ms
-        (Custom Budget) ---
-
-        --- [Stress Test] PASSED level: 1 calls took
-        0.04ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level: 11 calls
-        took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level: 21
-        calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        31 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        41 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        51 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        61 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        71 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        81 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        91 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED level:
-        101 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test] PASSED
-        level: 201 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress Test]
-        PASSED level: 301 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress
-        Test] PASSED level: 401 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress
-        Test] PASSED level: 501 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress
-        Test] PASSED level: 601 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress
-        Test] PASSED level: 701 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress
-        Test] PASSED level: 801 calls took 0.00ms (Budget: 0.40ms)
-
-        --- [Stress
-        Test] PASSED level: 901 calls took 0.00ms (Budget: 0.40ms)
-
-        [Health]
-        Boss_Warden(Clone) died
-
-        --- [Stress Test] PASSED level: 1001 calls
-        took 0.36ms (Budget: 0.40ms)
-
-        [Health] Boss_Warden(Clone) died
-
-        ---
-        [Stress Test] PASSED level: 2001 calls took 0.38ms (Budget: 0.40ms)
-
-        [Health]
-        Boss_Warden(Clone) died
-
-        stress test failed at 3001 calls
-
-'
-      stacktrace: 'at BossHealthTests_TL6+<StressTest_FindPerformanceLimit>d__7.MoveNext
-        () [0x00151] in C:\Users\29083\Documents\GitHub\GameProject\Platformer.V6000.1.17f1\Assets\Testing\PlayMode\TL6\BossHealthTests_TL6.cs:146
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in .\Library\PackageCache\com.unity.test-framework@78fc86e3183e\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
-
-'
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1009
+      parentId: 1023
       parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
     - id: 1013
       uniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
@@ -778,9 +690,9 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1025
+      parentId: 1027
       parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1007
+    - id: 1014
       uniqueId: 'PlayMode.dll/BoulderStressTest/[PlayMode][BoulderStressTest.MaxBoulderStack]'
       name: MaxBoulderStack
       fullName: BoulderStressTest.MaxBoulderStack
@@ -795,7 +707,7 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1006
+      parentId: 1013
       parentUniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
     - id: 1008
       uniqueId: 'PlayMode.dll/[PlayMode][BoundaryTests][suite]'
@@ -811,7 +723,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1025
+      parentId: 1027
       parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1010
       uniqueId: 'PlayMode.dll/BoundaryTests/[PlayMode][BoundaryTests.BCMode_DisablesText_WhenFalse]'
@@ -847,7 +759,40 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: 'PlayMode.dll/[PlayMode][BoundaryTests][suite]'
-    - id: 1015
+    - id: 1019
+      uniqueId: 'PlayMode.dll/[PlayMode][EnemyBoundaryTest][suite]'
+      name: EnemyBoundaryTest
+      fullName: EnemyBoundaryTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1020
+      uniqueId: 'PlayMode.dll/EnemyBoundaryTest/[PlayMode][EnemyBoundaryTest.EnemyDoesNotExceedBoundaries]'
+      name: EnemyDoesNotExceedBoundaries
+      fullName: EnemyBoundaryTest.EnemyDoesNotExceedBoundaries
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyBoundaryTest][suite]'
+    - id: 1021
       uniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
       name: EnemyStressTest
       fullName: EnemyStressTest
@@ -861,9 +806,9 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1025
+      parentId: 1027
       parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1009
+    - id: 1022
       uniqueId: 'PlayMode.dll/EnemyStressTest/[PlayMode][EnemyStressTest.MaxEnemyCount]'
       name: MaxEnemyCount
       fullName: EnemyStressTest.MaxEnemyCount
@@ -878,9 +823,9 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1008
+      parentId: 1021
       parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
-    - id: 1017
+    - id: 1015
       uniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
       name: LevelManagerTests
       fullName: LevelManagerTests
@@ -894,9 +839,9 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1025
+      parentId: 1027
       parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1013
+    - id: 1018
       uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadInvalidLevel]'
       name: LoadInvalidLevel
       fullName: LevelManagerTests.LoadInvalidLevel
@@ -911,9 +856,9 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1010
+      parentId: 1015
       parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
-    - id: 1011
+    - id: 1016
       uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadMainMenu]'
       name: LoadMainMenu
       fullName: LevelManagerTests.LoadMainMenu
@@ -928,9 +873,9 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1010
+      parentId: 1015
       parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
-    - id: 1012
+    - id: 1017
       uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadValidLevel]'
       name: LoadValidLevel
       fullName: LevelManagerTests.LoadValidLevel
@@ -945,7 +890,7 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1010
+      parentId: 1015
       parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
     - id: 1011
       uniqueId: 'PlayMode.dll/[PlayMode][PlayButtonStressTest][suite]'
@@ -961,7 +906,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1025
+      parentId: 1027
       parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1012
       uniqueId: 'PlayMode.dll/PlayButtonStressTest/[PlayMode][PlayButtonStressTest.StressTest_PlayButtonBreakingPoint]'
@@ -980,7 +925,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1011
       parentUniqueId: 'PlayMode.dll/[PlayMode][PlayButtonStressTest][suite]'
-    m_ResultText: BossHealthTests_TL6 (3 tests)  1 tests failed (1.859s)
+    m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -1194,7 +1139,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: aedbfeff6ee6feffbef3feff6e00ffffec0affff3019ffffec2fffffa83cffff224bffffea53fffff25affffae63ffff6e6cffff5079fffff483fffff690ffff209affffdca2ffffb6abffff96b6ffff72c1ffffa6c9ffff70d9ffff12e7ffffeef4ffff04fbffff
+      m_ExpandedIDs: f2faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1913,7 +1858,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 684.6667
+    y: 630
     width: 1167.6666
     height: 288
   m_SerializedDataModeController:
@@ -1938,7 +1883,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Testing/PlayMode/TL6
+    - Assets/Testing/PlayMode/TL5
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1948,16 +1893,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Testing/PlayMode/TL6
+  - Assets/Testing/PlayMode/TL5
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\29083\Documents\GitHub\GameProject\Platformer.V6000.1.17f1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 660}
-    m_SelectedIDs: 50b90000
-    m_LastClickedID: 47440
-    m_ExpandedIDs: 00000000f4b70000f6b70000f8b70000fab70000fcb70000feb7000000b8000002b8000004b8000006b8000008b800000ab800000cb80000
+    scrollPos: {x: 0, y: 632}
+    m_SelectedIDs: a0b90000
+    m_LastClickedID: 47520
+    m_ExpandedIDs: 0000000004b8000006b8000008b800000ab800000cb800000eb8000010b8000012b8000014b8000016b8000018b800001ab800001cb80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1986,7 +1931,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f4b70000f6b70000f8b70000fab70000fcb70000feb7000000b8000002b8000004b8000006b8000008b800000ab800000cb80000
+    m_ExpandedIDs: 0000000004b8000006b8000008b800000ab800000cb800000eb8000010b8000012b8000014b8000016b8000018b800001ab800001cb80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2014,7 +1959,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000fcbe00007ab5000000000000a44e0000d6b50000eeb90000e8b900009eb800000ab9000020ba0000c0b60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2066,7 +2011,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 630
+    y: 684.6667
     width: 1167.6666
     height: 288
   m_SerializedDataModeController:
@@ -2122,7 +2067,7 @@ MonoBehaviour:
     m_CachedPref: 191
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 1832
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
