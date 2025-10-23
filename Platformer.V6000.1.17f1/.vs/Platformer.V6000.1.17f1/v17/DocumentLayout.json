@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\testing\\playmode\\tl6\\bosshealthtests_tl6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|solutionrelative:assets\\testing\\playmode\\tl6\\bosshealthtests_tl6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,6 +18,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl6scripts\\boss\\fireballprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl6scripts\\boss\\fireballprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl6scripts\\boss\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl6scripts\\boss\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +47,37 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 3,
+=======
+              "DocumentIndex": 0,
+              "Title": "FireballProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T02:38:04.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BossController.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T02:33:39.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+>>>>>>> Stashed changes
               "Title": "CharacterInventory.cs",
               "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
@@ -38,6 +85,7 @@
               "RelativeToolTip": "Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-10-22T03:11:02.657Z",
               "IsPinned": true
             },
@@ -77,6 +125,21 @@
               "ViewState": "AgIAACIAAAAAAAAAAAAAwDMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T06:11:31.366Z"
+=======
+              "WhenOpened": "2025-10-21T19:04:50.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LevelManager.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T18:51:22.718Z"
+>>>>>>> Stashed changes
             }
           ]
         }

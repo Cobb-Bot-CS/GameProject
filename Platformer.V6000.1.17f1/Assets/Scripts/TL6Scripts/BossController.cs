@@ -68,7 +68,11 @@ public class BossController : MonoBehaviour
 
     public void TriggerBreath()
     {
+<<<<<<< Updated upstream:Platformer.V6000.1.17f1/Assets/Scripts/TL6Scripts/BossController.cs
         if (busy) return;
+
+        if (busy) return;
+>>>>>>> Stashed changes:Platformer.V6000.1.17f1/Assets/Scripts/TL6Scripts/Boss/BossController.cs
         if (!anim || !breathClip) return;
         if (Time.time < nextBreathTime) return;
 
