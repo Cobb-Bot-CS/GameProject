@@ -1865,6 +1865,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8721345705988779454, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
   m_PrefabInstance: {fileID: 1734387032}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1051111669 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6872760445125846525, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
+  m_PrefabInstance: {fileID: 1734387032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1097823723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5270843843510392315, guid: 63fec2504d0b550449b3e5698b7356bd, type: 3}
@@ -2037,6 +2042,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1223476075 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5030409517144142695, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
+  m_PrefabInstance: {fileID: 1734387032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1223476077 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 399142300331900281, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
+  m_PrefabInstance: {fileID: 1734387032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223476081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223476075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100f47e7f282a09448015f06cb95f24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1223476077}
+  breathClip: {fileID: 7400000, guid: 6be36c4cbce0bb6448385e49954f8ee9, type: 2}
+  fireCone: {fileID: 0}
+  fireFX: {fileID: 0}
+  fireMuzzle: {fileID: 1051111669}
+  fireballPrefab: {fileID: 408028956873498806, guid: 63fec2504d0b550449b3e5698b7356bd, type: 3}
+  fireballTargetLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  breathKey: 107
+  player: {fileID: 394238898}
+  autoFacePlayer: 1
+  breathCooldown: 1
+--- !u!114 &1223476082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223476075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b13fc1081432b4b95bc00c82786152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 5f751ec89bd96c44584730bf576011d2, type: 2}
+  deathCleanupDelay: 0.9
+  playerMaxHP: 100
+  currentHP: 0
 --- !u!1001 &1251868088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2919,11 +2975,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4586128246460654729, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.82
+      value: 6.05
       objectReference: {fileID: 0}
     - target: {fileID: 4586128246460654729, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.71
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4586128246460654729, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2965,10 +3021,19 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 6326097900372598276, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
+    - {fileID: 54408488244832495, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5030409517144142695, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1223476081}
+    - targetCorrespondingSourceObject: {fileID: 5030409517144142695, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1223476082}
   m_SourcePrefab: {fileID: 100100000, guid: eaa5287b301f4d4479d242934a5ed4f6, type: 3}
 --- !u!1 &1820671239
 GameObject:
