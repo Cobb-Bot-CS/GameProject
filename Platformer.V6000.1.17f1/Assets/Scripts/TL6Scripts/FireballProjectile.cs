@@ -16,13 +16,10 @@ public class FireballProjectile : MonoBehaviour
 
     // Internal state
     private Vector2 dir = Vector2.right;
-<<<<<<< Updated upstream:Platformer.V6000.1.17f1/Assets/Scripts/TL6Scripts/FireballProjectile.cs
     private Transform ownerRoot;       // Owner transform (to ignore self)
     // private bool inited; 
-=======
-    private Transform ownerRoot;       // 发射者（用于忽略自己）
+        // 发射者（用于忽略自己）
     // private bool inited; // <-- 已删除：这个变量没有被使用
->>>>>>> Stashed changes:Platformer.V6000.1.17f1/Assets/Scripts/TL6Scripts/Boss/FireballProjectile.cs
 
     void Reset()
     {
@@ -49,10 +46,7 @@ public class FireballProjectile : MonoBehaviour
     {
         ownerRoot = owner ? owner.root : null;
         targetLayers = mask;
-<<<<<<< Updated upstream:Platformer.V6000.1.17f1/Assets/Scripts/TL6Scripts/FireballProjectile.cs
-=======
         // inited = true; // <-- 已删除：这个变量没有被使用
->>>>>>> Stashed changes:Platformer.V6000.1.17f1/Assets/Scripts/TL6Scripts/Boss/FireballProjectile.cs
     }
 
     public void Launch(Vector2 direction, bool faceRight)
