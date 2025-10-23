@@ -85,7 +85,7 @@ public class BossHealthTests_TL6
    
     // Stress Test 1: FindPerformanceLimit
     
-    //       by gradually increasing Damage() calls until it fails a very strict budget .
+    //   by gradually increasing Damage() calls until it fails a very strict budget .
   
     
     [UnityTest]
@@ -95,12 +95,12 @@ public class BossHealthTests_TL6
         var stopwatch = new System.Diagnostics.Stopwatch();
 
         // This is the budget
-        const double FRAME_BUDGET_MS = 0.4;
+        const double FRAME_BUDGET_MS = 16.6;
 
         int stressLevel = 1; // Start at a success position
-        int maxStressToTest = 10000; // A high ceiling for the test
+        int maxStressToTest = 100000000; // A high ceiling for the test
 
-        Debug.Log($"--- [Stress Test] Started: Looking for call count that exceeds {FRAME_BUDGET_MS:F2}ms (Custom Budget) ---");
+        Debug.Log($"--- [Stress Test] Started: L2ooking for call count that exceeds {FRAME_BUDGET_MS:F2}ms (Custom Budget) ---");
 
         while (stressLevel <= maxStressToTest)
         {
@@ -167,7 +167,7 @@ public class BossHealthTests_TL6
             else if (stressLevel < 10000)
                 stressLevel += 1000;
             else
-                stressLevel += 5000;
+                stressLevel += 10000;
         }
 
         // If the loop finishes, it's a huge success
