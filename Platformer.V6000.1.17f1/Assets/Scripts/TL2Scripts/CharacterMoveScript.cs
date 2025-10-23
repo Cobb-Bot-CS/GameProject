@@ -13,13 +13,6 @@ public class CharacterMove : MonoBehaviour
     private float jumpStrength = 5f;
     private float jumpLimiter = 0.1f;
 
-
-
-    //BOUNDRY TEST TEMPORARY VARIABLE
-    [SerializeField] private Slider speedTest;
-
-
-
     //Attack Variables
     private float cooldownTime = 1f;
     private float nextClickTime = 0f;
@@ -37,7 +30,6 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
-
         //Input Manager Using New Unity Input System
         float moveX = Input.GetAxis("Horizontal");
         movement = new Vector2(moveX, rb.linearVelocity.y);
@@ -99,9 +91,8 @@ public class CharacterMove : MonoBehaviour
     }
     
     //BOUNDS TEST ONLY TEMPORARY
-
-    public void IncreaseMoveSpeed()
+    public void IncreaseMoveSpeed(float amount)
     {
-        moveSpeed = speedTest.value;
+        moveSpeed = amount;
     }
 }
