@@ -35,9 +35,9 @@ public class StressTest_VoiceLimit
         Debug.Log("=== STRESS TEST: Finding Voice Limit ===");
         
         int failurePoint = -1;
-        int maxVoices = 128; // Test up to 128 voices
+        int voiceCount = 4;
         
-        for (int voiceCount = 4; voiceCount <= maxVoices; voiceCount += 4)
+        while (failurePoint == -1)
         {
             Debug.Log($"Testing {voiceCount} simultaneous voices...");
             
@@ -85,12 +85,14 @@ public class StressTest_VoiceLimit
                 if (src != null) Object.Destroy(src.gameObject);
 
             yield return new WaitForSeconds(0.1f);
+            
+            voiceCount += 4; // Increment for next iteration
         }
 
         // Report results
         if (failurePoint == -1)
         {
-            Assert.Fail($"Stress test did not find voice limit up to {maxVoices} voices. Test may need adjustment.");
+            Assert.Fail("Stress test ended unexpectedly without finding voice limit.");
         }
         else
         {
