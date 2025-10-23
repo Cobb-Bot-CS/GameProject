@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4951310020862696107}
   - component: {fileID: 8707546273135956885}
   - component: {fileID: 3273227482698287304}
+  - component: {fileID: -7726678320686256391}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -124,4 +125,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 0.6
+  destroyParent: 0
+--- !u!114 &-7726678320686256391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024851737515756268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc22d0dfa5b334445ab05cf96ca0960e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0.5
   destroyParent: 0

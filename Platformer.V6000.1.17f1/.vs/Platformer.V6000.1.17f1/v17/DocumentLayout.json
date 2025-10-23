@@ -3,45 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl6scripts\\boss\\fireballprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl6scripts\\boss\\fireballprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\testing\\playmode\\tl6\\bosshealthtests_tl6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|solutionrelative:assets\\testing\\playmode\\tl6\\bosshealthtests_tl6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|c:\\users\\29083\\documents\\github\\gameproject\\platformer.v6000.1.17f1\\assets\\scripts\\tl6scripts\\boss\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl6scripts\\boss\\bosscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl6scripts\\fireballprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl6scripts\\fireballprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> Stashed changes
-      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl6scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl6scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E69C-5A20-577C-0103-6E5E85AC8638}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|c:\\users\\alex\\unityprojects\\gameproject\\platformer.v6000.1.17f1\\assets\\testing\\playmode\\tl3\\enemystresstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|solutionrelative:assets\\testing\\playmode\\tl3\\enemystresstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|c:\\users\\alex\\unityprojects\\gameproject\\platformer.v6000.1.17f1\\assets\\testing\\playmode\\tl3\\boulderstresstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99EC8573-86FE-13B5-12B6-5A752EDF9CA5}|PlayMode.csproj|solutionrelative:assets\\testing\\playmode\\tl3\\boulderstresstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl3scripts\\levelswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl3scripts\\levelswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl2scripts\\charactermovescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl2scripts\\charactermovescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl3scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> main
+      "AbsoluteMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78FB8C9A-F220-4D3C-0789-8D8806EF2A58}|AllScripts.csproj|solutionrelative:assets\\scripts\\tl2scripts\\characterinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,125 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
-              "Title": "FireballProjectile.cs",
-              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
-              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TL6Scripts\\Boss\\FireballProjectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T02:38:04.821Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BossController.cs",
-              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
-              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TL6Scripts\\Boss\\BossController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAswIIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T02:33:39.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CharacterInventory.cs",
               "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
               "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
               "RelativeToolTip": "Assets\\Scripts\\TL2Scripts\\CharacterInventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T19:04:50.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LevelManager.cs",
-              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2025-10-21T18:51:22.718Z",
-              "EditorCaption": ""
-=======
-              "DocumentIndex": 1,
-              "Title": "BoulderStressTest.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Testing\\PlayMode\\TL3\\BoulderStressTest.cs",
-              "RelativeDocumentMoniker": "Assets\\Testing\\PlayMode\\TL3\\BoulderStressTest.cs",
-              "ToolTip": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Testing\\PlayMode\\TL3\\BoulderStressTest.cs",
-              "RelativeToolTip": "Assets\\Testing\\PlayMode\\TL3\\BoulderStressTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T01:10:00.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T03:11:02.657Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EnemyStressTest.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Testing\\PlayMode\\TL3\\EnemyStressTest.cs",
-              "RelativeDocumentMoniker": "Assets\\Testing\\PlayMode\\TL3\\EnemyStressTest.cs",
-              "ToolTip": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Testing\\PlayMode\\TL3\\EnemyStressTest.cs",
-              "RelativeToolTip": "Assets\\Testing\\PlayMode\\TL3\\EnemyStressTest.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Title": "BossHealthTests_TL6.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Testing\\PlayMode\\TL6\\BossHealthTests_TL6.cs",
+              "RelativeDocumentMoniker": "Assets\\Testing\\PlayMode\\TL6\\BossHealthTests_TL6.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Testing\\PlayMode\\TL6\\BossHealthTests_TL6.cs",
+              "RelativeToolTip": "Assets\\Testing\\PlayMode\\TL6\\BossHealthTests_TL6.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAiwGYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T01:06:32.314Z",
+              "WhenOpened": "2025-10-22T18:54:48.971Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FireballProjectile.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\FireballProjectile.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TL6Scripts\\FireballProjectile.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\FireballProjectile.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TL6Scripts\\FireballProjectile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T06:29:00.41Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LevelSwitcher.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelSwitcher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TL3Scripts\\LevelSwitcher.cs",
-              "ToolTip": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelSwitcher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TL3Scripts\\LevelSwitcher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TL6Scripts\\Health.cs",
+              "ToolTip": "C:\\Users\\29083\\Documents\\GitHub\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL6Scripts\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TL6Scripts\\Health.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwDMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T21:44:38.692Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LevelManager.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "ToolTip": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TL3Scripts\\LevelManager.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwCUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T21:03:27.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CharacterMoveScript.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterMoveScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TL2Scripts\\CharacterMoveScript.cs",
-              "ToolTip": "C:\\Users\\Alex\\UnityProjects\\GameProject\\Platformer.V6000.1.17f1\\Assets\\Scripts\\TL2Scripts\\CharacterMoveScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TL2Scripts\\CharacterMoveScript.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T21:36:41.786Z"
->>>>>>> main
-=======
-              "WhenOpened": "2025-10-21T18:51:22.718Z"
->>>>>>> Stashed changes
+              "WhenOpened": "2025-10-22T06:11:31.366Z"
             }
           ]
         }

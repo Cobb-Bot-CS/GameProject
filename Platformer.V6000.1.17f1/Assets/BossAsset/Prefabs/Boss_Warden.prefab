@@ -82,7 +82,8 @@ GameObject:
   - component: {fileID: 6948821308973438146}
   - component: {fileID: 6820809963789449243}
   - component: {fileID: 399142300331900281}
-  - component: {fileID: 3403742679259348402}
+  - component: {fileID: 54408488244832495}
+  - component: {fileID: 6326097900372598276}
   m_Layer: 0
   m_Name: Boss_Warden
   m_TagString: Untagged
@@ -249,7 +250,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3403742679259348402
+--- !u!114 &54408488244832495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,18 +259,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 5030409517144142695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20266fb6e0f403049a6e5b051dacdb5e, type: 3}
+  m_Script: {fileID: 11500000, guid: e2b13fc1081432b4b95bc00c82786152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 0}
+  deathCleanupDelay: 3
+  playerMaxHP: 100
+  currentHP: 0
+--- !u!114 &6326097900372598276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030409517144142695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100f47e7f282a09448015f06cb95f24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 399142300331900281}
-  breathClip: {fileID: 7400000, guid: 6be36c4cbce0bb6448385e49954f8ee9, type: 2}
+  breathClip: {fileID: 0}
   fireCone: {fileID: 0}
-  fireFX: {fileID: 5457500937818823491}
-  fireMuzzle: {fileID: 6872760445125846525}
-  fireballPrefab: {fileID: 408028956873498806, guid: 63fec2504d0b550449b3e5698b7356bd, type: 3}
+  fireFX: {fileID: 0}
+  fireMuzzle: {fileID: 0}
+  fireballPrefab: {fileID: 0}
   fireballTargetLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   breathKey: 107
   player: {fileID: 0}
   autoFacePlayer: 0
