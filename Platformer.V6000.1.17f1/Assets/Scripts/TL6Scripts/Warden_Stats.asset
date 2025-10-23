@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ac9c049ed4bdd46a14f637b6d134a6, type: 3}
+  m_Name: Warden_Stats
+  m_EditorClassIdentifier: 
+  bossName: Warden
+  maxHP: 1000
+  moveSpeed: 3
+  maxPoise: 100
+  poiseRecoveryPerSec: 10
+  phase2TriggerHP: 500
+  slashWindup: 0.5
+  slashActive: 0.2
+  slashCooldown: 0.8
