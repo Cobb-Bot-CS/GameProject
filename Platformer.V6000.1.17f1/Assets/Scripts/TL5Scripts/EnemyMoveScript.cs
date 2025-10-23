@@ -4,7 +4,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class EnemyMoveScript : MonoBehaviour
 {
     private float moveDistance = 2f;
-    private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 2f;
 
     private Vector2 startPosition;
     private Vector2 targetPosition;
@@ -13,8 +13,9 @@ public class EnemyMoveScript : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>();
-        startPosition = transform.position;
-        targetPosition = startPosition + Vector2.up * moveDistance;
+        float lowerBound = startPosition.y - 2f;
+        float upperBound = startPosition.y + 2f;
+
     }
 
     void Update()
