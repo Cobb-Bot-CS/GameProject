@@ -9,6 +9,7 @@ public class HealthBoundsTest : MonoBehaviour
     private int damage = 2;
     [SerializeField] private CharacterHealthScript character;
 
+    [UnityTest]
     public void OnTriggerEnter2D(Collider2D collision)
     {
                 character.CharacterHurt(damage);
