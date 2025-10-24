@@ -4,21 +4,15 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.SceneManagement;
 
-public class HealthBoundsTest
+public class HealthBoundsTest : MonoBehaviour
 {
+    private int damage = 2;
+    [SerializeField] private CharacterHealthScript character;
 
-    [OneTimeSetUp]
-    public void Setup()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("PlayerTests");
-    }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator HealthBoundsTesting()
-    {
-       
-        yield return null;
+                character.CharacterHurt(damage);
+        Debug.Log("Damaged Player For " + damage + " Damage");
+        damage *= damage;
     }
 }
