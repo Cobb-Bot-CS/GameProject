@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -29,7 +30,6 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
-
         //Input Manager Using New Unity Input System
         float moveX = Input.GetAxis("Horizontal");
         movement = new Vector2(moveX, rb.linearVelocity.y);
@@ -77,10 +77,10 @@ public class CharacterMove : MonoBehaviour
 
     public IEnumerator CharacterHurtCooldown()
     {
-        if(animator.GetBool("IsHurt") == true)
+        if (animator.GetBool("IsHurt") == true)
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            
+
             yield return new WaitForSeconds(2f);
 
 
@@ -88,5 +88,11 @@ public class CharacterMove : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
+    }
+    
+    //BOUNDS TEST ONLY TEMPORARY
+    public void IncreaseMoveSpeed(float amount)
+    {
+        moveSpeed = amount;
     }
 }

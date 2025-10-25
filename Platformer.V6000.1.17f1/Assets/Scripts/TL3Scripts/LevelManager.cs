@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
         switch (nextLevel)
         {
             case 100:
-                SceneManager.LoadScene("SceneV1");
+                SceneManager.LoadScene("TestingScene");
                 break;
             case 101:
                 SceneManager.LoadScene("Level101");

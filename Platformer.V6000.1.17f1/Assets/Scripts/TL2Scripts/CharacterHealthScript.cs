@@ -21,6 +21,9 @@ public class CharacterHealthScript : MonoBehaviour
     {
         animator.SetBool("IsHurt", true);
         StartCoroutine(movement.CharacterHurtCooldown());
+        currentHealth = currentHealth - amount;
+        Sanitization();
+        Die();
     }
 
     private void Die()
@@ -28,16 +31,26 @@ public class CharacterHealthScript : MonoBehaviour
         if (currentHealth <= minHealth)
         {
             animator.SetBool("IsHurt", true);
+            Debug.Log("Character Died");
+
             //trigger game over screen]
             //restart game
         }
     }
-    
+
     private void NoOverhealing()
     {
-        if(currentHealth > maxHealth)
+        if (currentHealth > maxHealth)
         {
             currentHealth = 100;
+        }
+    }
+    
+    private void Sanitization()
+    {
+        if(currentHealth < 0 || currentHealth > 150)
+        {
+            currentHealth = 0;
         }
     }
 }
