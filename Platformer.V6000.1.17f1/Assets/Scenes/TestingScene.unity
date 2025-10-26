@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d072b5c83ae7d3446b09343ba6a575c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: -1
+  moveSpeed: 2
 --- !u!114 &167319889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1067,7 @@ GameObject:
   - component: {fileID: 394238901}
   - component: {fileID: 394238900}
   - component: {fileID: 394238899}
+  - component: {fileID: 394238908}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -1307,6 +1308,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &394238908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b2decec48a67946b401955554a91b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSound: {fileID: 8300000, guid: cab14906859acc04eb082293905f9ca1, type: 3}
 --- !u!1 &491759370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1416,7 @@ GameObject:
   - component: {fileID: 763200510}
   - component: {fileID: 763200509}
   - component: {fileID: 763200513}
+  - component: {fileID: 763200514}
   m_Layer: 0
   m_Name: World1Weapon
   m_TagString: Untagged
@@ -1561,6 +1576,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.53, y: 0.21}
   m_EdgeRadius: 0
+--- !u!114 &763200514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763200508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221731abbe05e7d43b5da9c502dbf12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
 --- !u!1 &1010043629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,7 +2797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d072b5c83ae7d3446b09343ba6a575c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 2
 --- !u!114 &1570249113
 MonoBehaviour:
   m_ObjectHideFlags: 0
