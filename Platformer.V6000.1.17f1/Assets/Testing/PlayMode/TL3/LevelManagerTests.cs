@@ -61,22 +61,22 @@ public class LevelManagerTests
         lm.LoadLevel(100, 0);
         yield return null;
         scene = SceneManager.GetActiveScene();
-        Assert.AreEqual("SceneV1", scene.name);
+        Assert.AreEqual("TestingScene", scene.name);
         // valid level to valid level
         lm.LoadLevel(100, 101);
         yield return null;
         scene = SceneManager.GetActiveScene();
-        Assert.AreEqual("SceneV1", scene.name);
+        Assert.AreEqual("TestingScene", scene.name);
         // invalid level to valid level
         lm.LoadLevel(100, -2);
         yield return null;
         scene = SceneManager.GetActiveScene();
-        Assert.AreEqual("SceneV1", scene.name);
+        Assert.AreEqual("TestingScene", scene.name);
         // valid level to same level
         lm.LoadLevel(100, 100);
         yield return null;
         scene = SceneManager.GetActiveScene();
-        Assert.AreEqual("SceneV1", scene.name);
+        Assert.AreEqual("TestingScene", scene.name);
     }
 
     [UnityTest]

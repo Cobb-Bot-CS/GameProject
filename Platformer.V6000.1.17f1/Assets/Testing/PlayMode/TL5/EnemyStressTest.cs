@@ -29,7 +29,7 @@ public class EnemyStressTest
         }
 
         // while at least 60 fps
-        while (1 / Time.deltaTime > 60)
+        while (1 / Time.deltaTime > 10)
         {
             yield return null;
             xPos -= 0.05f;

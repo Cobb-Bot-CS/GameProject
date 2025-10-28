@@ -28,10 +28,7 @@ public class BoulderStressTest
         {
             Debug.Log("Current boulder count:" + boulderCount);
             // wait for gravity to settle stack
-            for (int i = 0; i < 50; i++)
-            {
-                yield return null;
-            }
+            yield return new WaitForSeconds(0.3f);
             yPos += 1f;
             newBoulderObject = Object.Instantiate(orgBoulderObject, new Vector3(3.5f, yPos, 0), Quaternion.identity);
             boulderCount++;

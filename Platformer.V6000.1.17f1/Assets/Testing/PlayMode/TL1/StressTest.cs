@@ -26,11 +26,11 @@ public class PlayButtonStressTest
             pressCounter++;
 
             // Load Game
-            AsyncOperation loadPlay = SceneManager.LoadSceneAsync("SceneV1");
+            AsyncOperation loadPlay = SceneManager.LoadSceneAsync("TestingScene");
             loadPlay.allowSceneActivation = true;
             yield return new WaitForSeconds(speed);
 
-            if (SceneManager.GetActiveScene().name != "SceneV1")
+            if (SceneManager.GetActiveScene().name != "TestingScene")
             {
                 Debug.LogError($"[Stress Test] Failed to load SceneV1 on attempt #{pressCounter}!");
                 break;
