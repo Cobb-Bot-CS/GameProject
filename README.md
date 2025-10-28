@@ -17,7 +17,7 @@ Discord Link: https://discord.gg/uVKyKDxe
 -------------------------------------------------------
 
 Gnatt Chart link: 
-[Insert here]
+(https://vandalsuidaho-my.sharepoint.com/:x:/g/personal/gupt1374_vandals_uidaho_edu/EeC-1qWSROtEhPC-FGHeee8B9aqrl7vRZONIubVzaMeT7w?e=DfpXpy)
 
 -------------------------------------------------------
 
