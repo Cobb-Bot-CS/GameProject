@@ -42,3 +42,16 @@ Thumbs.db
 *.sln.iml
 Platformer.V6000.1.17f1/UserSettings/EditorUserSettings.asset
 Platformer.V6000.1.17f1/UserSettings/Layouts/default-6000.dwlt
+
+###############################################
+# Some stuff added by Alex to see if it helps #
+###############################################
+
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Bb]uild/
+**/[Bb]uilds/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Mm]emoryCaptures/
