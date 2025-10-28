@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 1165730739}
   - component: {fileID: 1165730738}
   m_Layer: 0
-  m_Name: WALL
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9819,7 +9819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea91c3719b9e1ef4c921c1123c43444a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 3806306822947208232}
 --- !u!61 &2108951691
 BoxCollider2D:
   m_ObjectHideFlags: 0
