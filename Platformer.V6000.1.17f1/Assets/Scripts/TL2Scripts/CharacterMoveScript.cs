@@ -13,6 +13,10 @@ public class CharacterMove : MonoBehaviour
     private float jumpStrength = 5f;
     private float jumpLimiter = 0.1f;
 
+    //Input Actions
+    private InputAction moveAction;
+    private InputAction jumpAction;
+
     //Attack Variables
     private float cooldownTime = 1f;
     private float nextClickTime = 0f;
@@ -20,6 +24,27 @@ public class CharacterMove : MonoBehaviour
     //Animator Variables
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
+
+    void OnEnable()
+    {
+        //Defining Input Actions
+        moveAction = new InputAction(type: InputActionType.Value, binding: "<Keyboard>/a");
+        moveAction.AddBinding("Keyboard>/d");
+        moveAction.AddCompositeBinding("1DAxis")
+            .With("Negative", "<Keyboard>/a")
+            .With("Positive", "<Keyboard>/d");
+
+        jumpAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/space");
+
+        moveAction.Enable();
+        jumpAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        moveAction.Disable();
+        jumpAction.Disable();
+    }
 
     void Start()
     {
@@ -31,10 +56,10 @@ public class CharacterMove : MonoBehaviour
     void Update()
     {
         //Input Manager Using New Unity Input System
-        float moveX = Input.GetAxis("Horizontal");
+        float moveX = moveAction.ReadValue<float>();
         movement = new Vector2(moveX, rb.linearVelocity.y);
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
+        if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpStrength);
         }
