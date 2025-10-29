@@ -1,0 +1,7182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 42.666668
+    width: 1706.6667
+    height: 976
+  m_ShowMode: 4
+  m_Title: Scene
+  m_RootView: {fileID: 2}
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1706.6666
+    height: 976
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 36
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1706.6666
+    height: 36
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 956
+    width: 1706.6666
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 36
+    width: 1706.6666
+    height: 920
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 108
+  draggingID: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 10}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1168.6666
+    height: 920
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 56
+  draggingID: 0
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1168.6666
+    height: 606
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 47
+  draggingID: 0
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 391.33334
+    height: 606
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 391.33334
+    y: 0
+    width: 777.33325
+    height: 606
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  - {fileID: 16}
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 606
+    width: 1168.6666
+    height: 314
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 17}
+  - {fileID: 18}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1168.6666
+    y: 0
+    width: 538
+    height: 920
+  m_MinSize: {x: 51, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 19}
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: Test framework for running Edit mode and Play mode tests in Unity.
+      Part of the com.unity.test-framework package.
+    m_TextWithWhitespace: "Test Runner\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 1168.6667
+    y: 78.66667
+    width: 537
+    height: 894
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_Spl:
+    ID: 141
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 618
+    - 206
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 824
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 1
+  m_TestListGUIs:
+  - m_Window: {fileID: 12}
+    runProgress:
+      RunGuid: 9cbd4869-1198-4003-ab17-c90966ed7f8a
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 2
+          testNames:
+          - BossHealthTests_TL6
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999999
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Platformer][suite]'
+      name: Platformer
+      fullName: Platformer
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 74de8b93ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  - m_Window: {fileID: 12}
+    runProgress:
+      RunGuid: 9cbd4869-1198-4003-ab17-c90966ed7f8a
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 2
+          testNames:
+          - BossHealthTests_TL6
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999999
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList:
+    - id: 1032
+      uniqueId: '[Platformer][suite]'
+      name: Platformer
+      fullName: Platformer
+      resultStatus: 0
+      duration: 12.5328865
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1007
+      uniqueId: '[AudioTest][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/AudioTest.dll][suite]'
+      name: AudioTest.dll
+      fullName: C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/AudioTest.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1032
+      parentUniqueId: '[Platformer][suite]'
+    - id: 1003
+      uniqueId: 'AudioTest.dll/[AudioTest][BoundaryTest_3DAudioDistance][suite]'
+      name: BoundaryTest_3DAudioDistance
+      fullName: BoundaryTest_3DAudioDistance
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: '[AudioTest][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/AudioTest.dll][suite]'
+    - id: 1004
+      uniqueId: 'AudioTest.dll/BoundaryTest_3DAudioDistance/[AudioTest][BoundaryTest_3DAudioDistance.MaxDistanceCutoffTest]'
+      name: MaxDistanceCutoffTest
+      fullName: BoundaryTest_3DAudioDistance.MaxDistanceCutoffTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1003
+      parentUniqueId: 'AudioTest.dll/[AudioTest][BoundaryTest_3DAudioDistance][suite]'
+    - id: 1001
+      uniqueId: 'AudioTest.dll/[AudioTest][BoundaryTest_VolumeClamp][suite]'
+      name: BoundaryTest_VolumeClamp
+      fullName: BoundaryTest_VolumeClamp
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: '[AudioTest][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/AudioTest.dll][suite]'
+    - id: 1002
+      uniqueId: 'AudioTest.dll/BoundaryTest_VolumeClamp/[AudioTest][BoundaryTest_VolumeClamp.VolumeClampingTest]'
+      name: VolumeClampingTest
+      fullName: BoundaryTest_VolumeClamp.VolumeClampingTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: 'AudioTest.dll/[AudioTest][BoundaryTest_VolumeClamp][suite]'
+    - id: 1005
+      uniqueId: 'AudioTest.dll/[AudioTest][StressTest_VoiceLimit][suite]'
+      name: StressTest_VoiceLimit
+      fullName: StressTest_VoiceLimit
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1007
+      parentUniqueId: '[AudioTest][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/AudioTest.dll][suite]'
+    - id: 1006
+      uniqueId: 'AudioTest.dll/StressTest_VoiceLimit/[AudioTest][StressTest_VoiceLimit.FindVoiceLimit]'
+      name: FindVoiceLimit
+      fullName: StressTest_VoiceLimit.FindVoiceLimit
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1005
+      parentUniqueId: 'AudioTest.dll/[AudioTest][StressTest_VoiceLimit][suite]'
+    - id: 1027
+      uniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+      name: PlayMode.dll
+      fullName: C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll
+      resultStatus: 0
+      duration: 12.5328865
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1032
+      parentUniqueId: '[Platformer][suite]'
+    - id: 1023
+      uniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+      name: BossHealthTests_TL6
+      fullName: BossHealthTests_TL6
+      resultStatus: 2
+      duration: 12.5328865
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1025
+      uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.BoundaryTest_DamageAfterDeath_IsIgnored]'
+      name: BoundaryTest_DamageAfterDeath_IsIgnored
+      fullName: BossHealthTests_TL6.BoundaryTest_DamageAfterDeath_IsIgnored
+      resultStatus: 1
+      duration: 0.0453251
+      messages: 
+      output: '[Health] Boss_Warden(Clone) died
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+    - id: 1024
+      uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.BoundaryTest_Overkill_HPClampsToZero]'
+      name: BoundaryTest_Overkill_HPClampsToZero
+      fullName: BossHealthTests_TL6.BoundaryTest_Overkill_HPClampsToZero
+      resultStatus: 1
+      duration: 0.0181656
+      messages: 
+      output: '[Health] Boss_Warden(Clone) died
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+    - id: 1026
+      uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.StressTest_FindPerformanceLimit]'
+      name: StressTest_FindPerformanceLimit
+      fullName: BossHealthTests_TL6.StressTest_FindPerformanceLimit
+      resultStatus: 2
+      duration: 12.469396
+      messages: 'Performance stress test failed at 8800001 calls: Frame took 16.94ms
+        (Budget was 16.60ms)'
+      output: '--- [Stress Test] Started: L2ooking for call count that exceeds 16.60ms
+        (Custom Budget) ---
+
+        --- [Stress Test] PASSED level: 1 calls took
+        0.04ms (Budget: 16.60ms)
+
+        --- [Stress Test] PASSED level: 11 calls
+        took 0.00ms (Budget: 16.60ms)
+
+        --- [Stress Test] PASSED level: 21
+        calls took 0.00ms (Budget: 16.60ms)
+
+        --- [Stress Test] PASSED level:
+        31 calls took 0.00ms (Budget: 16.60ms)
+
+        --- [Stress Test] PASSED
+        level: 41 calls took 0.00ms (Budget: 16.60ms)
+
+        --- [Stress Test]
+        PASSED level: 51 calls took 0.00ms (Budget: 16.60ms)
+
+        --- [Stress
+        Test] PASSED level: 61 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 71 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 81 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 91 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 101 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 201 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 301 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 401 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 501 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 601 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 701 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 801 calls took 0.00ms (Budget: 16.60ms)
+
+        ---
+        [Stress Test] PASSED level: 901 calls took 0.00ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1001 calls
+        took 0.39ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2001 calls took 0.37ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3001 calls
+        took 0.50ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4001 calls took 0.39ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5001 calls
+        took 0.49ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6001 calls took 0.55ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7001 calls
+        took 0.46ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8001 calls took 0.48ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 9001 calls
+        took 0.52ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 10001 calls took 0.49ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 20001 calls
+        took 0.59ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 30001 calls took 0.58ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 40001 calls
+        took 0.56ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 50001 calls took 0.47ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 60001 calls
+        took 0.48ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 70001 calls took 0.48ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 80001 calls
+        took 0.79ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 90001 calls took 0.64ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 100001
+        calls took 0.68ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 110001 calls took 0.74ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 120001 calls took 0.67ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 130001
+        calls took 0.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 140001 calls took 0.57ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 150001 calls took 0.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 160001
+        calls took 0.62ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 170001 calls took 0.75ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 180001 calls took 0.82ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 190001
+        calls took 1.02ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 200001 calls took 0.76ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 210001 calls took 1.08ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 220001
+        calls took 0.71ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 230001 calls took 0.96ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 240001 calls took 1.01ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 250001
+        calls took 1.08ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 260001 calls took 0.82ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 270001 calls took 0.94ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 280001
+        calls took 1.19ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 290001 calls took 1.12ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 300001 calls took 0.88ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 310001
+        calls took 1.16ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 320001 calls took 1.07ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 330001 calls took 1.22ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 340001
+        calls took 1.21ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 350001 calls took 1.15ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 360001 calls took 1.15ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 370001
+        calls took 1.22ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 380001 calls took 1.35ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 390001 calls took 1.46ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 400001
+        calls took 1.37ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 410001 calls took 1.07ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 420001 calls took 1.26ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 430001
+        calls took 1.45ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 440001 calls took 1.42ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 450001 calls took 1.21ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 460001
+        calls took 1.12ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 470001 calls took 1.43ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 480001 calls took 1.42ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 490001
+        calls took 1.67ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 500001 calls took 1.53ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 510001 calls took 1.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 520001
+        calls took 1.38ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 530001 calls took 1.37ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 540001 calls took 1.65ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 550001
+        calls took 1.25ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 560001 calls took 1.68ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 570001 calls took 1.41ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 580001
+        calls took 1.51ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 590001 calls took 1.51ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 600001 calls took 1.44ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 610001
+        calls took 1.58ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 620001 calls took 1.50ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 630001 calls took 1.50ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 640001
+        calls took 1.79ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 650001 calls took 1.52ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 660001 calls took 1.71ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 670001
+        calls took 1.72ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 680001 calls took 1.55ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 690001 calls took 1.81ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 700001
+        calls took 1.79ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 710001 calls took 1.90ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 720001 calls took 1.69ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 730001
+        calls took 1.93ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 740001 calls took 1.80ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 750001 calls took 1.68ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 760001
+        calls took 1.71ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 770001 calls took 1.94ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 780001 calls took 2.24ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 790001
+        calls took 2.14ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 800001 calls took 1.92ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 810001 calls took 2.04ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 820001
+        calls took 2.14ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 830001 calls took 1.90ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 840001 calls took 2.07ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 850001
+        calls took 1.80ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 860001 calls took 1.98ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 870001 calls took 2.12ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 880001
+        calls took 2.01ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 890001 calls took 2.31ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 900001 calls took 2.36ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 910001
+        calls took 2.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 920001 calls took 2.08ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 930001 calls took 2.23ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 940001
+        calls took 2.38ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 950001 calls took 2.32ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 960001 calls took 2.42ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 970001
+        calls took 2.30ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 980001 calls took 2.18ms (Budget:
+        16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        --- [Stress
+        Test] PASSED level: 990001 calls took 2.38ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1000001
+        calls took 2.17ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1010001 calls took 2.30ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1020001 calls took 2.27ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1030001
+        calls took 2.56ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1040001 calls took 2.52ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1050001 calls took 2.28ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1060001
+        calls took 2.34ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1070001 calls took 2.40ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1080001 calls took 2.40ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1090001
+        calls took 2.48ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1100001 calls took 2.39ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1110001 calls took 2.48ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1120001
+        calls took 2.45ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1130001 calls took 2.50ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1140001 calls took 2.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1150001
+        calls took 2.55ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1160001 calls took 2.43ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1170001 calls took 2.67ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1180001
+        calls took 2.67ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1190001 calls took 2.80ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1200001 calls took 2.87ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1210001
+        calls took 2.58ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1220001 calls took 2.71ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1230001 calls took 2.66ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1240001
+        calls took 2.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1250001 calls took 2.67ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1260001 calls took 3.09ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1270001
+        calls took 2.91ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1280001 calls took 2.59ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1290001 calls took 2.84ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1300001
+        calls took 2.93ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1310001 calls took 2.83ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1320001 calls took 3.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1330001
+        calls took 2.98ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1340001 calls took 3.36ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1350001 calls took 2.79ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1360001
+        calls took 3.08ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1370001 calls took 2.71ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1380001 calls took 2.88ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1390001
+        calls took 2.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1400001 calls took 3.07ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1410001 calls took 2.87ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1420001
+        calls took 2.91ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1430001 calls took 3.23ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1440001 calls took 3.27ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1450001
+        calls took 3.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1460001 calls took 3.03ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1470001 calls took 3.03ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1480001
+        calls took 3.10ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1490001 calls took 3.17ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1500001 calls took 3.19ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1510001
+        calls took 3.21ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1520001 calls took 3.14ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1530001 calls took 3.69ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1540001
+        calls took 3.22ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1550001 calls took 3.21ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1560001 calls took 3.31ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1570001
+        calls took 3.27ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1580001 calls took 3.28ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1590001 calls took 3.32ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1600001
+        calls took 3.33ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1610001 calls took 3.38ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1620001 calls took 3.30ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1630001
+        calls took 3.43ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1640001 calls took 3.36ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1650001 calls took 3.28ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1660001
+        calls took 3.82ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1670001 calls took 3.29ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1680001 calls took 3.67ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1690001
+        calls took 3.54ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1700001 calls took 3.85ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1710001 calls took 3.75ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1720001
+        calls took 3.62ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1730001 calls took 3.76ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1740001 calls took 3.30ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1750001
+        calls took 3.87ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1760001 calls took 3.69ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1770001 calls took 3.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1780001
+        calls took 3.59ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1790001 calls took 3.71ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1800001 calls took 3.77ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1810001
+        calls took 3.70ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1820001 calls took 4.03ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1830001 calls took 4.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1840001
+        calls took 3.97ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1850001 calls took 3.73ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1860001 calls took 3.93ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1870001
+        calls took 3.78ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1880001 calls took 3.64ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1890001 calls took 3.77ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1900001
+        calls took 3.72ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1910001 calls took 3.90ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1920001 calls took 4.25ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1930001
+        calls took 3.72ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1940001 calls took 3.74ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1950001 calls took 4.10ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1960001
+        calls took 4.17ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 1970001 calls took 4.24ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 1980001 calls took 4.13ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 1990001
+        calls took 4.09ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2000001 calls took 4.28ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2010001 calls took 3.89ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2020001
+        calls took 4.13ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2030001 calls took 4.22ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2040001 calls took 4.14ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2050001
+        calls took 3.96ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2060001 calls took 4.26ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2070001 calls took 4.31ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2080001
+        calls took 4.24ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2090001 calls took 4.30ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2100001 calls took 4.13ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2110001
+        calls took 3.94ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2120001 calls took 4.25ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2130001 calls took 4.21ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2140001
+        calls took 4.25ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2150001 calls took 4.23ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2160001 calls took 4.29ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2170001
+        calls took 4.47ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2180001 calls took 4.44ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2190001 calls took 4.58ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2200001
+        calls took 4.12ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2210001 calls took 4.39ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2220001 calls took 4.67ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2230001
+        calls took 4.47ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2240001 calls took 4.65ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2250001 calls took 4.75ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2260001
+        calls took 4.49ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2270001 calls took 4.31ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2280001 calls took 4.58ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2290001
+        calls took 5.36ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2300001 calls took 4.54ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2310001 calls took 4.59ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2320001
+        calls took 4.51ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2330001 calls took 4.78ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2340001 calls took 4.53ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2350001
+        calls took 4.30ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2360001 calls took 5.06ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2370001 calls took 4.72ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2380001
+        calls took 4.62ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2390001 calls took 4.72ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2400001 calls took 4.96ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2410001
+        calls took 5.25ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2420001 calls took 4.58ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2430001 calls took 4.84ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2440001
+        calls took 4.77ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2450001 calls took 4.73ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2460001 calls took 4.97ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2470001
+        calls took 4.80ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2480001 calls took 5.14ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2490001 calls took 4.73ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2500001
+        calls took 4.72ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2510001 calls took 5.12ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2520001 calls took 5.16ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2530001
+        calls took 4.99ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2540001 calls took 4.72ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2550001 calls took 5.11ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2560001
+        calls took 5.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2570001 calls took 5.09ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2580001 calls took 5.05ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2590001
+        calls took 5.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2600001 calls took 4.98ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2610001 calls took 5.15ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2620001
+        calls took 5.24ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2630001 calls took 5.09ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2640001 calls took 5.17ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2650001
+        calls took 5.37ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2660001 calls took 5.11ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2670001 calls took 5.15ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2680001
+        calls took 5.17ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2690001 calls took 5.19ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2700001 calls took 5.26ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2710001
+        calls took 5.21ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2720001 calls took 5.19ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2730001 calls took 5.57ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2740001
+        calls took 5.22ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2750001 calls took 5.67ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2760001 calls took 5.58ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2770001
+        calls took 5.29ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2780001 calls took 5.65ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2790001 calls took 5.53ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2800001
+        calls took 5.16ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2810001 calls took 5.31ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2820001 calls took 5.34ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2830001
+        calls took 5.58ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2840001 calls took 5.79ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2850001 calls took 5.82ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2860001
+        calls took 5.40ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2870001 calls took 5.52ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2880001 calls took 5.46ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2890001
+        calls took 5.60ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2900001 calls took 5.29ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2910001 calls took 5.35ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2920001
+        calls took 6.04ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2930001 calls took 5.73ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2940001 calls took 6.08ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2950001
+        calls took 5.71ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2960001 calls took 5.90ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 2970001 calls took 6.21ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 2980001
+        calls took 5.56ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 2990001 calls took 6.00ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3000001 calls took 5.91ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3010001
+        calls took 6.14ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3020001 calls took 5.86ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3030001 calls took 5.92ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3040001
+        calls took 5.85ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3050001 calls took 5.91ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3060001 calls took 5.80ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3070001
+        calls took 5.82ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3080001 calls took 6.21ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3090001 calls took 6.33ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3100001
+        calls took 5.82ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3110001 calls took 5.77ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3120001 calls took 6.22ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3130001
+        calls took 6.08ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3140001 calls took 6.06ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3150001 calls took 5.97ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3160001
+        calls took 6.04ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3170001 calls took 6.44ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3180001 calls took 6.03ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3190001
+        calls took 6.14ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3200001 calls took 6.00ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3210001 calls took 6.27ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3220001
+        calls took 6.58ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3230001 calls took 6.34ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3240001 calls took 6.57ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3250001
+        calls took 6.24ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3260001 calls took 6.15ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3270001 calls took 6.35ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3280001
+        calls took 6.18ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3290001 calls took 6.62ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3300001 calls took 5.97ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3310001
+        calls took 6.28ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3320001 calls took 6.04ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3330001 calls took 6.43ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3340001
+        calls took 6.33ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3350001 calls took 6.74ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3360001 calls took 6.63ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3370001
+        calls took 6.43ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3380001 calls took 6.31ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3390001 calls took 6.31ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3400001
+        calls took 6.67ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3410001 calls took 6.67ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3420001 calls took 6.68ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3430001
+        calls took 6.60ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3440001 calls took 6.43ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3450001 calls took 6.63ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3460001
+        calls took 6.75ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3470001 calls took 6.56ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3480001 calls took 6.93ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3490001
+        calls took 6.66ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3500001 calls took 6.70ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3510001 calls took 6.65ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3520001
+        calls took 6.75ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3530001 calls took 7.12ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3540001 calls took 6.92ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3550001
+        calls took 7.13ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3560001 calls took 7.59ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3570001 calls took 6.78ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3580001
+        calls took 7.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3590001 calls took 7.02ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3600001 calls took 7.00ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3610001
+        calls took 7.05ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3620001 calls took 7.26ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3630001 calls took 7.26ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3640001
+        calls took 7.12ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3650001 calls took 8.43ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3660001 calls took 6.70ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3670001
+        calls took 7.22ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3680001 calls took 7.09ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3690001 calls took 6.87ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3700001
+        calls took 7.36ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3710001 calls took 7.69ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3720001 calls took 6.92ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3730001
+        calls took 7.32ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3740001 calls took 7.41ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3750001 calls took 7.15ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3760001
+        calls took 7.35ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3770001 calls took 7.20ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3780001 calls took 7.16ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3790001
+        calls took 7.52ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3800001 calls took 7.15ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3810001 calls took 7.76ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3820001
+        calls took 7.66ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3830001 calls took 7.85ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3840001 calls took 7.05ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3850001
+        calls took 7.09ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3860001 calls took 7.15ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3870001 calls took 7.68ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3880001
+        calls took 7.53ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3890001 calls took 7.39ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3900001 calls took 7.41ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3910001
+        calls took 7.52ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3920001 calls took 7.16ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3930001 calls took 7.38ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3940001
+        calls took 7.31ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3950001 calls took 7.44ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3960001 calls took 8.05ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 3970001
+        calls took 7.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 3980001 calls took 7.70ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 3990001 calls took 7.99ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4000001
+        calls took 7.46ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4010001 calls took 7.44ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4020001 calls took 7.27ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4030001
+        calls took 7.92ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4040001 calls took 7.65ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4050001 calls took 7.57ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4060001
+        calls took 7.81ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4070001 calls took 7.51ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4080001 calls took 7.60ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4090001
+        calls took 7.77ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4100001 calls took 7.64ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4110001 calls took 7.86ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4120001
+        calls took 7.69ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4130001 calls took 7.96ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4140001 calls took 8.11ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4150001
+        calls took 7.81ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4160001 calls took 7.96ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4170001 calls took 8.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4180001
+        calls took 8.05ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4190001 calls took 7.97ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4200001 calls took 7.93ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4210001
+        calls took 8.27ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4220001 calls took 8.20ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4230001 calls took 8.09ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4240001
+        calls took 7.96ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4250001 calls took 8.06ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4260001 calls took 8.01ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4270001
+        calls took 8.47ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4280001 calls took 8.21ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4290001 calls took 8.32ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4300001
+        calls took 8.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4310001 calls took 8.40ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4320001 calls took 8.00ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4330001
+        calls took 8.37ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4340001 calls took 8.02ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4350001 calls took 8.33ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4360001
+        calls took 8.14ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4370001 calls took 8.26ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4380001 calls took 7.87ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4390001
+        calls took 8.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4400001 calls took 8.49ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4410001 calls took 8.11ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4420001
+        calls took 8.42ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4430001 calls took 8.47ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4440001 calls took 8.71ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4450001
+        calls took 8.51ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4460001 calls took 8.37ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4470001 calls took 8.60ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4480001
+        calls took 8.46ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4490001 calls took 8.74ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4500001 calls took 8.23ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4510001
+        calls took 8.79ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4520001 calls took 7.99ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4530001 calls took 8.42ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4540001
+        calls took 8.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4550001 calls took 8.27ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4560001 calls took 8.72ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4570001
+        calls took 8.41ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4580001 calls took 8.81ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4590001 calls took 8.43ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4600001
+        calls took 8.80ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4610001 calls took 8.76ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4620001 calls took 9.20ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4630001
+        calls took 8.76ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4640001 calls took 8.32ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4650001 calls took 8.98ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4660001
+        calls took 8.65ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4670001 calls took 8.71ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4680001 calls took 8.81ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4690001
+        calls took 8.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4700001 calls took 8.90ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4710001 calls took 9.00ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4720001
+        calls took 8.84ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4730001 calls took 9.98ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4740001 calls took 8.80ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4750001
+        calls took 9.20ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4760001 calls took 8.78ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4770001 calls took 8.70ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4780001
+        calls took 9.00ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4790001 calls took 8.86ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4800001 calls took 9.40ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4810001
+        calls took 9.04ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4820001 calls took 8.87ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4830001 calls took 8.81ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4840001
+        calls took 9.15ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4850001 calls took 8.74ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4860001 calls took 9.39ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4870001
+        calls took 8.87ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4880001 calls took 8.98ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4890001 calls took 9.85ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4900001
+        calls took 9.04ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4910001 calls took 9.25ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4920001 calls took 8.77ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4930001
+        calls took 9.16ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4940001 calls took 8.94ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4950001 calls took 8.89ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4960001
+        calls took 9.40ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 4970001 calls took 9.18ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 4980001 calls took 9.64ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 4990001
+        calls took 9.00ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5000001 calls took 10.50ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5010001 calls took 9.43ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5020001
+        calls took 9.42ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5030001 calls took 9.33ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5040001 calls took 9.54ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5050001
+        calls took 9.29ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5060001 calls took 9.70ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5070001 calls took 9.47ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5080001
+        calls took 9.28ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5090001 calls took 9.18ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5100001 calls took 9.10ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5110001
+        calls took 9.45ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5120001 calls took 9.72ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5130001 calls took 9.20ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5140001
+        calls took 9.86ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5150001 calls took 9.60ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5160001 calls took 9.46ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5170001
+        calls took 9.65ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5180001 calls took 9.86ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5190001 calls took 9.56ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5200001
+        calls took 9.56ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5210001 calls took 9.89ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5220001 calls took 9.51ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5230001
+        calls took 9.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5240001 calls took 9.76ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5250001 calls took 10.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5260001
+        calls took 9.46ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5270001 calls took 10.07ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5280001 calls took 10.06ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5290001
+        calls took 10.00ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5300001 calls took 9.49ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5310001 calls took 10.18ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5320001
+        calls took 9.77ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5330001 calls took 9.96ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5340001 calls took 10.45ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5350001
+        calls took 10.41ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5360001 calls took 10.17ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5370001 calls took 9.60ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5380001
+        calls took 10.14ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5390001 calls took 10.11ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5400001 calls took 10.13ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5410001
+        calls took 9.95ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5420001 calls took 10.24ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5430001 calls took 9.72ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5440001
+        calls took 10.32ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5450001 calls took 10.49ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5460001 calls took 10.17ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5470001
+        calls took 10.33ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5480001 calls took 10.40ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5490001 calls took 10.17ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5500001
+        calls took 9.97ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5510001 calls took 10.21ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5520001 calls took 10.51ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5530001
+        calls took 10.42ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5540001 calls took 10.58ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5550001 calls took 10.43ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5560001
+        calls took 10.09ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5570001 calls took 10.30ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5580001 calls took 10.34ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5590001
+        calls took 10.03ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5600001 calls took 10.42ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5610001 calls took 10.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5620001
+        calls took 10.66ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5630001 calls took 10.02ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5640001 calls took 11.28ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5650001
+        calls took 10.93ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5660001 calls took 10.80ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5670001 calls took 10.60ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5680001
+        calls took 10.52ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5690001 calls took 10.59ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5700001 calls took 11.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5710001
+        calls took 10.81ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5720001 calls took 11.12ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5730001 calls took 10.72ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5740001
+        calls took 10.90ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5750001 calls took 10.96ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5760001 calls took 10.93ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5770001
+        calls took 11.41ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5780001 calls took 10.98ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5790001 calls took 11.09ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5800001
+        calls took 11.66ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5810001 calls took 11.14ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5820001 calls took 11.40ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5830001
+        calls took 11.32ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5840001 calls took 10.55ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5850001 calls took 11.03ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5860001
+        calls took 11.04ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5870001 calls took 10.91ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5880001 calls took 10.96ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5890001
+        calls took 11.09ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5900001 calls took 11.39ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5910001 calls took 11.35ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5920001
+        calls took 10.96ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5930001 calls took 11.16ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5940001 calls took 11.05ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5950001
+        calls took 11.38ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5960001 calls took 10.52ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 5970001 calls took 10.32ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 5980001
+        calls took 10.25ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 5990001 calls took 10.56ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6000001 calls took 10.99ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6010001
+        calls took 11.08ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6020001 calls took 11.80ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6030001 calls took 11.16ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6040001
+        calls took 10.66ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6050001 calls took 10.80ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6060001 calls took 10.70ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6070001
+        calls took 11.21ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6080001 calls took 11.31ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6090001 calls took 11.35ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6100001
+        calls took 11.44ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6110001 calls took 11.40ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6120001 calls took 11.40ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6130001
+        calls took 11.22ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6140001 calls took 11.41ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6150001 calls took 11.20ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6160001
+        calls took 11.36ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6170001 calls took 11.47ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6180001 calls took 11.41ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6190001
+        calls took 11.06ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6200001 calls took 11.09ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6210001 calls took 11.58ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6220001
+        calls took 11.48ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6230001 calls took 11.43ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6240001 calls took 11.15ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6250001
+        calls took 11.06ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6260001 calls took 11.55ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6270001 calls took 12.29ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6280001
+        calls took 11.48ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6290001 calls took 11.59ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6300001 calls took 11.64ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6310001
+        calls took 11.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6320001 calls took 12.39ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6330001 calls took 11.64ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6340001
+        calls took 11.62ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6350001 calls took 11.62ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6360001 calls took 11.83ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6370001
+        calls took 11.98ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6380001 calls took 11.73ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6390001 calls took 11.99ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6400001
+        calls took 11.46ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6410001 calls took 12.25ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6420001 calls took 12.13ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6430001
+        calls took 12.60ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6440001 calls took 11.60ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6450001 calls took 11.73ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6460001
+        calls took 11.68ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6470001 calls took 12.40ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6480001 calls took 12.15ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6490001
+        calls took 11.87ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6500001 calls took 12.26ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6510001 calls took 11.74ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6520001
+        calls took 12.73ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6530001 calls took 11.85ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6540001 calls took 11.68ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6550001
+        calls took 11.99ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6560001 calls took 12.61ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6570001 calls took 11.92ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6580001
+        calls took 12.11ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6590001 calls took 12.43ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6600001 calls took 12.51ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6610001
+        calls took 11.89ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6620001 calls took 12.24ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6630001 calls took 12.16ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6640001
+        calls took 12.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6650001 calls took 12.37ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6660001 calls took 12.18ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6670001
+        calls took 12.78ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6680001 calls took 12.24ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6690001 calls took 11.86ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6700001
+        calls took 12.02ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6710001 calls took 12.27ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6720001 calls took 12.58ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6730001
+        calls took 11.97ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6740001 calls took 12.77ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6750001 calls took 11.79ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6760001
+        calls took 12.94ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6770001 calls took 12.70ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6780001 calls took 12.13ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6790001
+        calls took 12.45ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6800001 calls took 12.36ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6810001 calls took 13.14ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6820001
+        calls took 12.77ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6830001 calls took 12.63ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6840001 calls took 11.96ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6850001
+        calls took 12.70ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6860001 calls took 12.77ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6870001 calls took 12.11ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6880001
+        calls took 12.60ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6890001 calls took 12.21ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6900001 calls took 13.16ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6910001
+        calls took 12.50ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6920001 calls took 12.48ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6930001 calls took 12.57ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6940001
+        calls took 12.68ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6950001 calls took 12.73ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6960001 calls took 13.47ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 6970001
+        calls took 12.51ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 6980001 calls took 12.80ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 6990001 calls took 13.03ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7000001
+        calls took 13.11ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7010001 calls took 13.35ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7020001 calls took 13.29ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7030001
+        calls took 12.25ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7040001 calls took 12.94ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7050001 calls took 12.73ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7060001
+        calls took 13.24ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7070001 calls took 13.45ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7080001 calls took 13.42ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7090001
+        calls took 13.35ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7100001 calls took 12.24ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7110001 calls took 12.71ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7120001
+        calls took 13.12ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7130001 calls took 13.34ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7140001 calls took 13.14ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7150001
+        calls took 12.51ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7160001 calls took 13.22ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7170001 calls took 12.88ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7180001
+        calls took 12.88ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7190001 calls took 12.76ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7200001 calls took 13.10ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7210001
+        calls took 13.33ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7220001 calls took 13.51ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7230001 calls took 13.56ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7240001
+        calls took 13.49ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7250001 calls took 13.39ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7260001 calls took 13.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7270001
+        calls took 13.53ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7280001 calls took 13.55ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7290001 calls took 13.96ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7300001
+        calls took 13.01ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7310001 calls took 13.13ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7320001 calls took 13.35ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7330001
+        calls took 13.30ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7340001 calls took 13.96ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7350001 calls took 13.32ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7360001
+        calls took 13.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7370001 calls took 13.47ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7380001 calls took 13.74ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7390001
+        calls took 13.65ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7400001 calls took 13.63ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7410001 calls took 13.04ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7420001
+        calls took 13.46ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7430001 calls took 13.61ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7440001 calls took 13.74ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7450001
+        calls took 14.03ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7460001 calls took 13.65ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7470001 calls took 13.80ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7480001
+        calls took 13.74ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7490001 calls took 13.79ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7500001 calls took 13.78ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7510001
+        calls took 13.97ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7520001 calls took 13.22ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7530001 calls took 13.37ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7540001
+        calls took 13.24ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7550001 calls took 13.58ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7560001 calls took 13.73ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7570001
+        calls took 13.60ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7580001 calls took 13.80ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7590001 calls took 14.23ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7600001
+        calls took 13.43ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7610001 calls took 13.86ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7620001 calls took 14.09ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7630001
+        calls took 14.02ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7640001 calls took 13.95ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7650001 calls took 14.14ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7660001
+        calls took 14.03ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7670001 calls took 14.89ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7680001 calls took 14.78ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7690001
+        calls took 13.66ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7700001 calls took 14.26ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7710001 calls took 14.53ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7720001
+        calls took 14.56ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7730001 calls took 13.49ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7740001 calls took 14.95ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7750001
+        calls took 14.49ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7760001 calls took 14.44ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7770001 calls took 14.52ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7780001
+        calls took 14.68ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7790001 calls took 14.49ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7800001 calls took 14.34ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7810001
+        calls took 14.43ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7820001 calls took 14.47ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7830001 calls took 14.14ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7840001
+        calls took 14.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7850001 calls took 14.33ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7860001 calls took 14.42ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7870001
+        calls took 14.71ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7880001 calls took 14.64ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7890001 calls took 13.92ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7900001
+        calls took 14.29ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7910001 calls took 14.85ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7920001 calls took 13.65ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7930001
+        calls took 14.51ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7940001 calls took 14.13ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7950001 calls took 14.16ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7960001
+        calls took 14.43ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 7970001 calls took 14.28ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 7980001 calls took 14.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 7990001
+        calls took 14.48ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8000001 calls took 14.72ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8010001 calls took 15.22ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8020001
+        calls took 14.35ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8030001 calls took 14.82ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8040001 calls took 15.05ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8050001
+        calls took 14.18ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8060001 calls took 14.38ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8070001 calls took 14.39ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8080001
+        calls took 14.43ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8090001 calls took 15.54ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8100001 calls took 14.66ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8110001
+        calls took 14.89ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8120001 calls took 15.25ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8130001 calls took 14.64ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8140001
+        calls took 14.95ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8150001 calls took 15.05ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8160001 calls took 14.57ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8170001
+        calls took 15.07ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8180001 calls took 15.14ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8190001 calls took 15.09ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8200001
+        calls took 15.16ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8210001 calls took 14.83ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8220001 calls took 15.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8230001
+        calls took 15.38ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8240001 calls took 15.34ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8250001 calls took 15.68ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8260001
+        calls took 14.88ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8270001 calls took 15.19ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8280001 calls took 15.37ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8290001
+        calls took 15.33ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8300001 calls took 15.24ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8310001 calls took 15.38ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8320001
+        calls took 15.31ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8330001 calls took 15.18ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8340001 calls took 15.05ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8350001
+        calls took 15.27ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8360001 calls took 15.28ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8370001 calls took 16.06ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8380001
+        calls took 15.82ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8390001 calls took 15.34ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8400001 calls took 15.47ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8410001
+        calls took 15.35ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8420001 calls took 15.71ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8430001 calls took 15.39ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8440001
+        calls took 15.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8450001 calls took 15.12ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8460001 calls took 15.91ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8470001
+        calls took 16.03ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8480001 calls took 16.21ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8490001 calls took 14.62ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8500001
+        calls took 15.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8510001 calls took 15.56ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8520001 calls took 15.80ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8530001
+        calls took 15.62ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8540001 calls took 15.95ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8550001 calls took 16.08ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8560001
+        calls took 15.23ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8570001 calls took 14.87ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8580001 calls took 14.71ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8590001
+        calls took 15.90ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8600001 calls took 16.10ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8610001 calls took 16.21ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8620001
+        calls took 15.49ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8630001 calls took 15.15ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8640001 calls took 15.81ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8650001
+        calls took 15.67ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8660001 calls took 15.25ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8670001 calls took 16.21ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8680001
+        calls took 15.71ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8690001 calls took 16.32ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8700001 calls took 16.31ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8710001
+        calls took 15.70ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8720001 calls took 15.69ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8730001 calls took 16.32ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8740001
+        calls took 15.68ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8750001 calls took 15.34ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8760001 calls took 16.56ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        --- [Stress Test] PASSED level: 8770001
+        calls took 16.18ms (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone)
+        died
+
+        --- [Stress Test] PASSED level: 8780001 calls took 15.49ms
+        (Budget: 16.60ms)
+
+        [Health] Boss_Warden(Clone) died
+
+        ---
+        [Stress Test] PASSED level: 8790001 calls took 16.02ms (Budget: 16.60ms)
+
+        [Health]
+        Boss_Warden(Clone) died
+
+        stress test failed at 8800001 calls
+
+'
+      stacktrace: 'at BossHealthTests_TL6+<StressTest_FindPerformanceLimit>d__7.MoveNext
+        () [0x00151] in C:\Users\29083\Documents\GitHub\GameProject\Platformer.V6000.1.17f1\Assets\Testing\PlayMode\TL6\BossHealthTests_TL6.cs:146
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in .\Library\PackageCache\com.unity.test-framework@78fc86e3183e\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+    - id: 1013
+      uniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
+      name: BoulderStressTest
+      fullName: BoulderStressTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1014
+      uniqueId: 'PlayMode.dll/BoulderStressTest/[PlayMode][BoulderStressTest.MaxBoulderStack]'
+      name: MaxBoulderStack
+      fullName: BoulderStressTest.MaxBoulderStack
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
+    - id: 1008
+      uniqueId: 'PlayMode.dll/[PlayMode][BoundaryTests][suite]'
+      name: BoundaryTests
+      fullName: BoundaryTests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1010
+      uniqueId: 'PlayMode.dll/BoundaryTests/[PlayMode][BoundaryTests.BCMode_DisablesText_WhenFalse]'
+      name: BCMode_DisablesText_WhenFalse
+      fullName: BoundaryTests.BCMode_DisablesText_WhenFalse
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BoundaryTests][suite]'
+    - id: 1009
+      uniqueId: 'PlayMode.dll/BoundaryTests/[PlayMode][BoundaryTests.BCMode_EnablesText_WhenTrue]'
+      name: BCMode_EnablesText_WhenTrue
+      fullName: BoundaryTests.BCMode_EnablesText_WhenTrue
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BoundaryTests][suite]'
+    - id: 1019
+      uniqueId: 'PlayMode.dll/[PlayMode][EnemyBoundaryTest][suite]'
+      name: EnemyBoundaryTest
+      fullName: EnemyBoundaryTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1020
+      uniqueId: 'PlayMode.dll/EnemyBoundaryTest/[PlayMode][EnemyBoundaryTest.EnemyDoesNotExceedBoundaries]'
+      name: EnemyDoesNotExceedBoundaries
+      fullName: EnemyBoundaryTest.EnemyDoesNotExceedBoundaries
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyBoundaryTest][suite]'
+    - id: 1021
+      uniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
+      name: EnemyStressTest
+      fullName: EnemyStressTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1022
+      uniqueId: 'PlayMode.dll/EnemyStressTest/[PlayMode][EnemyStressTest.MaxEnemyCount]'
+      name: MaxEnemyCount
+      fullName: EnemyStressTest.MaxEnemyCount
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
+    - id: 1015
+      uniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
+      name: LevelManagerTests
+      fullName: LevelManagerTests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1018
+      uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadInvalidLevel]'
+      name: LoadInvalidLevel
+      fullName: LevelManagerTests.LoadInvalidLevel
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
+    - id: 1016
+      uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadMainMenu]'
+      name: LoadMainMenu
+      fullName: LevelManagerTests.LoadMainMenu
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
+    - id: 1017
+      uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadValidLevel]'
+      name: LoadValidLevel
+      fullName: LevelManagerTests.LoadValidLevel
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
+    - id: 1011
+      uniqueId: 'PlayMode.dll/[PlayMode][PlayButtonStressTest][suite]'
+      name: PlayButtonStressTest
+      fullName: PlayButtonStressTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[PlayMode][C:/Users/29083/Documents/GitHub/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1012
+      uniqueId: 'PlayMode.dll/PlayButtonStressTest/[PlayMode][PlayButtonStressTest.StressTest_PlayButtonBreakingPoint]'
+      name: StressTest_PlayButtonBreakingPoint
+      fullName: PlayButtonStressTest.StressTest_PlayButtonBreakingPoint
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: 'PlayMode.dll/[PlayMode][PlayButtonStressTest][suite]'
+    m_ResultText: BossHealthTests_TL6 (3 tests)  1 tests failed (12.533s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 187f5e7e
+      m_LastClickedID: 2120122136
+      m_ExpandedIDs: 74de8b93709664f3187f5e7effffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  - m_Window: {fileID: 0}
+    runProgress:
+      RunGuid: 9cbd4869-1198-4003-ab17-c90966ed7f8a
+      ExecutionSettings:
+        m_TargetPlatform: 0
+        m_HasTargetPlatform: 0
+        filter:
+          testMode: 0
+          testNames: []
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        filters:
+        - testMode: 2
+          testNames:
+          - BossHealthTests_TL6
+          groupNames: []
+          categoryNames: []
+          assemblyNames: []
+        runSynchronously: 0
+        playerHeartbeatTimeout: 600
+        orderedTestNames: []
+        ignoreTests: []
+        featureFlags:
+          fileCleanUpCheck: 0
+          requiresSplashScreen: 0
+          strictDomainReload: 0
+          disableNestedEnumeratorBugfix: 0
+        randomOrderSeed: 0
+      HasFinished: 1
+      Progress: 0.9999999
+      CurrentStepName: Unlock Reload Assemblies
+      CurrentStageName: 
+    m_NewResultList: []
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategories: []
+      availableCategories: []
+    m_SelectedOption: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor.Graphs.dll::UnityEditor.Graphs.AnimatorControllerTool
+  m_MinSize: {x: 50, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Animator\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 258.6667
+    y: 78.66667
+    width: 1000
+    height: 580
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -1763235712059191845, guid: aacb889ac9299f143a2168e2b3a9afa4, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: aacb889ac9299f143a2168e2b3a9afa4, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -1763235712059191845, guid: aacb889ac9299f143a2168e2b3a9afa4, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Hierarchy\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 78.66667
+    width: 390.33334
+    height: 580
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 70d8fdff680bfeffc02cfefff84efeff1038ffffc2c1ffff1ae5ffff16f5ffff04fbffff
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_TrimLeadingAndTrailingWhitespace: 0
+        m_ClientGUIView: {fileID: 8}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 4c969a2b90040154d917609493e03593
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Scene\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 391.33334
+    y: 78.66667
+    width: 775.33325
+    height: 580
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      displayed: 0
+      id: Brush Attributes
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: Tool Settings
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: unity-grid-and-snap-toolbar
+      index: 2
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: unity-scene-view-toolbar
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      displayed: 1
+      id: unity-scene-view-camera-mode-toolbar
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      displayed: 0
+      id: unity-search-toolbar
+      index: 2
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__left
+      displayed: 0
+      id: Terrain Tools
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__left
+      displayed: 0
+      id: Brush Masks
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      displayed: 1
+      id: unity-transform-toolbar
+      index: 0
+      contents: '{"m_Layout":2,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--left
+      displayed: 0
+      id: Scene View/Lighting Visualization Colors
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--left
+      displayed: 1
+      id: Overlays/OverlayMenu
+      index: 1
+      contents: '{"m_Layout":1,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: overlay-container--right
+      displayed: 1
+      id: Orientation
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tilemap Focus
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 0
+      containerId: Floating
+      displayed: 0
+      id: Scene View/Tile Palette Clipboard
+      index: 0
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":true,"m_FloatingSnapOffset":{"x":-700.0,"y":-470.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":3,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 1
+      collapsed: 0
+      snapOffset: {x: -700, y: -470}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Open Tile Palette
+      index: 3
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":24.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 24, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Light Settings
+      index: 1
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/PBR Validation Settings
+      index: 2
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Cloth Collisions
+      index: 4
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Cloth Constraints
+      index: 5
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Tile Palette Brush Pick
+      index: 9
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: APV Overlay
+      index: 11
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Path
+      index: 13
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Sprite Swap
+      index: 15
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: SceneView/CamerasOverlay
+      index: 6
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Physics Debugger
+      index: 7
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Occlusion Culling
+      index: 8
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Particles
+      index: 10
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/TrailRenderer
+      index: 12
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: Scene View/Scene Visibility
+      index: 14
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":24.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 24, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      displayed: 0
+      id: unity-spline-inspector
+      index: 17
+      contents: '{"m_Layout":4,"m_Collapsed":false,"m_Folded":false,"m_Floating":false,"m_FloatingSnapOffset":{"x":0.0,"y":0.0},"m_SnapOffsetDelta":{"x":0.0,"y":0.0},"m_FloatingSnapCorner":0,"m_Size":{"x":0.0,"y":0.0},"m_SizeOverridden":false}'
+      floating: 0
+      collapsed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverridden: 0
+    m_ContainerData:
+    - containerId: overlay-toolbar__top
+      scrollOffset: 0
+    - containerId: overlay-toolbar__left
+      scrollOffset: 0
+    - containerId: overlay-container--left
+      scrollOffset: 0
+    - containerId: overlay-container--right
+      scrollOffset: 0
+    - containerId: overlay-toolbar__right
+      scrollOffset: 0
+    - containerId: overlay-toolbar__bottom
+      scrollOffset: 0
+    - containerId: Floating
+      scrollOffset: 0
+    m_OverlaysVisible: 1
+  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+  m_Gizmos: 1
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 0
+  m_SceneLighting: 1
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_DebugDrawModesUseInteractiveLightBakingData: 0
+  m_Position:
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 1
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    zGrid:
+      m_Fade:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    m_ShowGrid: 1
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+  m_Ortho:
+    m_Target: 1
+    speed: 2
+    m_Value: 1
+  m_CameraSettings:
+    m_Speed: 0.100949906
+    m_SpeedNormalized: 0.049999952
+    m_SpeedMin: 0.001
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewOrtho: 0
+  m_Viewpoint:
+    m_SceneView: {fileID: 15}
+    m_CameraOverscanSettings:
+      m_Opacity: 50
+      m_Scale: 1
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_LastDebugDrawMode:
+    drawMode: 35
+    name: Contributors / Receivers
+    section: Lighting
+  m_ViewIsLockedToObject: 0
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Game\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 391.33334
+    y: 78.66667
+    width: 775.33325
+    height: 580
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - C:\Users\Gabriel\Pong Demo\Library\PlayModeViewStates\b85fc99ba7edfc54bb220af87a7ec107
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 775.33325, y: 559}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -258.44443
+    m_HBaseRangeMax: 258.44443
+    m_VBaseRangeMin: -186.33334
+    m_VBaseRangeMax: 186.33334
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 775.33325
+      height: 559
+    m_Scale: {x: 1.5, y: 1.5}
+    m_Translation: {x: 387.66663, y: 279.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -258.44443
+      y: -186.33333
+      width: 516.88885
+      height: 372.66666
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1162.9999, y: 870}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+  m_showToolbar: 1
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Project\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 684.6667
+    width: 1167.6666
+    height: 288
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Testing/PlayMode/TL6
+    m_Globs: []
+    m_ProductIds: 
+    m_AnyWithAssetOrigin: 0
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Testing/PlayMode/TL6
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\29083\Documents\GitHub\GameProject\Platformer.V6000.1.17f1
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 632}
+    m_SelectedIDs: b2b90000
+    m_LastClickedID: 47538
+    m_ExpandedIDs: 0000000004b8000006b8000008b800000ab800000cb800000eb8000010b8000012b8000014b8000016b8000018b800001ab800001cb80000a2b9000000ca9a3b
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 0000000004b8000006b8000008b800000ab800000cb800000eb8000010b8000012b8000014b8000016b8000018b800001ab800001cb80000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000fcbe00007ab5000000000000a44e0000d6b50000eeb90000e8b900009eb800000ab9000020ba0000c0b60000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_TrimLeadingAndTrailingWhitespace: 0
+      m_ClientGUIView: {fileID: 10}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 207
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Console\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 684.6667
+    width: 1167.6666
+    height: 288
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Inspector\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 1168.6667
+    y: 78.66667
+    width: 537.0001
+    height: 894
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 191
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
