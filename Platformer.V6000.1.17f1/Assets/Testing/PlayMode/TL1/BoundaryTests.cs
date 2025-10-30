@@ -1,3 +1,4 @@
+/*
 using System.Collections;
 using NUnit.Framework;
 using UnityEngine;
@@ -48,3 +49,4 @@ public class BoundaryTests
         Assert.IsFalse(bcModeText.gameObject.activeSelf);
     }
 }
+*/

@@ -23,11 +23,7 @@ public class MainMenu : MonoBehaviour
     /// 
     public void PlayGame()
     {
-        // Use FindAnyObjectByType to get your LevelManager instance if not assigned
-        if (levelManager == null)
-        {
-            levelManager = Object.FindAnyObjectByType<LevelManager>();
-        }
+      LevelManager levelManager = Object.FindAnyObjectByType<LevelManager>();
 
         if (levelManager != null)
         {
