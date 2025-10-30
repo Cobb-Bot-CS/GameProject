@@ -56,3 +56,19 @@ Platformer.V6000.1.17f1/UserSettings/Layouts/default-6000.dwlt
 **/[Uu]ser[Ss]ettings/
 **/[Mm]emoryCaptures/
 Platformer.V6000.1.17f1/.vs/
+# --- Unity cache & large files ---
+Library/
+Temp/
+Logs/
+Obj/
+UserSettings/
+.vs/
+*.sdf
+Platformer.V6000.1.17f1/Assets/Scripts/TL6scripts/font/
+*.psd
+*.tga
+*.fbx
+*.wav
+*.mp4
+*.ttf
+*.otf
