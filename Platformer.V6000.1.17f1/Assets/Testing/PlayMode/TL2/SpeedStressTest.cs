@@ -10,12 +10,12 @@ using UnityEngine.InputSystem.LowLevel;
 using System.Data;
 using UnityEngine.EventSystems;
 
-public class SpeedBoundryTest : InputTestFixture
+public class SpeedStressTest : InputTestFixture
 {
     private GameObject character;
     private Rigidbody2D rb;
     private CharacterMove movescript;
-    private Vector2 startpos;
+    private GameObject wall;
 
     [OneTimeSetUp]
     public override void Setup()
@@ -29,52 +29,48 @@ public class SpeedBoundryTest : InputTestFixture
     {
         var keyboard = InputSystem.AddDevice<Keyboard>();
 
+        //Find Character And Wall
         character = GameObject.Find("PlayerCharacter");
+        wall = GameObject.Find("Wall");
 
-        if (character != null)
+        //Find Character Components
+        rb = character.GetComponent<Rigidbody2D>();
+        movescript = character.GetComponent<CharacterMove>();
+
+        //Reset Position
+        Vector3 startpos = character.transform.position;
+        float speed = 2f;
+        int maxIterations = 10;
+
+        for (int i = 0; i < maxIterations; i++)
         {
-            rb = character.GetComponent<Rigidbody2D>();
-        }
-
-        if (character != null)
-        {
-            movescript = character.GetComponent<CharacterMove>();
-        }
-
-        float speedamount = 2f;
-        startpos = character.transform.position;
-
-
-        while (character.transform.position.x < 55)
-        {
+            //Reset Position And Veloctiy
             character.transform.position = startpos;
-            //yield return MoveRight(speedamount);
+            rb.linearVelocity = Vector2.zero;
+
+            //Apply Speed
+            movescript.IncreaseMoveSpeed(speed);
             Press(keyboard.dKey);
-
-            yield return new WaitForSeconds(2);
-
+            yield return new WaitForSeconds(3);
             Release(keyboard.dKey);
 
-            movescript.IncreaseMoveSpeed(speedamount);
-            speedamount = speedamount *10;
-            Debug.Log("Speed is Currently: " + speedamount);
+            yield return new WaitForSeconds(0.5f);
 
-            //yield return new WaitForSeconds(2);
+            float playerX = character.transform.position.x;
+            float wallX = wall.transform.position.x;
+            float wallWidth = wall.GetComponent<Collider2D>().bounds.extents.x;
 
+            Debug.Log($"Iteration {i + 1}: Speed = {speed}, Player X = {playerX}");
+
+            if (playerX > wallX + wallWidth)
+            {
+                Debug.Log($"Player clipped through the wall at speed {speed}");
+                Assert.Pass();
+            }
+
+            speed *= 2f;
         }
-    }
-    
-    private IEnumerator MoveRight(float speed)
-    {
-        float duration = 3f;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            rb.transform.Translate(Vector2.right * speed * Time.deltaTime);
-            elapsed+=Time.deltaTime;
-            yield return null;  
-        }  
+        Assert.Fail("Player did not clip through the wall after max speed iteration");
     }
 }
 
