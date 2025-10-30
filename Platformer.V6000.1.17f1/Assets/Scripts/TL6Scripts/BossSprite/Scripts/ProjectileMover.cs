@@ -27,15 +27,25 @@ public class ProjectileMover : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    
-       
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(10);
-            Destroy(gameObject);
-        }
-       
-    }
+            //  get(CharacterHealthScript)
+            CharacterHealthScript playerHealth = collision.gameObject.GetComponent<CharacterHealthScript>();
 
+           
+            if (playerHealth != null)
+            {
+                // (CharacterHurt)
+                playerHealth.CharacterHurt(10);
+
+                // »÷ÖÐºóÏú»Ù»ðÇò
+                Destroy(gameObject);
+            }
+            else
+            {
+  
+                Debug.LogError("touched 'Player'£¬but he doesn't have 'CharacterHealthScript'");
+            }
+        }
+    }
 }
