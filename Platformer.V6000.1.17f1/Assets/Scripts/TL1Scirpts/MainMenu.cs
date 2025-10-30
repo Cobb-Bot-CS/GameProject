@@ -2,7 +2,7 @@
  * File: MainMenu.cs
  * Description: Handles main menu actions including starting the game and quitting.
  * Author: Adam Cobb
- * Date: 10-27-2025
+ * Date: 10-28-2025
  */
 
 using UnityEngine;
