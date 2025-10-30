@@ -3,15 +3,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class CharacterMove : MonoBehaviour
 {
     //Movement Variables
     private Rigidbody2D rb;
     private Vector2 movement;
-    private float moveSpeed = 2f;
-    private float jumpStrength = 5f;
-    private float jumpLimiter = 0.1f;
+    private float moveSpeed = 5f;
+    private float jumpStrength = 9f;
+    private float jumpLimiter = .1f;
 
     //Input Actions
     private InputAction moveAction;
@@ -104,17 +105,21 @@ public class CharacterMove : MonoBehaviour
     {
         if (animator.GetBool("IsHurt") == true)
         {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            moveAction.Disable();
+            jumpAction.Disable();
 
-            yield return new WaitForSeconds(2f);
-
+            yield return new WaitForSeconds(1f);
 
             animator.SetBool("IsHurt", false);
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            moveAction.Enable();
+            jumpAction.Enable();
+            {
+                
+            }
         }
 
     }
-    
+
     //BOUNDS TEST ONLY TEMPORARY
     public void IncreaseMoveSpeed(float amount)
     {
