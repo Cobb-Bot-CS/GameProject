@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Terrain
-  - Boss
   layers:
   - Default
   - TransparentFX
@@ -14,8 +13,8 @@ TagManager:
   - Water
   - UI
   - Player
-  - ground
   - 
+  - Ground
   - 
   - 
   - 

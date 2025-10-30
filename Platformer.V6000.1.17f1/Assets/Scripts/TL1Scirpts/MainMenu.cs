@@ -19,9 +19,9 @@ public class MainMenu : MonoBehaviour
    [SerializeField] private LevelManager levelManager;
 
 
-   /// <summary>
+   /// 
    /// Starts the game by loading the first level.
-   /// </summary>
+   /// 
    public void PlayGame()
    {
       // Use FindObjectOfType to get your LevelManager instance
