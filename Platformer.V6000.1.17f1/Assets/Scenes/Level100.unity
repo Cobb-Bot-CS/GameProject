@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d072b5c83ae7d3446b09343ba6a575c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 2
   moveSpeed: -1
 --- !u!114 &167319889
 MonoBehaviour:
@@ -509,6 +510,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1397186965}
+  sfxSource: {fileID: 0}
+  soundEffects: []
+  masterVolume: 1
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!4 &243675142
 Transform:
   m_ObjectHideFlags: 0
@@ -2016,7 +2022,7 @@ Transform:
   m_GameObject: {fileID: 763200508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.45, y: -3.38, z: 0}
+  m_LocalPosition: {x: -9.51, y: -2.46, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2080,7 +2086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221731abbe05e7d43b5da9c502dbf12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupSound: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
+  pickupSoundName: SwordPickup
+  fallbackSound: {fileID: 0}
 --- !u!1 &889938231
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,6 +6505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d072b5c83ae7d3446b09343ba6a575c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveDistance: 2
   moveSpeed: 2
 --- !u!114 &1888140660
 MonoBehaviour:
