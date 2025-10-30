@@ -43,6 +43,7 @@ public class EnemyMoveScript : MonoBehaviour
 
         // If you need physics later, keep this; otherwise remove
         GetComponent<Rigidbody2D>();
+
     }
 
 
