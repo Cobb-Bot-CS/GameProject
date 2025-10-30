@@ -30,20 +30,22 @@ public class PlayerFootsteps : MonoBehaviour
         bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
 
-        // 🦶 Play footsteps when walking
-        if (isMoving && isGrounded)
-        {
-            stepTimer += Time.deltaTime;
-            if (stepTimer >= stepInterval)
-            {
-                AudioManager.Instance.PlaySFXWithRandomPitch(footstepSFXName, 0.95f, 1.05f);
-                stepTimer = 0f;
-            }
-        }
-        else
-        {
-            stepTimer = 0f;
-        }
+
+                // 🦶 Play footsteps when walking
+                if (isMoving && isGrounded)
+                {
+                    stepTimer += Time.deltaTime;
+                    if (stepTimer >= stepInterval)
+                    {
+                        AudioManager.Instance.PlaySFXWithRandomPitch(footstepSFXName, 0.95f, 1.05f);
+                        stepTimer = 0f;
+                    }
+                }
+                else
+                {
+                    stepTimer = 0f;
+                }
+
 
         // 🦘 Play jump sound only once when leaving the ground
         if (wasGrounded && !isGrounded && rb.linearVelocity.y > 0.1f)

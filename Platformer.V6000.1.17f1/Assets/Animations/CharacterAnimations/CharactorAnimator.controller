@@ -334,10 +334,10 @@ AnimatorState:
   m_Transitions:
   - {fileID: -5518428409323436574}
   - {fileID: -4720819522501459961}
-  - {fileID: -4099387446121184179}
-  - {fileID: 1926369343139312386}
-  - {fileID: -526722680666583322}
   - {fileID: 5710341557246894450}
+  - {fileID: 1926369343139312386}
+  - {fileID: -4099387446121184179}
+  - {fileID: -526722680666583322}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -825,7 +825,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HurtAnimation
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6537078406803703808}
