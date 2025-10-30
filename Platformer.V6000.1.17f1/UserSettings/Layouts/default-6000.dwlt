@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Test Runner
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -246,14 +246,14 @@ MonoBehaviour:
     y: 634
     width: 1555
     height: 307
-  m_MinSize: {x: 101, y: 126}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 276}
+  m_MaxSize: {x: 10001, y: 10026}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -303,8 +303,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Test Runner\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1556
-    y: 24
+    x: 1555
+    y: 79
     width: 364
     height: 915
   m_SerializedDataModeController:
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_ContainerData: []
     m_OverlaysVisible: 1
   m_Spl:
-    ID: 1910
+    ID: 109
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -462,7 +462,7 @@ MonoBehaviour:
       CurrentStepName: Unlock Reload Assemblies
       CurrentStageName: 
     m_NewResultList:
-    - id: 1026
+    - id: 1000
       uniqueId: '[Platformer][suite]'
       name: Platformer
       fullName: Platformer
@@ -492,7 +492,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1026
+      parentId: 1000
       parentUniqueId: '[Platformer][suite]'
     - id: 1003
       uniqueId: 'AudioTest.dll/[AudioTest][BoundaryTest_3DAudioDistance][suite]'
@@ -593,7 +593,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1005
       parentUniqueId: 'AudioTest.dll/[AudioTest][StressTest_VoiceLimit][suite]'
-    - id: 1021
+    - id: 1031
       uniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
       name: PlayMode.dll
       fullName: C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll
@@ -607,9 +607,76 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1026
+      parentId: 1000
       parentUniqueId: '[Platformer][suite]'
-    - id: 1013
+    - id: 1027
+      uniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+      name: BossHealthTests_TL6
+      fullName: BossHealthTests_TL6
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1029
+      uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.BoundaryTest_DamageAfterDeath_IsIgnored]'
+      name: BoundaryTest_DamageAfterDeath_IsIgnored
+      fullName: BossHealthTests_TL6.BoundaryTest_DamageAfterDeath_IsIgnored
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+    - id: 1028
+      uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.BoundaryTest_Overkill_HPClampsToZero]'
+      name: BoundaryTest_Overkill_HPClampsToZero
+      fullName: BossHealthTests_TL6.BoundaryTest_Overkill_HPClampsToZero
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+    - id: 1030
+      uniqueId: 'PlayMode.dll/BossHealthTests_TL6/[PlayMode][BossHealthTests_TL6.StressTest_FindPerformanceLimit]'
+      name: StressTest_FindPerformanceLimit
+      fullName: BossHealthTests_TL6.StressTest_FindPerformanceLimit
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1027
+      parentUniqueId: 'PlayMode.dll/[PlayMode][BossHealthTests_TL6][suite]'
+    - id: 1017
       uniqueId: 'PlayMode.dll/[PlayMode][BoulderStressTest][suite]'
       name: BoulderStressTest
       fullName: BoulderStressTest
@@ -623,7 +690,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1031
       parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1007
       uniqueId: 'PlayMode.dll/BoulderStressTest/[PlayMode][BoulderStressTest.MaxBoulderStack]'
@@ -656,7 +723,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1031
       parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1003
       uniqueId: 'PlayMode.dll/BoundaryTests/[PlayMode][BoundaryTests.BCMode_DisablesText_WhenFalse]'
@@ -692,7 +759,40 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: 'PlayMode.dll/[PlayMode][BoundaryTests][suite]'
-    - id: 1015
+    - id: 1023
+      uniqueId: 'PlayMode.dll/[PlayMode][EnemyBoundaryTest][suite]'
+      name: EnemyBoundaryTest
+      fullName: EnemyBoundaryTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1024
+      uniqueId: 'PlayMode.dll/EnemyBoundaryTest/[PlayMode][EnemyBoundaryTest.EnemyDoesNotExceedBoundaries]'
+      name: EnemyDoesNotExceedBoundaries
+      fullName: EnemyBoundaryTest.EnemyDoesNotExceedBoundaries
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1023
+      parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyBoundaryTest][suite]'
+    - id: 1025
       uniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
       name: EnemyStressTest
       fullName: EnemyStressTest
@@ -706,7 +806,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1031
       parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1009
       uniqueId: 'PlayMode.dll/EnemyStressTest/[PlayMode][EnemyStressTest.MaxEnemyCount]'
@@ -725,7 +825,40 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: 'PlayMode.dll/[PlayMode][EnemyStressTest][suite]'
-    - id: 1017
+    - id: 1013
+      uniqueId: 'PlayMode.dll/[PlayMode][HealthBoundsTest][suite]'
+      name: HealthBoundsTest
+      fullName: HealthBoundsTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1014
+      uniqueId: 'PlayMode.dll/HealthBoundsTest/[PlayMode][HealthBoundsTest.OnTriggerEnter2D]'
+      name: OnTriggerEnter2D
+      fullName: HealthBoundsTest.OnTriggerEnter2D
+      resultStatus: 2
+      duration: 0
+      messages: Method marked with UnityTest must return IEnumerator.
+      output: 
+      stacktrace: 
+      notRunnable: 1
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: 'PlayMode.dll/[PlayMode][HealthBoundsTest][suite]'
+    - id: 1019
       uniqueId: 'PlayMode.dll/[PlayMode][LevelManagerTests][suite]'
       name: LevelManagerTests
       fullName: LevelManagerTests
@@ -739,7 +872,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1031
       parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1013
       uniqueId: 'PlayMode.dll/LevelManagerTests/[PlayMode][LevelManagerTests.LoadInvalidLevel]'
@@ -806,7 +939,7 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1021
+      parentId: 1031
       parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
     - id: 1005
       uniqueId: 'PlayMode.dll/PlayButtonStressTest/[PlayMode][PlayButtonStressTest.StressTest_PlayButtonBreakingPoint]'
@@ -857,6 +990,39 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1004
       parentUniqueId: 'PlayMode.dll/[PlayMode][PlayButtonStressTest][suite]'
+    - id: 1015
+      uniqueId: 'PlayMode.dll/[PlayMode][SpeedBoundryTest][suite]'
+      name: SpeedBoundryTest
+      fullName: SpeedBoundryTest
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: '[PlayMode][C:/Users/Adam Cobb/Project/GameProject/Platformer.V6000.1.17f1/Library/ScriptAssemblies/PlayMode.dll][suite]'
+    - id: 1016
+      uniqueId: 'PlayMode.dll/SpeedBoundryTest/[PlayMode][SpeedBoundryTest.SpeedBoundryTesting]'
+      name: SpeedBoundryTesting
+      fullName: SpeedBoundryTest.SpeedBoundryTesting
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: 'PlayMode.dll/[PlayMode][SpeedBoundryTest][suite]'
     m_ResultText: 'PlayButtonStressTest (1 tests) (7.443s)
 
       ---
@@ -1204,7 +1370,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 24
+    y: 79
     width: 318
     height: 608
   m_SerializedDataModeController:
@@ -1221,9 +1387,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 2c440000
       m_LastClickedID: 0
-      m_ExpandedIDs: 684ffdff9c57fdffa45cfdffde67fdffa86ffdff6677fdff307ffdffe489fdffaaaafdff88b7fdfffebffdff80c8fdff4ecffdffc4d7fdff7ae7fdffbc05feffd409feff6029feff262afeffba2cfeffb635feff2638feff503dfeff0244feffaa4afeff5251feff5056feffec5cfeff8663feff226afeffca70feffc875feffa67cfeff4283fefff489feffb090feffc495feffcc9afeff72aafeffa6aefeff58b5feff44b6feff90bbfeffa0c1feff5ec9feff38cffeff5ed3feffeef2fefffcf2feff48f3feff08f8feff16f8feff7cf9feff3803ffff2e04fffffe04ffff50cfffff1ad0ffffdad6ffff4cecffff54f0ffff1ef1fffff4f1ffffe2f2ffff04fbffffc2b4000076000400ae000400c6000400fa060400420704007a0e0400840e0400be0e0400cc0e0400fc0e0400
+      m_ExpandedIDs: 04fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1269,8 +1435,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 320
-    y: 24
+    x: 319
+    y: 79
     width: 1234
     height: 608
   m_SerializedDataModeController:
@@ -1942,9 +2108,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 714
+    y: 713
     width: 1554
-    height: 280
+    height: 281
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1967,7 +2133,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/TL1Scirpts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1977,16 +2143,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/TL1Scirpts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Adam Cobb\Project\GameProject\Platformer.V6000.1.17f1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 159}
-    m_SelectedIDs: 82b60000
-    m_LastClickedID: 46722
-    m_ExpandedIDs: 00000000deb60000e0b60000e2b60000e4b60000e6b60000
+    m_SelectedIDs: 4ab70000
+    m_LastClickedID: 46922
+    m_ExpandedIDs: 00000000deb60000e0b60000e2b60000e4b60000e6b6000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2095,7 +2261,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 658
+    y: 713
     width: 1554
     height: 281
   m_SerializedDataModeController:
@@ -2151,7 +2317,7 @@ MonoBehaviour:
     m_CachedPref: 191
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 17452
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
