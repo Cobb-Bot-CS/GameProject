@@ -2,7 +2,7 @@
  * File: MainMenu.cs
  * Description: Handles main menu actions including starting the game and quitting.
  * Author: Adam Cobb
- * Date: 10-29-2025
+ * Date: 10-26-2025
  */
 
 using UnityEngine;
@@ -28,7 +28,7 @@ public class MainMenu : MonoBehaviour
         if (levelManager != null)
         {
            
-            levelManager.LoadLevel(100, 0);   
+            levelManager.LoadLevel(100, 0);  // loading first level
         }
         else
         {
