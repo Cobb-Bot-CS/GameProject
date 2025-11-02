@@ -1,78 +1,110 @@
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
 /*
- * Filename: EnemyMoveScript.cs
+ * Filename: Playerawarness.cs
  * Developer: Aj Karki
- * Purpose: Moves the enemy up and down between two points.
+ * Purpose: Detects the player and applies damage when in range.
  */
 
-/// <summary>
-/// Handles simple vertical patrol movement for an enemy.
-/// The enemy moves between a lower and upper point using MoveTowards.
-/// </summary>
-public class EnemyMoveScript : MonoBehaviour
+public class Playerawarness : MonoBehaviour
 {
-    // How far (in units) the enemy moves up and down from the start position
-    [SerializeField] private float moveDistance = 2f;
+    [Header("Detection Settings")]
+    public Transform player;                  // Player Transform
+    public float detectRadius = 6f;           // How far the enemy can see the player
+    public float attackRadius = 1.5f;         // How close the enemy must be to attack
+    public float moveSpeed = 2f;              // Enemy movement speed
+    public float attackCooldown = 1f;         // Delay between attacks
+    public LayerMask playerLayer;             // Assign to Player layer in Inspector
 
-    // How fast the enemy moves
-    [SerializeField] private float moveSpeed = 2f;
+    private float nextAttackTime = 0f;
+    private Rigidbody2D rb;
+    private Animator animator;
+    private bool facingRight = true;
 
-    // Starting position of the enemy when the scene begins
-    private Vector2 startPosition;
-
-    // Current target position the enemy is moving toward
-    private Vector2 targetPosition;
-
-    // Whether the enemy is currently moving upward
-    private bool movingUp;
-
-
-    /// <summary>
-    /// Initializes the movement positions and sets the first target.
-    /// </summary>
     private void Start()
     {
-        // Record the position where the enemy started
-        startPosition = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
-        // Start by moving upward
-        movingUp = true;
-        targetPosition = startPosition + Vector2.up * moveDistance;
-
-        // If you need physics later, keep this; otherwise remove
-        GetComponent<Rigidbody2D>();
-
+        // Auto-find the player if not assigned
+        if (player == null)
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null)
+                player = p.transform;
+        }
     }
 
-
-    /// <summary>
-    /// Moves the enemy toward the current target and flips the direction
-    /// when the target is reached.
-    /// </summary>
     private void Update()
     {
-        // Move toward the current target
-        transform.position = Vector2.MoveTowards(
-           transform.position,
-           targetPosition,
-           moveSpeed * Time.deltaTime
-        );
+        if (player == null) return;
 
-        // If close enough to the target, switch direction
-        if (Vector2.Distance(transform.position, targetPosition) < 0.01f)
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        // Detect & Chase
+        if (distance <= detectRadius && distance > attackRadius)
         {
-            movingUp = !movingUp;
+            ChasePlayer();
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
 
-            if (movingUp)
+        // Attack
+        if (distance <= attackRadius && Time.time >= nextAttackTime)
+        {
+            AttackPlayer();
+            nextAttackTime = Time.time + attackCooldown;
+        }
+    }
+
+    private void ChasePlayer()
+    {
+        Vector2 direction = (player.position - transform.position).normalized;
+        rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
+
+        if (animator != null)
+            animator.SetBool("isWalking", true);
+
+        // Flip facing direction
+        if (direction.x > 0 && !facingRight)
+            Flip();
+        else if (direction.x < 0 && facingRight)
+            Flip();
+    }
+
+    private void AttackPlayer()
+    {
+        if (animator != null)
+            animator.SetTrigger("attack");
+
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRadius, playerLayer);
+        if (hit != null)
+        {
+            CharacterHealthScript playerHealth = hit.GetComponent<CharacterHealthScript>();
+            if (playerHealth != null)
             {
-                targetPosition = startPosition + Vector2.up * moveDistance;
-            }
-            else
-            {
-                targetPosition = startPosition + Vector2.down * moveDistance;
+                // ? FIXED: call CharacterHurt instead of CharacterTakeDamage
+                playerHealth.CharacterHurt(5);
+                Debug.Log("Enemy attacked the player!");
             }
         }
+    }
+
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 s = transform.localScale;
+        s.x *= -1;
+        transform.localScale = s;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 }
