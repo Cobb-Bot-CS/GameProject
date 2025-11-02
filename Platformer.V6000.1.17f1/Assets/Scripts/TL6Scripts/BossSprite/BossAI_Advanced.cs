@@ -48,7 +48,7 @@ public class BossAI_Advanced : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private CharacterHealthScript playerHealth;
 
     [Header("Basic Stats")]
     public Slider healthBar;
@@ -235,10 +235,10 @@ public class BossAI_Advanced : MonoBehaviour
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, currentAttack.maxRange, LayerMask.GetMask("Player"));
             foreach (Collider2D hit in hits)
             {
-                PlayerHealth playerHealth = hit.GetComponent<PlayerHealth>();
+                CharacterHealthScript playerHealth = hit.GetComponent<CharacterHealthScript>();
                 if (playerHealth != null)
                 {
-                    playerHealth.TakeDamage(currentAttack.damage);
+                    playerHealth.CharacterHurt((int)currentAttack.damage);
                     if (currentAttack.hitVFX != null)
                     {
                         Instantiate(currentAttack.hitVFX, hit.transform.position, Quaternion.identity);
