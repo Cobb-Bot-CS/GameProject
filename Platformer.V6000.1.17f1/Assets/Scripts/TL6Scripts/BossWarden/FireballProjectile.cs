@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class FireballProjectile : MonoBehaviour
@@ -6,6 +6,7 @@ public class FireballProjectile : MonoBehaviour
     [Header("Flight")]
     public float speed = 8f;          // Flight speed
     public float lifeTime = 3f;       // Auto-destroy after this many seconds
+    public Vector2 direction = Vector2.right; // âœ… æ–°å¢å­—æ®µï¼Œè®©BossWardenAIèƒ½æ§åˆ¶æ–¹å‘
 
     [Header("Damage")]
     public int damage = 20;           // Damage value
@@ -15,11 +16,7 @@ public class FireballProjectile : MonoBehaviour
     public GameObject explosionPrefab; // Explosion prefab on hit (optional)
 
     // Internal state
-    private Vector2 dir = Vector2.right;
     private Transform ownerRoot;       // Owner transform (to ignore self)
-    // private bool inited; 
-        // ·¢ÉäÕß£¨ÓÃÓÚºöÂÔ×Ô¼º£©
-    // private bool inited; // <-- ÒÑÉ¾³ı£ºÕâ¸ö±äÁ¿Ã»ÓĞ±»Ê¹ÓÃ
 
     void Reset()
     {
@@ -46,12 +43,11 @@ public class FireballProjectile : MonoBehaviour
     {
         ownerRoot = owner ? owner.root : null;
         targetLayers = mask;
-        // inited = true; // <-- ÒÑÉ¾³ı£ºÕâ¸ö±äÁ¿Ã»ÓĞ±»Ê¹ÓÃ
     }
 
-    public void Launch(Vector2 direction, bool faceRight)
+    public void Launch(Vector2 dir, bool faceRight)
     {
-        dir = direction.sqrMagnitude > 0.0001f ? direction.normalized : Vector2.right;
+        direction = dir.sqrMagnitude > 0.0001f ? dir.normalized : Vector2.right;
 
         // Flip visual based on direction
         var s = transform.localScale;
@@ -60,8 +56,8 @@ public class FireballProjectile : MonoBehaviour
 
     void Update()
     {
-        // This line moves the fireball
-        transform.Translate(dir * speed * Time.deltaTime, Space.World);
+        // âœ… BossWardenAI.cs è°ƒç”¨ direction åï¼Œè¿™é‡Œä¼šè‡ªåŠ¨ç§»åŠ¨
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -76,20 +72,13 @@ public class FireballProjectile : MonoBehaviour
             return;
         }
 
-        // --- ÉËº¦Âß¼­ĞŞ¸Ä¿ªÊ¼ ---
-        // ³¢ÊÔÕÒµ½ Health ½Å±¾ (¶ø²»ÊÇ CharacterHealthScript)
+        // Damage logic
         var hp = other.GetComponent<Health>();
         if (hp != null)
         {
-            // µ÷ÓÃÍ³Ò»µÄ Damage ·½·¨
             hp.Damage(damage);
             Debug.Log($"[Fireball] Hit {other.name} for {damage}");
         }
-        else
-        {
-            Debug.Log($"[Fireball] {other.name} has no Health component");
-        }
-        // --- ÉËº¦Âß¼­ĞŞ¸Ä½áÊø ---
 
         // Hit VFX
         if (explosionPrefab)
