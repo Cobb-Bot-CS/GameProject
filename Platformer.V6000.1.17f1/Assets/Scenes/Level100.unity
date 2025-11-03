@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDistance: 2
-  moveSpeed: 0
+  moveSpeed: 2
 --- !u!114 &167319889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
-  playerHealth: {fileID: 394238900}
+  playerHealth: {fileID: 394238907}
 --- !u!50 &167319890
 Rigidbody2D:
   serializedVersion: 5
@@ -698,7 +698,7 @@ Transform:
   m_GameObject: {fileID: 167319887}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.07, y: 0.45, z: 0}
+  m_LocalPosition: {x: 6.51, y: 3.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1224,10 +1224,12 @@ GameObject:
   - component: {fileID: 394238905}
   - component: {fileID: 394238904}
   - component: {fileID: 394238903}
-  - component: {fileID: 394238902}
-  - component: {fileID: 394238901}
-  - component: {fileID: 394238900}
-  - component: {fileID: 394238899}
+  - component: {fileID: 394238910}
+  - component: {fileID: 394238909}
+  - component: {fileID: 394238908}
+  - component: {fileID: 394238907}
+  - component: {fileID: 394238912}
+  - component: {fileID: 394238911}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -1252,73 +1254,6 @@ Transform:
   - {fileID: 195262588}
   m_Father: {fileID: 1820671240}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &394238899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394238897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a8c938cb88b4fd40a3c6f1acc6e407d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: {fileID: 394238902}
-  playerAnimator: {fileID: 394238903}
---- !u!114 &394238900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394238897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c55618d694ff0841b0463228a901555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  minHealth: 0
-  currentHealth: 100
-  animator: {fileID: 394238903}
-  movement: {fileID: 394238901}
---- !u!114 &394238901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394238897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 936f8a0a34b3a3746ac2772acf57b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 394238903}
-  spriteRenderer: {fileID: 394238906}
---- !u!114 &394238902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394238897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e81717ff3bb0d448303c6264607fe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FinishedIntro: 0
-  EnteredWorld1: 0
-  WeaponWorld1: 0
-  DefeatedBoss1: 0
-  EnteredWorld2: 0
-  WeaponWorld2: 0
-  DefeatedBoss2: 0
-  EnteredWorld3: 0
-  WeaponWorld3: 0
-  DefeatedBoss3: 0
 --- !u!95 &394238903
 Animator:
   serializedVersion: 7
@@ -1469,6 +1404,122 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &394238907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969b279e48637894da7581435ee71e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  minHealth: 0
+  currentHealth: 100
+  animator: {fileID: 394238903}
+  movement: {fileID: 394238909}
+--- !u!114 &394238908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fc8af0790618b4eb1c46619a6c5739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 394238910}
+  playerAnimator: {fileID: 394238903}
+--- !u!114 &394238909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7bdbd6c9f5753e4682b048813efa16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 394238903}
+  spriteRenderer: {fileID: 394238906}
+--- !u!114 &394238910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47912a2d788e0647afeb41f9b484e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinishedIntro: 0
+  EnteredWorld1: 0
+  WeaponWorld1: 0
+  DefeatedBoss1: 0
+  EnteredWorld2: 0
+  WeaponWorld2: 0
+  DefeatedBoss2: 0
+  EnteredWorld3: 0
+  WeaponWorld3: 0
+  DefeatedBoss3: 0
+--- !u!70 &394238911
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.88, y: 0}
+  m_Size: {x: 0.83, y: 0.0001}
+  m_Direction: 0
+--- !u!114 &394238912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394238897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dead923a0a5f19946b45789b094f5f96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &483161600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,8 +2441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a504087a441ac409b247a041f4bfbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 394238899}
-  weaponAnimator: {fileID: 763200509}
 --- !u!212 &763200511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7273,7 +7322,7 @@ GameObject:
   - component: {fileID: 1888140659}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7287,7 +7336,7 @@ Transform:
   m_GameObject: {fileID: 1888140655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.95, y: 2.07, z: 0}
+  m_LocalPosition: {x: 8.51, y: 6.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7393,7 +7442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageAmount: 5
-  playerHealth: {fileID: 394238900}
+  playerHealth: {fileID: 394238907}
 --- !u!212 &1888140661
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7437,7 +7486,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -8664280450288585976, guid: bbb3e0b2850490940a47f5f4674caab1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
