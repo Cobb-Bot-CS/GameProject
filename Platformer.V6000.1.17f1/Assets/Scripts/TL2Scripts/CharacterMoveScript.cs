@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
+using UnityEngine.TextCore.Text;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class CharacterMove : MonoBehaviour
     private InputAction jumpAction;
 
     //Attack Variables
+    [SerializeField] private CharacterAttack attackScript;
+    [SerializeField] private CapsuleCollider2D weaponHitbox;
     private float cooldownTime = 1f;
     private float nextClickTime = 0f;
 
@@ -68,7 +71,12 @@ public class CharacterMove : MonoBehaviour
         //Sprite Flipper Depending On Direction
         if (moveX != 0)
         {
-            spriteRenderer.flipX = moveX > 0;
+            bool facingLeft = moveX > 0;
+            spriteRenderer.flipX = facingLeft;
+
+            Vector2 offset = weaponHitbox.offset;
+            offset.x = Mathf.Abs(offset.x) * (facingLeft ? 1 : -1);
+            weaponHitbox.offset = offset;
         }
 
         //Character Walking Animation Manager
@@ -84,15 +92,10 @@ public class CharacterMove : MonoBehaviour
         //Character Attacking Animation Manager
         if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
-            animator.SetBool("IsAttacking", true);
-            //Insert Actual Attack Here Later
+            StartCoroutine(attackScript.Attack());
             nextClickTime = Time.time + cooldownTime;
+            Debug.Log("Time is up to " + nextClickTime);
         }
-        else
-        {
-            animator.SetBool("IsAttacking", false);
-        }
-
     }
 
     void FixedUpdate()
