@@ -523,8 +523,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d072b5c83ae7d3446b09343ba6a575c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 2
+  player: {fileID: 1820671240}
+  detectRadius: 6
+  attackRadius: 1.5
   moveSpeed: 2
+  attackCooldown: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &167319889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,11 +704,11 @@ Transform:
   m_GameObject: {fileID: 167319887}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.51, y: 3.53, z: 0}
+  m_LocalPosition: {x: 0.5100002, y: 3.6299999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1317191146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &180409201
 GameObject:
@@ -1447,6 +1453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bdbd6c9f5753e4682b048813efa16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackScript: {fileID: 394238912}
+  weaponHitbox: {fileID: 394238911}
   animator: {fileID: 394238903}
   spriteRenderer: {fileID: 394238906}
 --- !u!114 &394238910
@@ -1505,7 +1513,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.88, y: 0}
+  m_Offset: {x: 0.9, y: 0}
   m_Size: {x: 0.83, y: 0.0001}
   m_Direction: 0
 --- !u!114 &394238912
@@ -1520,6 +1528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dead923a0a5f19946b45789b094f5f96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickDetection: {fileID: 394238909}
+  weaponHitbox: {fileID: 394238911}
+  animator: {fileID: 394238903}
+  bossScript: {fileID: 1995613223}
+  bossHitbox: {fileID: 1995613224}
 --- !u!1 &483161600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,6 +2354,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &544539418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4914618078250941178, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &638039427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,7 +2420,6 @@ GameObject:
   m_Component:
   - component: {fileID: 763200512}
   - component: {fileID: 763200511}
-  - component: {fileID: 763200510}
   - component: {fileID: 763200509}
   - component: {fileID: 763200513}
   - component: {fileID: 763200514}
@@ -2429,18 +2452,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &763200510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763200508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a504087a441ac409b247a041f4bfbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &763200511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2616,6 +2627,16 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!212 &870457347 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7379435350120693979, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &870457350 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3458138776417090404, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &889938231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,6 +2682,11 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &969519976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 418721702857489973, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1019737798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5366,6 +5392,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 418721702857489973, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590588770028347840, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1019737802}
+    - target: {fileID: 1590588770028347840, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2309516251116476507, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5414,6 +5452,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4756467554112458623, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7306456670707596303, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
       propertyPath: player
       value: 
@@ -5421,11 +5463,19 @@ PrefabInstance:
     - target: {fileID: 7306456670707596303, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
       propertyPath: arenaController
       value: 
-      objectReference: {fileID: 1804189458}
-    m_RemovedComponents: []
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7306456670707596303, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+    - {fileID: 483478218867081653, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 418721702857489973, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1995613223}
+    - targetCorrespondingSourceObject: {fileID: 418721702857489973, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1995613227}
   m_SourcePrefab: {fileID: 100100000, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
 --- !u!1 &1317191145
 GameObject:
@@ -5457,6 +5507,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888140656}
+  - {fileID: 167319894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356760219
@@ -7180,6 +7231,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1697220091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4756467554112458623, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1804189457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7189,8 +7251,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1804189460}
-  - component: {fileID: 1804189458}
   - component: {fileID: 1804189459}
+  - component: {fileID: 1804189461}
   m_Layer: 0
   m_Name: ArenaController
   m_TagString: Untagged
@@ -7198,19 +7260,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1804189458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804189457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 273a494bc2624ed4b85d2affed77929c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossAI: {fileID: 1995613222}
 --- !u!61 &1804189459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7272,6 +7321,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 302206878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1804189461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804189457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acb330ac6205bf4bb692a2ba85be476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAI: {fileID: 1995613223}
 --- !u!1 &1820671239
 GameObject:
   m_ObjectHideFlags: 0
@@ -7427,8 +7489,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d072b5c83ae7d3446b09343ba6a575c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 2
+  player: {fileID: 394238898}
+  detectRadius: 6
+  attackRadius: 1.5
   moveSpeed: 2
+  attackCooldown: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1888140660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7520,17 +7588,81 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1995613222 stripped
+--- !u!114 &1995613223
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7306456670707596303, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
-  m_PrefabInstance: {fileID: 1274704010}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 969519976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aae72dbb0817ee45b3185995d2f975c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b3995c7c87a63943981c4d41f2b3bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  statusText: {fileID: 544539418}
+  firePoint: {fileID: 1995613226}
+  player: {fileID: 394238898}
+  arenaController: {fileID: 1995613227}
+  animator: {fileID: 870457350}
+  rb: {fileID: 1995613225}
+  spriteRenderer: {fileID: 870457347}
+  playerHealth: {fileID: 394238907}
+  healthBar: {fileID: 1697220091}
+  maxHealth: 100
+  moveSpeed: 2
+  dashSpeed: 4
+  phase2Threshold: 0.7
+  phase3Threshold: 0.4
+  meleeAttacks: []
+  rangedPhase1Attacks: []
+  rangedPhase2Attacks: []
+  rangedPhase3Attacks: []
+  pushbackAttack:
+    attackName: 
+    animationIndex: 0
+    attackPrefab: {fileID: 0}
+    castVFX: {fileID: 0}
+    hitVFX: {fileID: 0}
+    spawnLocation: 0
+    minRange: 0
+    maxRange: 5
+    damage: 10
+    cooldown: 2
+  meleeRange: 3
+  boredTimer: 3
+  jumpInterval: 8
+  jumpForce: 20
+  actionCooldown: 1.5
+  visualsTransform: {fileID: 1995613226}
+--- !u!70 &1995613224 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7091698732962687179, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1995613225 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3533505638564263978, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1995613226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3985531617412535900, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1995613227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969519976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7acb330ac6205bf4bb692a2ba85be476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAI: {fileID: 1995613223}
 --- !u!1 &2086400251
 GameObject:
   m_ObjectHideFlags: 0
@@ -9701,7 +9833,6 @@ SceneRoots:
   - {fileID: 1820671240}
   - {fileID: 1317191146}
   - {fileID: 1397186966}
-  - {fileID: 167319894}
   - {fileID: 2086400254}
   - {fileID: 4572124053576730846}
   - {fileID: 1274704010}
