@@ -64,9 +64,6 @@ public class Playerawarness : MonoBehaviour
         Vector2 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
-        if (animator != null)
-            animator.SetBool("isWalking", true);
-
         // Flip facing direction
         if (direction.x > 0 && !facingRight)
             Flip();
