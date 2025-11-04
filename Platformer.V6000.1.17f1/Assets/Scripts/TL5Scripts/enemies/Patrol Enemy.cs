@@ -49,9 +49,9 @@ public class PatrolEnemy : MonoBehaviour
     void Patrol()
     {
         // Move in the facing direction
-        rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.linearVelocity.y);
 
-        // Raycast ahead to see if there’s ground or a wall
+        // Raycast ahead to see if thereï¿½s ground or a wall
         RaycastHit2D groundInfo = Physics2D.Raycast(checkPoint.position, Vector2.down, checkDistance, groundMask);
         RaycastHit2D wallInfo = Physics2D.Raycast(checkPoint.position, transform.right, checkDistance, groundMask);
 
@@ -71,7 +71,7 @@ public class PatrolEnemy : MonoBehaviour
 
         // Move toward player
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
         // Flip toward player
         if (direction.x > 0 && !movingRight)
@@ -82,7 +82,7 @@ public class PatrolEnemy : MonoBehaviour
 
     void TryAttack()
     {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         if (Time.time - lastAttackTime >= attackCooldown)
         {
             if (animator != null)
