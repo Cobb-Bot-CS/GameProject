@@ -89,7 +89,7 @@ public class BossAI_Advanced : MonoBehaviour
         initialPosition = transform.position;
         currentState = State.Idle;
         UpdateStatusText("Idle");
-        animator.Play("Idle");
+        //animator.Play("Idle");
 
         currentHealth = maxHealth;
        
@@ -122,7 +122,7 @@ public class BossAI_Advanced : MonoBehaviour
 
     private void IdleState()
     {
-        animator.Play("Idle");
+        //animator.Play("Idle");
         timeSinceLostPlayer += Time.deltaTime;
         if (timeSinceLostPlayer > boredTimer)
         {

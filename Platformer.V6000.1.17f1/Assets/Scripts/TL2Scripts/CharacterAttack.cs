@@ -10,8 +10,8 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private BossAI_Advanced bossScript;
     [SerializeField] private CapsuleCollider2D bossHitbox;
-    [SerializeField] private int baseDamage = 5;
-    [SerializeField] private int weapon1Damage = 10;
+    [SerializeField] private float baseDamage = 5;
+    [SerializeField] private float weapon1Damage = 10;
 
     private int typeAttack = 0;
     
@@ -32,6 +32,7 @@ public class CharacterAttack : MonoBehaviour
                 case 1:
                     bossScript.TakeDamage(weapon1Damage);
                     break;
+
                 default:
                     bossScript.TakeDamage(baseDamage);
                     break;
