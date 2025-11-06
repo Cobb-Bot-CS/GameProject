@@ -2730,7 +2730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0637b5a24d0d1be4d8f70885cd67b02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuUI: {fileID: 0}
+  mainMenuUI: {fileID: 1487877469}
   settingsMenuUI: {fileID: 1425334595}
 --- !u!4 &657245250
 Transform:
@@ -3842,7 +3842,6 @@ GameObject:
   - component: {fileID: 1036567244}
   - component: {fileID: 1036567243}
   - component: {fileID: 1036567242}
-  - component: {fileID: 1036567241}
   - component: {fileID: 1036567240}
   m_Layer: 0
   m_Name: PatrolEnemy
@@ -3866,18 +3865,6 @@ MonoBehaviour:
   attackRange: 1.5
   damage: 10
   attackCooldown: 1
---- !u!114 &1036567241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036567239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c7083e8cff613243a78eddfec1543d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1036567242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3891,7 +3878,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  checkPoint: {fileID: 0}
   checkDistance: 1
   groundMask:
     serializedVersion: 2
@@ -7058,6 +7044,11 @@ Transform:
   - {fileID: 167319894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1322697030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7426125870145829087, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1342776459
 GameObject:
   m_ObjectHideFlags: 0
@@ -8601,16 +8592,16 @@ Canvas:
   m_GameObject: {fileID: 1487877469}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1019737802}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -10616,6 +10607,16 @@ MonoBehaviour:
   masterVolume: 1
   musicVolume: 1
   sfxVolume: 1
+--- !u!212 &2030753590 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7379435350120693979, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2030753591 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3458138776417090404, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 1274704010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2057420712
 GameObject:
   m_ObjectHideFlags: 0
