@@ -1,57 +1,68 @@
 /*
  * File: SettingsManager.cs
- * Description: Manages and displays player settings including BC Mode toggle.
+ * Description: Manages player settings, including volume control and navigation.
  * Author: Adam Cobb
- * Date: 10-27-2025
+ * Date: 11-05-2025
  */
 
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
-
-/// 
-/// Handles game settings such as toggling BC Mode.
-/// 
+/// <summary>
+/// Handles the game settings such as audio volume and navigation between menus.
+/// </summary>
+/// <remarks>
 /// Member Variables:
-///    BCMode - whether BC Mode is active.
-///    bcModeStatusText - UI text displaying BC Mode status.
-/// 
+///     audioMixer - reference to the AudioMixer controlling master volume.
+///     volumeSlider - UI slider to adjust volume.
+///     settingsMenuUI - reference to the Settings Menu Canvas.
+/// </remarks>
 public class SettingsManager : MonoBehaviour
 {
-   [Header("BC Mode Settings")]
-   public bool BCMode = false;             // True or false toggle
-   public Text bcModeStatusText;           // Reference to on-screen text
+    [Header("Audio Settings")]
+    public AudioMixer audioMixer;     // Reference to main audio mixer
+    public Slider volumeSlider;       // UI slider for controlling volume
 
+    [Header("Menu Settings")]
+    public GameObject settingsMenuUI; // Reference to Settings Menu Canvas
 
-   /// 
-   /// Called when the scene starts. Updates BC Mode display.
-   /// 
-   void Start()
-   {
-      UpdateBCModeDisplay();
-   }
+    private void Start()
+    {
+        // Load saved volume preference or default to 0 dB
+        float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 0f);
+        audioMixer.SetFloat("Volume", savedVolume);
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = savedVolume;
+        }
+    }
 
+    /// <summary>
+    /// Sets the master audio volume based on slider input.
+    /// </summary>
+    /// <param name="volume">Slider value between -80 (mute) and 0 (max).</param>
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("MasterVolume", volume); // Save preference
+    }
 
-   /// 
-   /// Toggles BC Mode on or off and updates the display.
-   /// 
-   /// <param name="isOn">True to enable BC Mode, false to disable.</param>
-   public void ToggleBCMode(bool isOn)
-   {
-      BCMode = isOn;
-      UpdateBCModeDisplay();
-   }
+    /// <summary>
+    /// Opens the settings menu.
+    /// </summary>
+    public void OpenSettings()
+    {
+        settingsMenuUI.SetActive(true);
+        Time.timeScale = 0f; // Optional: freeze time if used in-game
+    }
 
-
-   /// 
-   /// Updates the on-screen text to reflect current BC Mode status.
-   /// 
-   private void UpdateBCModeDisplay()
-   {
-      if (bcModeStatusText != null)
-      {
-         bcModeStatusText.gameObject.SetActive(BCMode);
-         bcModeStatusText.text = "BC MODE ACTIVE";
-      }
-   }
+    /// <summary>
+    /// Closes the settings menu and resumes game or returns to main menu.
+    /// </summary>
+    public void CloseSettings()
+    {
+        settingsMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
 }
