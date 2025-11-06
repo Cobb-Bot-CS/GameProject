@@ -4,7 +4,7 @@ public class PatrolEnemy : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 2f;
-    public Transform checkPoint;
+    //public Transform checkPoint;
     public float checkDistance = 1f;
     public LayerMask groundMask;
     public LayerMask playerMask;
@@ -52,13 +52,13 @@ public class PatrolEnemy : MonoBehaviour
         rb.linearVelocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.linearVelocity.y);
 
         // Raycast ahead to see if there�s ground or a wall
-        RaycastHit2D groundInfo = Physics2D.Raycast(checkPoint.position, Vector2.down, checkDistance, groundMask);
-        RaycastHit2D wallInfo = Physics2D.Raycast(checkPoint.position, transform.right, checkDistance, groundMask);
+        //RaycastHit2D groundInfo = Physics2D.Raycast(checkPoint.position, Vector2.down, checkDistance, groundMask);
+        //RaycastHit2D wallInfo = Physics2D.Raycast(checkPoint.position, transform.right, checkDistance, groundMask);
 
-        if (!groundInfo.collider || wallInfo.collider)
-        {
-            Flip();
-        }
+        //if (!groundInfo.collider || wallInfo.collider)
+        //{
+           // Flip();
+       // }
 
         if (animator != null)
             animator.SetBool("IsChasing", false);
