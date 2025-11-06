@@ -4,7 +4,7 @@ public class PatrolEnemy : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 2f;
-    [SerializeField] private Transform checkPoint;     // will be auto-created if missing
+    [SerializeField] private Transform checkPoint;     // auto-created if missing
     public float checkDistance = 1f;
     public LayerMask groundMask;
     public LayerMask playerMask;
@@ -24,32 +24,30 @@ public class PatrolEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
-    // --- Safety nets so fields are never null ---
-    void Awake()
-    {
-        EnsureCheckPoint();
-    }
+    // --- Make sure checkpoint exists in editor & playmode ---
+    void Awake() => EnsureCheckPoint();
+
     void OnValidate()
     {
-        // Runs in editor when values change; keeps checkpoint present
         if (Application.isPlaying) return;
         EnsureCheckPoint();
     }
+
     private void EnsureCheckPoint()
     {
-        if (checkPoint == null)
+        if (checkPoint != null) return;
+
+        var existing = transform.Find("CheckPoint");
+        if (existing != null)
         {
-            var existing = transform.Find("CheckPoint");
-            if (existing != null) checkPoint = existing;
-            else
-            {
-                var go = new GameObject("CheckPoint");
-                go.transform.SetParent(transform);
-                go.transform.localPosition = checkPointLocal;
-                checkPoint = go.transform;
-                // No exception anymore even if you forget to assign
-            }
+            checkPoint = existing;
+            return;
         }
+
+        var go = new GameObject("CheckPoint");
+        go.transform.SetParent(transform);
+        go.transform.localPosition = checkPointLocal;
+        checkPoint = go.transform;
     }
 
     void Start()
@@ -64,7 +62,6 @@ public class PatrolEnemy : MonoBehaviour
 
     void Update()
     {
-        // If no player yet, just patrol without errors
         if (player == null) { Patrol(); return; }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -77,56 +74,20 @@ public class PatrolEnemy : MonoBehaviour
             Patrol();
     }
 
+    // ---------- Behaviours ----------
     void Patrol()
     {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        // Move in the facing direction
-        rb.linearVelocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.linearVelocity.y);
+        // Horizontal move
+        rb.velocity = new Vector2((movingRight ? 1f : -1f) * moveSpeed, rb.velocity.y);
 
-        // Raycast ahead to see if there�s ground or a wall
-        RaycastHit2D groundInfo = Physics2D.Raycast(checkPoint.position, Vector2.down, checkDistance, groundMask);
-        RaycastHit2D wallInfo = Physics2D.Raycast(checkPoint.position, transform.right, checkDistance, groundMask);
+        // Ground/wall checks from checkpoint if available, else from current position
+        Vector2 origin = checkPoint ? (Vector2)checkPoint.position : (Vector2)transform.position;
+        RaycastHit2D groundInfo = Physics2D.Raycast(origin, Vector2.down, checkDistance, groundMask);
+        RaycastHit2D wallInfo = Physics2D.Raycast(origin, transform.right, checkDistance, groundMask);
 
+        // Turn around if no ground ahead or a wall is hit
         if (!groundInfo.collider || wallInfo.collider)
-=======
-        // Horizontal move
-        rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
-
-        // Safe raycasts (only if checkpoint exists)
-        if (checkPoint != null)
->>>>>>> Stashed changes
-=======
-        // Horizontal move
-        rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
-
-        // Safe raycasts (only if checkpoint exists)
-        if (checkPoint != null)
->>>>>>> Stashed changes
-=======
-        // Horizontal move
-        rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
-
-        // Safe raycasts (only if checkpoint exists)
-        if (checkPoint != null)
->>>>>>> Stashed changes
-=======
-        // Horizontal move
-        rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
-
-        // Safe raycasts (only if checkpoint exists)
-        if (checkPoint != null)
->>>>>>> Stashed changes
-        {
-            Vector2 cp = checkPoint.position;
-            var groundInfo = Physics2D.Raycast(cp, Vector2.down, checkDistance, groundMask);
-            var wallInfo = Physics2D.Raycast(cp, transform.right, checkDistance, groundMask);
-
-            if (!groundInfo.collider || wallInfo.collider)
-                Flip();
-        }
+            Flip();
 
         if (animator) animator.SetBool("IsChasing", false);
     }
@@ -136,61 +97,43 @@ public class PatrolEnemy : MonoBehaviour
         if (animator) animator.SetBool("IsChasing", true);
 
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
+        rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
 
-        if (direction.x > 0 && !movingRight) Flip();
-        else if (direction.x < 0 && movingRight) Flip();
+        if (direction.x > 0f && !movingRight) Flip();
+        else if (direction.x < 0f && movingRight) Flip();
     }
 
     void TryAttack()
     {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        rb.linearVelocity = Vector2.zero;
-=======
+        // stop horizontal motion while attacking
         rb.velocity = new Vector2(0f, rb.velocity.y);
 
->>>>>>> Stashed changes
-=======
-        rb.velocity = new Vector2(0f, rb.velocity.y);
+        if (Time.time - lastAttackTime < attackCooldown) return;
 
->>>>>>> Stashed changes
-=======
-        rb.velocity = new Vector2(0f, rb.velocity.y);
+        if (animator) animator.SetTrigger("Attack");
 
->>>>>>> Stashed changes
-=======
-        rb.velocity = new Vector2(0f, rb.velocity.y);
-
->>>>>>> Stashed changes
-        if (Time.time - lastAttackTime >= attackCooldown)
+        // Detect player close enough
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerMask);
+        if (hit != null)
         {
-            if (animator) animator.SetTrigger("Attack");
-
-            // Detect player in a circle around enemy
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerMask);
-            if (hit != null)
-            {
-                var health = hit.GetComponent<CharacterHealthScript>();
-                if (health != null) health.CharacterHurt(damage);
-            }
-            lastAttackTime = Time.time; // or Time.time + attackCooldown if you prefer
+            var health = hit.GetComponent<CharacterHealthScript>();
+            if (health != null) health.CharacterHurt(damage);
         }
+
+        lastAttackTime = Time.time;
     }
 
     void Flip()
     {
         movingRight = !movingRight;
 
-        // flip sprite
+        // flip sprite scale
         var s = transform.localScale;
         s.x *= -1f;
         transform.localScale = s;
 
         // keep checkpoint in front after flip
-        if (checkPoint != null)
+        if (checkPoint)
         {
             var lp = checkPoint.localPosition;
             lp.x *= -1f;
@@ -205,7 +148,7 @@ public class PatrolEnemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
 
-        if (checkPoint != null)
+        if (checkPoint)
         {
             Gizmos.color = Color.cyan;
             Gizmos.DrawLine(checkPoint.position, checkPoint.position + Vector3.down * checkDistance);
