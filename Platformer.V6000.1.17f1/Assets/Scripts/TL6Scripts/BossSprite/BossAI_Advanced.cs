@@ -87,10 +87,13 @@ public class BossAI_Advanced : MonoBehaviour
     void Start()
     {
         initialPosition = transform.position;
-        currentState = State.Dormant;
+        currentState = State.Idle;
+        UpdateStatusText("Idle");
+        animator.Play("Idle");
+
         currentHealth = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
-        UpdateStatusText("Dormant");
+       
+       
     }
 
     void Update()

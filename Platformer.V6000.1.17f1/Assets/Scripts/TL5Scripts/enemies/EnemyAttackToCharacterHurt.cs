@@ -45,7 +45,7 @@ public class EnemyAttackToCharacterHurt : MonoBehaviour
 
     void AttackPlayer()
     {
-        // ✅ call the method YOUR player has
+        //  call the method YOUR player has
         _playerHealth.CharacterHurt(damage);
         Debug.Log($"{name} hit player for {damage}");
     }
