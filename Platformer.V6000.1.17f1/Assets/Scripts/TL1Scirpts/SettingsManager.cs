@@ -21,7 +21,7 @@ using UnityEngine.UI;
 public class SettingsManager : MonoBehaviour
 {
     [Header("Audio Settings")]
-    public AudioMixer audioMixer;     // Reference to main audio mixer
+   // public AudioMixer audioMixer;     // Reference to main audio mixer
     public Slider volumeSlider;       // UI slider for controlling volume
 
     [Header("Menu Settings")]
@@ -31,7 +31,7 @@ public class SettingsManager : MonoBehaviour
     {
         // Load saved volume preference or default to 0 dB
         float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 0f);
-        audioMixer.SetFloat("Volume", savedVolume);
+        //audioMixer.SetFloat("Volume", savedVolume);
         if (volumeSlider != null)
         {
             volumeSlider.value = savedVolume;
@@ -44,7 +44,7 @@ public class SettingsManager : MonoBehaviour
     /// <param name="volume">Slider value between -80 (mute) and 0 (max).</param>
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+       // audioMixer.SetFloat("Volume", volume);
         PlayerPrefs.SetFloat("MasterVolume", volume); // Save preference
     }
 
