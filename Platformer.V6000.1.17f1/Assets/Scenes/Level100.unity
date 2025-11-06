@@ -121,7 +121,11 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!1 &25455220
+=======
+--- !u!1 &11268829
+>>>>>>> Stashed changes
 =======
 --- !u!1 &11268829
 >>>>>>> Stashed changes
@@ -135,6 +139,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   - component: {fileID: 25455221}
@@ -152,11 +157,17 @@ GameObject:
   m_Layer: 0
   m_Name: CheckPoint
 >>>>>>> Stashed changes
+=======
+  - component: {fileID: 11268830}
+  m_Layer: 0
+  m_Name: CheckPoint
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 --- !u!224 &25455221
@@ -169,10 +180,15 @@ Transform:
 --- !u!4 &11268830
 Transform:
 >>>>>>> Stashed changes
+=======
+--- !u!4 &11268830
+Transform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
   m_GameObject: {fileID: 25455220}
@@ -229,6 +245,8 @@ CanvasRenderer:
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   m_GameObject: {fileID: 11268829}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -239,6 +257,9 @@ CanvasRenderer:
   m_Father: {fileID: 1036567247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -81,6 +81,7 @@ public class PatrolEnemy : MonoBehaviour
     {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         // Move in the facing direction
         rb.linearVelocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.linearVelocity.y);
 
@@ -89,6 +90,13 @@ public class PatrolEnemy : MonoBehaviour
         RaycastHit2D wallInfo = Physics2D.Raycast(checkPoint.position, transform.right, checkDistance, groundMask);
 
         if (!groundInfo.collider || wallInfo.collider)
+=======
+        // Horizontal move
+        rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
+
+        // Safe raycasts (only if checkpoint exists)
+        if (checkPoint != null)
+>>>>>>> Stashed changes
 =======
         // Horizontal move
         rb.velocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.velocity.y);
@@ -130,7 +138,12 @@ public class PatrolEnemy : MonoBehaviour
     {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         rb.linearVelocity = Vector2.zero;
+=======
+        rb.velocity = new Vector2(0f, rb.velocity.y);
+
+>>>>>>> Stashed changes
 =======
         rb.velocity = new Vector2(0f, rb.velocity.y);
 
