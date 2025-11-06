@@ -19,13 +19,13 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     [Header("Pause Menu Settings")]
-    public GameObject pauseMenuUI;   // Reference to Pause Menu Canvas
-    private bool isPaused = false;   // Tracks current pause state
+    [SerializeField] private GameObject pauseMenuUI;   // Reference to Pause Menu Canvas
+    private bool isPaused = false;                     // Tracks current pause state
 
     ///
     /// Called every frame to detect player input for pausing or resuming.
     ///
-    void Update()
+    private void Update()
     {
         // Check for Escape key press to toggle pause state
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -42,9 +42,17 @@ public class PauseManager : MonoBehaviour
     ///
     public void ResumeGame()
     {
-        pauseMenuUI.SetActive(false); // Hide pause menu UI
-        Time.timeScale = 1f;          // Resume normal time
-        isPaused = false;             // Update state flag
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(false); // Hide pause menu UI
+        }
+        else
+        {
+            Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
+        }
+
+        Time.timeScale = 1f;              // Resume normal time
+        isPaused = false;                 // Update state flag
     }
 
     ///
@@ -52,9 +60,17 @@ public class PauseManager : MonoBehaviour
     ///
     private void PauseGame()
     {
-        pauseMenuUI.SetActive(true);  // Show pause menu UI
-        Time.timeScale = 0f;          // Freeze all time-dependent systems
-        isPaused = true;              // Update state flag
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);  // Show pause menu UI
+        }
+        else
+        {
+            Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
+        }
+
+        Time.timeScale = 0f;              // Freeze all time-dependent systems
+        isPaused = true;                  // Update state flag
     }
 
     ///
@@ -62,8 +78,17 @@ public class PauseManager : MonoBehaviour
     ///
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;                   // Ensure time is unfrozen
-        SceneManager.LoadScene("MainMenu");    // Load main menu scene (adjust name if needed)
+        Time.timeScale = 1f; // Ensure time is unfrozen
+
+        // Safely check if the scene exists before loading
+        if (Application.CanStreamedLevelBeLoaded("MainMenu"))
+        {
+            SceneManager.LoadScene("MainMenu"); // Load main menu scene
+        }
+        else
+        {
+            Debug.LogError("MainMenu scene not found! Ensure it’s added to Build Settings.");
+        }
     }
 
     ///
