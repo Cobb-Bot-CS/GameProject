@@ -2659,7 +2659,7 @@ CanvasRenderer:
 --- !u!114 &544539418 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4914618078250941178, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
-  m_PrefabInstance: {fileID: 986363438}
+  m_PrefabInstance: {fileID: 1274704010}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
