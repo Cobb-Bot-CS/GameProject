@@ -4,7 +4,7 @@ public class PatrolEnemy : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 2f;
-    //public Transform checkPoint;
+    [SerializeField] private Transform checkPoint;     // auto-created if missing
     public float checkDistance = 1f;
     public LayerMask groundMask;
     public LayerMask playerMask;
@@ -15,96 +15,130 @@ public class PatrolEnemy : MonoBehaviour
     public int damage = 10;
     public float attackCooldown = 1f;
 
+    [Header("Auto CheckPoint Offset (local)")]
+    [SerializeField] private Vector2 checkPointLocal = new Vector2(0.6f, -0.1f);
+
     private bool movingRight = true;
     private float lastAttackTime;
     private Transform player;
     private Rigidbody2D rb;
     private Animator animator;
 
+    // --- Make sure checkpoint exists in editor & playmode ---
+    void Awake() => EnsureCheckPoint();
+
+    void OnValidate()
+    {
+        if (Application.isPlaying) return;
+        EnsureCheckPoint();
+    }
+
+    private void EnsureCheckPoint()
+    {
+        if (checkPoint != null) return;
+
+        var existing = transform.Find("CheckPoint");
+        if (existing != null)
+        {
+            checkPoint = existing;
+            return;
+        }
+
+        var go = new GameObject("CheckPoint");
+        go.transform.SetParent(transform);
+        go.transform.localPosition = checkPointLocal;
+        checkPoint = go.transform;
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        var p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null) player = p.transform;
+        else Debug.LogWarning("[PatrolEnemy] No GameObject tagged 'Player' found. Chasing/attacking will be skipped.");
     }
 
     void Update()
     {
+        if (player == null) { Patrol(); return; }
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
         if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
-        {
             ChasePlayer();
-        }
         else if (distanceToPlayer <= attackRange)
-        {
             TryAttack();
-        }
         else
-        {
             Patrol();
-        }
     }
 
+    // ---------- Behaviours ----------
     void Patrol()
     {
-        // Move in the facing direction
-        rb.linearVelocity = new Vector2((movingRight ? 1 : -1) * moveSpeed, rb.linearVelocity.y);
+        // Horizontal move
+        rb.linearVelocity = new Vector2((movingRight ? 1f : -1f) * moveSpeed, rb.linearVelocity.y);
 
-        // Raycast ahead to see if there�s ground or a wall
-        //RaycastHit2D groundInfo = Physics2D.Raycast(checkPoint.position, Vector2.down, checkDistance, groundMask);
-        //RaycastHit2D wallInfo = Physics2D.Raycast(checkPoint.position, transform.right, checkDistance, groundMask);
+        // Ground/wall checks from checkpoint if available, else from current position
+        Vector2 origin = checkPoint ? (Vector2)checkPoint.position : (Vector2)transform.position;
+        RaycastHit2D groundInfo = Physics2D.Raycast(origin, Vector2.down, checkDistance, groundMask);
+        RaycastHit2D wallInfo = Physics2D.Raycast(origin, transform.right, checkDistance, groundMask);
 
-        //if (!groundInfo.collider || wallInfo.collider)
-        //{
-           // Flip();
-       // }
+        // Turn around if no ground ahead or a wall is hit
+        if (!groundInfo.collider || wallInfo.collider)
+            Flip();
 
-        if (animator != null)
-            animator.SetBool("IsChasing", false);
+        if (animator) animator.SetBool("IsChasing", false);
     }
 
     void ChasePlayer()
     {
-        if (animator != null)
-            animator.SetBool("IsChasing", true);
+        if (animator) animator.SetBool("IsChasing", true);
 
-        // Move toward player
         Vector2 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
-        // Flip toward player
-        if (direction.x > 0 && !movingRight)
-            Flip();
-        else if (direction.x < 0 && movingRight)
-            Flip();
+        if (direction.x > 0f && !movingRight) Flip();
+        else if (direction.x < 0f && movingRight) Flip();
     }
 
     void TryAttack()
     {
-        rb.linearVelocity = Vector2.zero;
-        if (Time.time - lastAttackTime >= attackCooldown)
-        {
-            if (animator != null)
-                animator.SetTrigger("Attack");
+        // stop horizontal motion while attacking
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
-            Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerMask);
-            if (hit != null)
-            {
-                CharacterHealthScript health = hit.GetComponent<CharacterHealthScript>();
-                if (health != null)
-                    health.CharacterHurt(damage);
-            }
-            lastAttackTime = Time.time;
+        if (Time.time - lastAttackTime < attackCooldown) return;
+
+        if (animator) animator.SetTrigger("Attack");
+
+        // Detect player close enough
+        Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerMask);
+        if (hit != null)
+        {
+            var health = hit.GetComponent<CharacterHealthScript>();
+            if (health != null) health.CharacterHurt(damage);
         }
+
+        lastAttackTime = Time.time;
     }
 
     void Flip()
     {
         movingRight = !movingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
+
+        // flip sprite scale
+        var s = transform.localScale;
+        s.x *= -1f;
+        transform.localScale = s;
+
+        // keep checkpoint in front after flip
+        if (checkPoint)
+        {
+            var lp = checkPoint.localPosition;
+            lp.x *= -1f;
+            checkPoint.localPosition = lp;
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -113,5 +147,12 @@ public class PatrolEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+
+        if (checkPoint)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(checkPoint.position, checkPoint.position + Vector3.down * checkDistance);
+            Gizmos.DrawLine(checkPoint.position, checkPoint.position + transform.right * checkDistance);
+        }
     }
 }
