@@ -78,7 +78,7 @@ public class PatrolEnemy : MonoBehaviour
     void Patrol()
     {
         // Horizontal move
-        rb.velocity = new Vector2((movingRight ? 1f : -1f) * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2((movingRight ? 1f : -1f) * moveSpeed, rb.linearVelocity.y);
 
         // Ground/wall checks from checkpoint if available, else from current position
         Vector2 origin = checkPoint ? (Vector2)checkPoint.position : (Vector2)transform.position;
@@ -97,7 +97,7 @@ public class PatrolEnemy : MonoBehaviour
         if (animator) animator.SetBool("IsChasing", true);
 
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
         if (direction.x > 0f && !movingRight) Flip();
         else if (direction.x < 0f && movingRight) Flip();
@@ -106,7 +106,7 @@ public class PatrolEnemy : MonoBehaviour
     void TryAttack()
     {
         // stop horizontal motion while attacking
-        rb.velocity = new Vector2(0f, rb.velocity.y);
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
         if (Time.time - lastAttackTime < attackCooldown) return;
 
