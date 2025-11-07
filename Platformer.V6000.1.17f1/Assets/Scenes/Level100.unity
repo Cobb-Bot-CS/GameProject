@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSoundName: SwordPickup
-  fallbackSound: {fileID: 0}
+  fallbackSound: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
 --- !u!1 &816749095
 GameObject:
   m_ObjectHideFlags: 0
@@ -10346,8 +10346,8 @@ MonoBehaviour:
     loop: 0
   - name: Walk
     clip: {fileID: 8300000, guid: 9b713c76b05f8b04882a23a60605b0d2, type: 3}
-    volume: 0.871
-    pitch: 2.04
+    volume: 0.5
+    pitch: 1
     loop: 0
   - name: SwordPickup
     clip: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
