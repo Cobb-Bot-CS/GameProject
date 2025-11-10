@@ -14226,6 +14226,16 @@ MonoBehaviour:
     volume: 0.632
     pitch: 0.73
     loop: 0
+  - name: Enemy
+    clip: {fileID: 0}
+    volume: 0.632
+    pitch: 0.73
+    loop: 0
+  - name: Lava
+    clip: {fileID: 0}
+    volume: 0.632
+    pitch: 0.73
+    loop: 0
   masterVolume: 1
   musicVolume: 1
   sfxVolume: 1
