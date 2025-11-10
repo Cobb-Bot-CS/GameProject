@@ -321,6 +321,14 @@ PrefabInstance:
       propertyPath: arenaController
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7379435350120693979, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379435350120693979, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2057763795
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7306456670707596303, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
     - {fileID: 483478218867081653, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
@@ -9202,6 +9210,11 @@ MonoBehaviour:
   jumpForce: 20
   actionCooldown: 1.5
   visualsTransform: {fileID: 583169397}
+--- !u!70 &1365775048 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7091698732962687179, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
+  m_PrefabInstance: {fileID: 316327737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1367455294
 GameObject:
   m_ObjectHideFlags: 0
@@ -10396,8 +10409,8 @@ MonoBehaviour:
   clickDetection: {fileID: 1749746499}
   weaponHitbox: {fileID: 1749746495}
   animator: {fileID: 1749746501}
-  bossScript: {fileID: 0}
-  bossHitbox: {fileID: 0}
+  bossScript: {fileID: 1365775046}
+  bossHitbox: {fileID: 1365775048}
   baseDamage: 200
   weapon1Damage: 10
 --- !u!114 &1749746497
