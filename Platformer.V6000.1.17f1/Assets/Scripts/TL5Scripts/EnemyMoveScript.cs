@@ -9,12 +9,14 @@ using UnityEngine;
 public class Playerawarness : MonoBehaviour
 {
     [Header("Detection Settings")]
-    public Transform player;                  // Player Transform
-    public float detectRadius = 6f;           // How far the enemy can see the player
-    public float attackRadius = 1.5f;         // How close the enemy must be to attack
-    public float moveSpeed = 2f;              // Enemy movement speed
-    public float attackCooldown = 1f;         // Delay between attacks
-    public LayerMask playerLayer;             // Assign to Player layer in Inspector
+    private Transform player;                  // Player Transform
+    private float detectRadius = 6f;           // How far the enemy can see the player
+    private float attackRadius = 1.5f;         // How close the enemy must be to attack
+   // private float moveSpeed = 2f;              // Enemy movement speed
+    private float attackCooldown = 1f;         // Delay between attacks
+    private LayerMask playerLayer;             // Assign to Player layer in Inspector
+
+    private MovespeedSuper moveSpeedObj = new Movespeed();
 
     private float nextAttackTime = 0f;
     private Rigidbody2D rb;
@@ -62,7 +64,7 @@ public class Playerawarness : MonoBehaviour
     private void ChasePlayer()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-        rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(direction.x * moveSpeedObj.speed(), rb.linearVelocity.y);
 
         // Flip facing direction
         if (direction.x > 0 && !facingRight)
@@ -105,3 +107,24 @@ public class Playerawarness : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 }
+
+public class MovespeedSuper
+{
+
+   public virtual float speed()
+  // public float speed()
+    {
+        return 100f;
+    }
+}
+
+public class Movespeed: MovespeedSuper
+{
+
+   public override  float speed()
+  // public float speed()
+    {
+        return 2f;
+    }
+}
+

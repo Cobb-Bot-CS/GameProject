@@ -10,28 +10,28 @@ EditorBuildSettings:
     guid: 31a0352d363a1594c8f223d4a43d92c4
   - enabled: 1
     path: Assets/Scenes/Level100.unity
-    guid: 8b8cc9ee01ea53b48914d9a77b53a40d
+    guid: 06a50bd261bb6fa40ae116c40362f7e9
   - enabled: 0
     path: Assets/Scenes/SceneV1.unity
     guid: 91813ffd482ce904cb677f55c36cdf17
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level101.unity
     guid: 48b385c46a51ac247ae8c71e59e8f446
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level102.unity
     guid: ed5d2446d53820543b2e124d923ab6bf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TestingScene.unity
     guid: ad0df868d924a1e418cf7d496aad39bd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlayerTests.unity
     guid: 1a810d3599a6b814b84ffc19a74ec8cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level100.unity
-    guid: 8b8cc9ee01ea53b48914d9a77b53a40d
+    guid: 06a50bd261bb6fa40ae116c40362f7e9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
