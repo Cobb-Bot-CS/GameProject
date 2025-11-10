@@ -1,10 +1,11 @@
-using System.Collections;
+#if UNITY_EDITOR
 using Codice.Client.Common.GameUI;
+#endif
+using System.Collections;
 using UnityEngine;
 
 public class CharacterAttack : MonoBehaviour
 {
-
     [SerializeField] private CharacterMove clickDetection;
     [SerializeField] private CapsuleCollider2D weaponHitbox;
     [SerializeField] private Animator animator;
@@ -14,8 +15,6 @@ public class CharacterAttack : MonoBehaviour
     [SerializeField] private float weapon1Damage = 10;
 
     private int typeAttack = 0;
-    
-    
 
     public IEnumerator Attack()
     {
@@ -32,16 +31,13 @@ public class CharacterAttack : MonoBehaviour
                 case 1:
                     bossScript.TakeDamage(weapon1Damage);
                     break;
-
                 default:
                     bossScript.TakeDamage(baseDamage);
                     break;
             }
-
         }
 
         yield return new WaitForSeconds(0.3f);
         animator.SetBool("IsAttacking", false);
-
     }
 }

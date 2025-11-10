@@ -1,0 +1,8 @@
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/GitHub/GameProject/Platformer.V6000.1.17f1/.utmp/RelWithDebInfo/62w225i5/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

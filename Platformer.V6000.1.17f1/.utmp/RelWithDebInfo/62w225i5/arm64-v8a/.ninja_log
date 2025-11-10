@@ -1,0 +1,23 @@
+# ninja log v5
+7	6075	7844625417550010	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8b643420236f6809
+516	1451	7844625371219595	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	e967f4251c37f3ed
+1458	2334	7844625379080004	D:/GitHub/GameProject/Platformer.V6000.1.17f1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/62w225i5/obj/arm64-v8a/libswappywrapper.so	b6bf19a79cd2e76d
+473	5468	7844625411402718	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d42160dba8e0f977
+255	5531	7844625412014023	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	c7505d8cecd1507e
+299	5730	7844625414059164	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b549d2a0d27eada5
+32	5561	7844625412323268	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	44c6f2fa075436b8
+117	5652	7844625413282866	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3c4e25938a7fe8ca
+391	5576	7844625412492346	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5c61787d4cc55cd6
+185	5992	7844625416741695	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c407d04a614bfd3e
+6076	6439	7844625421183226	D:/GitHub/GameProject/Platformer.V6000.1.17f1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/62w225i5/obj/arm64-v8a/libgame.so	4d444be4cbb29115
+209	807	7844661517283050	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	e967f4251c37f3ed
+809	1374	7844661522550678	D:/GitHub/GameProject/Platformer.V6000.1.17f1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/62w225i5/obj/arm64-v8a/libswappywrapper.so	b6bf19a79cd2e76d
+144	3531	7844661544354019	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d42160dba8e0f977
+161	3572	7844661544814040	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	c7505d8cecd1507e
+93	3601	7844661545054385	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	44c6f2fa075436b8
+178	3625	7844661545294624	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5c61787d4cc55cd6
+111	3707	7844661546164473	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3c4e25938a7fe8ca
+193	3814	7844661547334617	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b549d2a0d27eada5
+125	3981	7844661549010507	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c407d04a614bfd3e
+64	4120	7844661550374086	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8b643420236f6809
+4121	4496	7844661554129735	D:/GitHub/GameProject/Platformer.V6000.1.17f1/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/62w225i5/obj/arm64-v8a/libgame.so	4d444be4cbb29115
