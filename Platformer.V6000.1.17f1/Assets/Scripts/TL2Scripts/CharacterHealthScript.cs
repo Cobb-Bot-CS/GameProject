@@ -1,17 +1,14 @@
 using System.Data.Common;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CharacterHealthScript : MonoBehaviour
 {
-    
     //Health Related Variables
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int minHealth = 0;
     public int currentHealth = 100;
 
     //Movement While Hurt / Animation
-     [SerializeField] private GameObject deathScreen;
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterMove movement;
 
@@ -46,9 +43,6 @@ public class CharacterHealthScript : MonoBehaviour
     {
             animator.SetBool("IsHurt", true);
             Debug.Log("Character Died");
-            movement.enabled = false;
-            if (deathScreen != null)
-            deathScreen.SetActive(true);
             //trigger game over screen]
             //restart game
     }
@@ -60,9 +54,5 @@ public class CharacterHealthScript : MonoBehaviour
             currentHealth = 100;
         }
     }
-    public void RestartGame()
-{
-    Time.timeScale = 1f; // unpause the game
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-}
+    
 }

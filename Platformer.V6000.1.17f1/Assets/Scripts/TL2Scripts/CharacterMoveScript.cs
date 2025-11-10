@@ -61,9 +61,7 @@ public class CharacterMove : MonoBehaviour
 
     void Update()
     {
-       
         // Movement Input (Keyboard + Joystick)
-      
         float moveX = 0f;
 
         if (joystick != null)
@@ -83,9 +81,7 @@ public class CharacterMove : MonoBehaviour
 
         movement = new Vector2(moveX, rb.linearVelocity.y);
 
-        
-        //  Jump Logic (velocity-based, no IsGrounded)
-        
+        // Jump Logic (velocity-based, no IsGrounded)
 
         // 1️⃣ Keyboard jump
         if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
@@ -113,7 +109,7 @@ public class CharacterMove : MonoBehaviour
         // Walking animation control
         animator.SetBool("IsWalking", moveX != 0);
 
-        // Attack control (mouse click)
+        // PC Attack control (mouse left click)
         if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
             StartCoroutine(attackScript.Attack());
@@ -143,10 +139,21 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
+    // Mobile Attack trigger for UI button
+    public void MobileAttack()
+    {
+        // Same logic as mouse click attack
+        if (Time.time >= nextClickTime)
+        {
+            StartCoroutine(attackScript.Attack());
+            nextClickTime = Time.time + cooldownTime;
+            Debug.Log("Mobile attack triggered at " + Time.time);
+        }
+    }
+
     // Temporary function for testing
     public void IncreaseMoveSpeed(float amount)
     {
         moveSpeed = amount;
     }
 }
-
