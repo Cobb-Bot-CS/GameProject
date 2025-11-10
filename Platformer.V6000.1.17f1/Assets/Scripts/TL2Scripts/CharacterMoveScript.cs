@@ -1,5 +1,7 @@
 ﻿
+#if UNITY_EDITOR
 using log4net.Util;
+#endif
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,7 +11,6 @@ using UnityEngine.UI;
 
 public class CharacterMove : MonoBehaviour
 {
-    // Movement variables
     private Rigidbody2D rb;
     private Vector2 movement;
     private float moveSpeed = 5f;
@@ -17,23 +18,19 @@ public class CharacterMove : MonoBehaviour
     private float jumpLimiter = .1f;      // Used instead of IsGrounded()
     public Joystick joystick;             // Mobile joystick reference
 
-    // Input Actions
     private InputAction moveAction;
     private InputAction jumpAction;
 
-    // Attack variables
     [SerializeField] private CharacterAttack attackScript;
     [SerializeField] private CapsuleCollider2D weaponHitbox;
     private float cooldownTime = 1f;
     private float nextClickTime = 0f;
 
-    // Animator variables
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     void OnEnable()
     {
-        // Define input actions (A/D for move, Space for jump)
         moveAction = new InputAction(type: InputActionType.Value, binding: "<Keyboard>/a");
         moveAction.AddBinding("Keyboard>/d");
         moveAction.AddCompositeBinding("1DAxis")
@@ -54,21 +51,18 @@ public class CharacterMove : MonoBehaviour
 
     void Start()
     {
-        // Get required components
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        // Movement Input (Keyboard + Joystick)
         float moveX = 0f;
 
         if (joystick != null)
         {
             moveX = joystick.Horizontal();
 
-            // Allow keyboard when joystick centered
             if (Mathf.Abs(moveX) < 0.1f)
             {
                 moveX = moveAction.ReadValue<float>();
@@ -81,21 +75,16 @@ public class CharacterMove : MonoBehaviour
 
         movement = new Vector2(moveX, rb.linearVelocity.y);
 
-        // Jump Logic (velocity-based, no IsGrounded)
-
-        // 1️⃣ Keyboard jump
         if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
         }
 
-        // 2️⃣ Joystick upward drag jump
         if (joystick != null && joystick.Vertical() > 0.6f && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
         }
 
-        // Sprite flipping depending on direction
         if (moveX != 0)
         {
             bool facingLeft = moveX > 0;
@@ -106,10 +95,8 @@ public class CharacterMove : MonoBehaviour
             weaponHitbox.offset = offset;
         }
 
-        // Walking animation control
         animator.SetBool("IsWalking", moveX != 0);
 
-        // PC Attack control (mouse left click)
         if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
             StartCoroutine(attackScript.Attack());
@@ -120,7 +107,6 @@ public class CharacterMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Smooth horizontal movement
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
@@ -139,10 +125,8 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
-    // Mobile Attack trigger for UI button
     public void MobileAttack()
     {
-        // Same logic as mouse click attack
         if (Time.time >= nextClickTime)
         {
             StartCoroutine(attackScript.Attack());
@@ -151,7 +135,6 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
-    // Temporary function for testing
     public void IncreaseMoveSpeed(float amount)
     {
         moveSpeed = amount;
