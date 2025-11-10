@@ -2753,6 +2753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bdbd6c9f5753e4682b048813efa16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystick: {fileID: 1074922619}
   attackScript: {fileID: 394238912}
   weaponHitbox: {fileID: 394238911}
   animator: {fileID: 394238903}
@@ -5363,6 +5364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d06efd2c5a4ac4f821493a654bbc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpThreshold: 0.6
 --- !u!1 &1075861825
 GameObject:
   m_ObjectHideFlags: 0
@@ -14567,7 +14569,7 @@ GameObject:
   - component: {fileID: 2130283954}
   - component: {fileID: 2130283953}
   - component: {fileID: 2130283952}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

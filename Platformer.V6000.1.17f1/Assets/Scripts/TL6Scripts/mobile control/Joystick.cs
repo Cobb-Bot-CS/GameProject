@@ -7,6 +7,11 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     private RectTransform handle;
     private Vector2 inputVector;
 
+    //  新增：记录是否触发跳跃
+    private bool jumpTriggered = false;
+    [Header("Jump Settings")]
+    public float jumpThreshold = 0.6f;  // 拖动多高算“跳跃”
+
     void Start()
     {
         bg = GetComponent<RectTransform>();
@@ -30,6 +35,12 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
                 inputVector.x * (bg.sizeDelta.x / 3f),
                 inputVector.y * (bg.sizeDelta.y / 3f)
             );
+
+            //  检测上拖跳跃
+            if (inputVector.y > jumpThreshold && !jumpTriggered)
+            {
+                jumpTriggered = true;
+            }
         }
     }
 
@@ -42,8 +53,20 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     {
         inputVector = Vector2.zero;
         handle.anchoredPosition = Vector2.zero;
+        jumpTriggered = false;
     }
 
     public float Horizontal() => inputVector.x;
     public float Vertical() => inputVector.y;
+
+    // 新增方法：供玩家脚本调用跳跃信号
+    public bool JumpTriggered()
+    {
+        if (jumpTriggered)
+        {
+            jumpTriggered = false; // 重置状态
+            return true;
+        }
+        return false;
+    }
 }
