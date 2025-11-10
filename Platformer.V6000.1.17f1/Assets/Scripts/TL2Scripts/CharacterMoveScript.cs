@@ -1,37 +1,39 @@
-
+﻿
+using log4net.Util;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
-using UnityEngine.UI;
-using UnityEngine.Tilemaps;
 using UnityEngine.TextCore.Text;
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class CharacterMove : MonoBehaviour
 {
-    //Movement Variables
+    // Movement variables
     private Rigidbody2D rb;
     private Vector2 movement;
     private float moveSpeed = 5f;
     private float jumpStrength = 9f;
-    private float jumpLimiter = .1f;
+    private float jumpLimiter = .1f;      // Used instead of IsGrounded()
+    public Joystick joystick;             // Mobile joystick reference
 
-    //Input Actions
+    // Input Actions
     private InputAction moveAction;
     private InputAction jumpAction;
 
-    //Attack Variables
+    // Attack variables
     [SerializeField] private CharacterAttack attackScript;
     [SerializeField] private CapsuleCollider2D weaponHitbox;
     private float cooldownTime = 1f;
     private float nextClickTime = 0f;
 
-    //Animator Variables
+    // Animator variables
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     void OnEnable()
     {
-        //Defining Input Actions
+        // Define input actions (A/D for move, Space for jump)
         moveAction = new InputAction(type: InputActionType.Value, binding: "<Keyboard>/a");
         moveAction.AddBinding("Keyboard>/d");
         moveAction.AddCompositeBinding("1DAxis")
@@ -52,23 +54,52 @@ public class CharacterMove : MonoBehaviour
 
     void Start()
     {
-        //Getting Components Upon Startup
+        // Get required components
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        //Input Manager Using New Unity Input System
-        float moveX = moveAction.ReadValue<float>();
-        movement = new Vector2(moveX, rb.linearVelocity.y);
+       
+        // Movement Input (Keyboard + Joystick)
+      
+        float moveX = 0f;
 
-        if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
+        if (joystick != null)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpStrength);
+            moveX = joystick.Horizontal();
+
+            // Allow keyboard when joystick centered
+            if (Mathf.Abs(moveX) < 0.1f)
+            {
+                moveX = moveAction.ReadValue<float>();
+            }
+        }
+        else
+        {
+            moveX = moveAction.ReadValue<float>();
         }
 
-        //Sprite Flipper Depending On Direction
+        movement = new Vector2(moveX, rb.linearVelocity.y);
+
+        
+        //  Jump Logic (velocity-based, no IsGrounded)
+        
+
+        // 1️⃣ Keyboard jump
+        if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
+        }
+
+        // 2️⃣ Joystick upward drag jump
+        if (joystick != null && joystick.Vertical() > 0.6f && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
+        }
+
+        // Sprite flipping depending on direction
         if (moveX != 0)
         {
             bool facingLeft = moveX > 0;
@@ -79,28 +110,21 @@ public class CharacterMove : MonoBehaviour
             weaponHitbox.offset = offset;
         }
 
-        //Character Walking Animation Manager
-        if (moveX != 0)
-        {
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            animator.SetBool("IsWalking", false);
-        }
+        // Walking animation control
+        animator.SetBool("IsWalking", moveX != 0);
 
-        //Character Attacking Animation Manager
+        // Attack control (mouse click)
         if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
             StartCoroutine(attackScript.Attack());
             nextClickTime = Time.time + cooldownTime;
-            Debug.Log("Time is up to " + nextClickTime);
+            Debug.Log("Next click available at " + nextClickTime);
         }
     }
 
     void FixedUpdate()
     {
-        //Allows For Smooth Horizontal Movement 
+        // Smooth horizontal movement
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
@@ -116,16 +140,13 @@ public class CharacterMove : MonoBehaviour
             animator.SetBool("IsHurt", false);
             moveAction.Enable();
             jumpAction.Enable();
-            {
-                
-            }
         }
-
     }
 
-    //BOUNDS TEST ONLY TEMPORARY
+    // Temporary function for testing
     public void IncreaseMoveSpeed(float amount)
     {
         moveSpeed = amount;
     }
 }
+
