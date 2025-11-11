@@ -55,9 +55,9 @@ https://drive.google.com/file/d/1fvkmlRFnUHNgRsmMFJm4wFjXm4BBc0_j/view?usp=drive
 -------------------------------------------------------
 
 **Future Updates:**  
-Developing new maps and features
-Improved visual effects and animations
-Additional enemy types and boss stages
+-Developing new maps and features
+-Improved visual effects and animations
+-Additional enemy types and boss stages
 
 -------------------------------------------------------
 
