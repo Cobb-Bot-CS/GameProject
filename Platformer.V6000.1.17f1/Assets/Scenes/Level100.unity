@@ -2363,7 +2363,7 @@ Tilemap:
       - {fileID: 7288868865586460202, guid: 1656759e76620564f853ff88a2799869, type: 3}
       - {fileID: -6167413043888199122, guid: 1656759e76620564f853ff88a2799869, type: 3}
       - {fileID: -2012132654485923743, guid: 1656759e76620564f853ff88a2799869, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 49, y: -12, z: 0}
@@ -13949,7 +13949,7 @@ GameObject:
   - component: {fileID: 1890731945}
   - component: {fileID: 1890731944}
   m_Layer: 0
-  m_Name: World1MusicParent (1)
+  m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14208,30 +14208,108 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905215553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db726fab439d74c42a80acca5a28da1e, type: 3}
+  m_Script: {fileID: 11500000, guid: f0cc9a747ccea83428db3589191fa4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 1890731944}
-  sfxSource: {fileID: 1905215555}
-  soundEffects:
+  sounds:
   - name: Jump
+    type: 0
     clip: {fileID: 8300000, guid: cab14906859acc04eb082293905f9ca1, type: 3}
-    volume: 0.316
-    pitch: 0.26
+    volume: 1
+    pitch: 0.5
     loop: 0
-  - name: Walk
+    source: {fileID: 0}
+  - name: Footstep
+    type: 0
     clip: {fileID: 8300000, guid: 9b713c76b05f8b04882a23a60605b0d2, type: 3}
-    volume: 0.871
-    pitch: 2.04
+    volume: 1
+    pitch: 0
     loop: 0
-  - name: SwordPickup
+    source: {fileID: 0}
+  - name: PlayerHurt
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Power-Up
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyAttack
+    type: 1
+    clip: {fileID: 8300000, guid: 7d156b8a5b340cd46bcf0a76557dd2dd, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDie
+    type: 1
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyChase
+    type: 1
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: CoinPickup
+    type: 3
+    clip: {fileID: 8300000, guid: 9d206b55baa499e4b91d9ffdcc6d6049, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: HealthPickup
+    type: 3
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    type: 4
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseOpen
+    type: 4
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseClose
+    type: 4
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordAttack
+    type: 2
     clip: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
-    volume: 0.632
-    pitch: 0.73
+    volume: 1
+    pitch: 0
     loop: 0
-  masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
+    source: {fileID: 0}
 --- !u!1 &1908086676
 GameObject:
   m_ObjectHideFlags: 0

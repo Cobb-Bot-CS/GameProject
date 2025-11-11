@@ -78,11 +78,13 @@ public class CharacterMove : MonoBehaviour
         if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
+            AudioManager.Instance.Play("Jump");
         }
 
         if (joystick != null && joystick.Vertical() > 0.6f && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
+            AudioManager.Instance.Play("Jump");
         }
 
         if (moveX != 0)
@@ -99,6 +101,7 @@ public class CharacterMove : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
+            AudioManager.Instance.Play("Footstep");
             StartCoroutine(attackScript.Attack());
             nextClickTime = Time.time + cooldownTime;
             Debug.Log("Next click available at " + nextClickTime);
@@ -114,6 +117,7 @@ public class CharacterMove : MonoBehaviour
     {
         if (animator.GetBool("IsHurt") == true)
         {
+            AudioManager.Instance.Play("PlayerHurt");
             moveAction.Disable();
             jumpAction.Disable();
 
