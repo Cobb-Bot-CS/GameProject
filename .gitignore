@@ -75,3 +75,4 @@ Platformer.V6000.1.17f1/Assets/Scripts/TL6scripts/font/
 
 # Ignore tests for this branch
 Platformer.V6000.1.17f1/Assests/Testing/
+.gitignore
