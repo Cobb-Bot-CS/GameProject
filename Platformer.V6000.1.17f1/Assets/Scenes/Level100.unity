@@ -2875,6 +2875,7 @@ MonoBehaviour:
   weaponHitbox: {fileID: 394238911}
   animator: {fileID: 394238903}
   spriteRenderer: {fileID: 394238906}
+  footstepInterval: 0.35
 --- !u!114 &394238910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2953,37 +2954,6 @@ MonoBehaviour:
   bossHitbox: {fileID: 714366619}
   baseDamage: 200
   weapon1Damage: 10
---- !u!1 &453534294
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 453534295}
-  m_Layer: 0
-  m_Name: FX Sound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &453534295
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453534294}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1890731945}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483161600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,7 +4016,6 @@ GameObject:
   - component: {fileID: 763200511}
   - component: {fileID: 763200509}
   - component: {fileID: 763200513}
-  - component: {fileID: 763200514}
   m_Layer: 0
   m_Name: World1Weapon
   m_TagString: Untagged
@@ -4192,20 +4161,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8, y: 0.35}
   m_EdgeRadius: 0
---- !u!114 &763200514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763200508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221731abbe05e7d43b5da9c502dbf12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupSoundName: SwordPickup
-  fallbackSound: {fileID: 0}
 --- !u!1 &816749095
 GameObject:
   m_ObjectHideFlags: 0
@@ -14800,7 +14755,7 @@ GameObject:
   - component: {fileID: 1890731945}
   - component: {fileID: 1890731944}
   m_Layer: 0
-  m_Name: World1MusicParent (1)
+  m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14917,7 +14872,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1905215554}
-  - {fileID: 453534295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1905215553
@@ -15059,30 +15013,108 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905215553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db726fab439d74c42a80acca5a28da1e, type: 3}
+  m_Script: {fileID: 11500000, guid: f0cc9a747ccea83428db3589191fa4bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 1890731944}
-  sfxSource: {fileID: 1905215555}
-  soundEffects:
+  sounds:
   - name: Jump
+    type: 0
     clip: {fileID: 8300000, guid: cab14906859acc04eb082293905f9ca1, type: 3}
-    volume: 0.316
-    pitch: 0.26
+    volume: 1
+    pitch: 0.5
     loop: 0
-  - name: Walk
-    clip: {fileID: 8300000, guid: 9b713c76b05f8b04882a23a60605b0d2, type: 3}
-    volume: 0.871
-    pitch: 2.04
+    source: {fileID: 0}
+  - name: Footstep
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0.8
     loop: 0
-  - name: SwordPickup
+    source: {fileID: 0}
+  - name: PlayerHurt
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1.32
+    loop: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Power-Up
+    type: 0
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyAttack
+    type: 1
+    clip: {fileID: 8300000, guid: 7d156b8a5b340cd46bcf0a76557dd2dd, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDie
+    type: 1
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyChase
+    type: 1
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: CoinPickup
+    type: 3
+    clip: {fileID: 8300000, guid: 9d206b55baa499e4b91d9ffdcc6d6049, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: HealthPickup
+    type: 3
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    type: 4
+    clip: {fileID: 8300000, guid: 31606710d125b1e47b5517a7a5885d0a, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseOpen
+    type: 4
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PauseClose
+    type: 4
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordAttack
+    type: 2
     clip: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
-    volume: 0.632
-    pitch: 0.73
+    volume: 1
+    pitch: 0
     loop: 0
-  masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
+    source: {fileID: 0}
 --- !u!1 &1908086676
 GameObject:
   m_ObjectHideFlags: 0
