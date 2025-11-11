@@ -2758,6 +2758,7 @@ MonoBehaviour:
   weaponHitbox: {fileID: 394238911}
   animator: {fileID: 394238903}
   spriteRenderer: {fileID: 394238906}
+  footstepInterval: 0.35
 --- !u!114 &394238910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2836,37 +2837,6 @@ MonoBehaviour:
   bossHitbox: {fileID: 714366619}
   baseDamage: 200
   weapon1Damage: 10
---- !u!1 &453534294
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 453534295}
-  m_Layer: 0
-  m_Name: FX Sound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &453534295
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453534294}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1890731945}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483161600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4554,7 +4524,6 @@ GameObject:
   - component: {fileID: 763200511}
   - component: {fileID: 763200509}
   - component: {fileID: 763200513}
-  - component: {fileID: 763200514}
   m_Layer: 0
   m_Name: World1Weapon
   m_TagString: Untagged
@@ -4700,20 +4669,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8, y: 0.35}
   m_EdgeRadius: 0
---- !u!114 &763200514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763200508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221731abbe05e7d43b5da9c502dbf12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupSoundName: SwordPickup
-  fallbackSound: {fileID: 0}
 --- !u!1 &816749095
 GameObject:
   m_ObjectHideFlags: 0
@@ -14066,7 +14021,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1905215554}
-  - {fileID: 453534295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1905215553
@@ -14221,17 +14175,17 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Footstep
     type: 0
-    clip: {fileID: 8300000, guid: 9b713c76b05f8b04882a23a60605b0d2, type: 3}
+    clip: {fileID: 0}
     volume: 1
-    pitch: 0
+    pitch: 0.8
     loop: 0
     source: {fileID: 0}
   - name: PlayerHurt
     type: 0
     clip: {fileID: 0}
     volume: 1
-    pitch: 0.1
-    loop: 0
+    pitch: 1.32
+    loop: 1
     source: {fileID: 0}
   - name: PlayerDeath
     type: 0
@@ -14284,7 +14238,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ButtonClick
     type: 4
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 31606710d125b1e47b5517a7a5885d0a, type: 3}
     volume: 1
     pitch: 0
     loop: 0
