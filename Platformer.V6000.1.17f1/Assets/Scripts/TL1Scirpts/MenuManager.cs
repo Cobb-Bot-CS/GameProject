@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
     // Show Main Menu and hide Settings
     public void ShowMainMenu()
     {
+         AudioManager.Instance.Play("ButtonClick");
         mainMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
     }
@@ -21,6 +22,7 @@ public class MenuManager : MonoBehaviour
     // Show Settings Menu and hide Main Menu
     public void ShowSettingsMenu()
     {
+         AudioManager.Instance.Play("ButtonClick");
         mainMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
     }
