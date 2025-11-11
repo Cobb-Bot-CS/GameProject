@@ -34,7 +34,7 @@ Logo:
 -------------------------------------------------------
 
 **Download Link:**  
-[Click here to download the game (Google Drive)](https://drive.google.com/file/d/1fvkmlRFnUHNgRsmMFJm4wFjXm4BBc0_j/view?usp=drive_link)
+https://drive.google.com/file/d/1fvkmlRFnUHNgRsmMFJm4wFjXm4BBc0_j/view?usp=drive_link
 
 -------------------------------------------------------
 
