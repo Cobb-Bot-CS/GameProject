@@ -80,7 +80,7 @@ public class BossAI_Advanced : MonoBehaviour
     private float timeSinceLostPlayer = 0f;
     private float timeSinceLastJump = 0f;
     private BossAttack currentAttack;
-    private bool isFlipped = false;
+    
     [Tooltip("Visual child object that should be flipped")]
     [SerializeField] private Transform visualsTransform;
 
