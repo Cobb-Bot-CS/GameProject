@@ -108,8 +108,8 @@ public class Playerawarness : MonoBehaviour
 public class MovespeedSuper
 {
 
-   public virtual float speed()
-  // public float speed()
+  public virtual float speed()
+  //public float speed()
     {
         return 100f;
     }
