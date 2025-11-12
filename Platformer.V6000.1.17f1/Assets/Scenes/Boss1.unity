@@ -2074,7 +2074,7 @@ MonoBehaviour:
   bossScript: {fileID: 714366617}
   bossHitbox: {fileID: 714366619}
   baseDamage: 200
-  weapon1Damage: 10
+  weapon1Damage: 300
 --- !u!114 &394238913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,11 +2981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3985531617412535900, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80
+      value: 73.58
       objectReference: {fileID: 0}
     - target: {fileID: 3985531617412535900, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28
+      value: -6.23
       objectReference: {fileID: 0}
     - target: {fileID: 3985531617412535900, guid: d9656f0785fb09e4c80a53d15a74b1f4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3697,9 +3697,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 763200508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221731abbe05e7d43b5da9c502dbf12c, type: 3}
+  m_Script: {fileID: 11500000, guid: da3bd86ca41121d40b3c120bf9272633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 394238908}
+  weaponAnimator: {fileID: 763200509}
 --- !u!1 &811203053
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,7 +7363,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2057763795
   m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!1 &1776436597
