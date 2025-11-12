@@ -13529,7 +13529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1524934512}
   m_Layer: 0
-  m_Name: MenuParent
+  m_Name: MenuParentRework
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15673,7 +15673,7 @@ GameObject:
   - component: {fileID: 1890731945}
   - component: {fileID: 1890731944}
   m_Layer: 0
-  m_Name: Sound
+  m_Name: SoundRework
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
