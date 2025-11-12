@@ -49,8 +49,8 @@ public class Hazards : MonoBehaviour
    private void OnTriggerEnter2D(Collider2D other)
    {
       GameObject otherGameObject = other.gameObject;
-      // if player collided
-      if (otherGameObject.CompareTag("Player"))
+      // if player boxcollider collided
+      if (otherGameObject.CompareTag("Player") && other is BoxCollider2D)
       {
          if (playerHealth != null)
          {

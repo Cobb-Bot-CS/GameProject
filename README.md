@@ -27,6 +27,30 @@ Logo:
 
 -------------------------------------------------------
 
+**User Manual**
+
+### OVERVIEW
+Dr. Tempus Rift was on the verge of his greatest discovery — a ship that could bend time itself.  
+But during the first test, the Chrono Engine overloaded, tearing open a violent rift.  
+His ship shattered into pieces, each one flung into a different era.  
+He needs to defeat the leaders of different eras to recover the ship fragments.
+
+---
+
+### CONTROLS
+
+**PC**
+- Left Move: `A`  
+- Right Move: `D`  
+- Jump: `Space`  
+- Attack: `Left Click`
+
+**MOBILE**
+- Left stick: Move and jump  
+- Right stick: Attack  
+
+-------------------------------------------------------
+
 **Game Version:** 1.1  
 **Platform:** Android  
 **Engine:** Unity 6 (6000.1.17f1)
