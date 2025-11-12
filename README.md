@@ -27,6 +27,10 @@ Logo:
 
 -------------------------------------------------------
 
+<img width="500" alt="UserManual" src="https://github.com/user-attachments/assets/6c4ce971-b87d-4a24-befb-004887ba7369" />
+
+-------------------------------------------------------
+
 **Game Version:** 1.1  
 **Platform:** Android  
 **Engine:** Unity 6 (6000.1.17f1)
