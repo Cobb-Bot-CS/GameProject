@@ -13,26 +13,24 @@ using UnityEngine.SceneManagement;
  * 
  * Member Variables:
  *    player: a gameobject to store the player so its position can be changed
+ *    newPosition: Where to spawn the player in the next level
  */
 public class LevelManager : MonoBehaviour
 {
-   //public static LevelManager instance;
-   [SerializeField] GameObject player;
+   private Vector3 newPosition;
+
 
    /*
-    * Summary: Gets the player object from the scene
+    * Summary: Prevent gameobject from being destroyed on new scene
     */
    private void Awake()
    {
-      if (player == null)
-      {
-          player = GameObject.Find("CharacterParent");
-      }
+         DontDestroyOnLoad(gameObject);
    }
 
 
    /*
-    * Summary: Loads the next level and places the player in the correct position based on the current level
+    * Summary: Loads the next level and saves the correct player position based on the current level
     * 
     * Parameters:
     *    nextLevel - The level you want to go to; ex. 100 for level 100, 0 for main menu
@@ -43,17 +41,19 @@ public class LevelManager : MonoBehaviour
       switch (nextLevel)
       {
          case 100:
-            SceneManager.LoadScene("Level100");
+            if (currentLevel == 101)
+            {
+               newPosition = new Vector3(67f, 4.75f, 0f);
+            }
+            else
+            {
+               newPosition = new Vector3(0f, -0.25f, 0f);
+            }
+            SceneManager.LoadScene("Level100(Alex)");
             break;
          case 101:
-            SceneManager.LoadScene("Level101");
-            if (player != null)
-            {
-               if (currentLevel == 100)
-                  player.transform.position = new Vector3(0.5f, 0.65f, 0.0f);
-               else
-                  player.transform.position = new Vector3(3.0f, 0.65f, 0.0f);
-            }
+            newPosition = new Vector3(0f, -0.25f, 0.0f);
+            SceneManager.LoadScene("Boss1");
             break;
          case 102:
             SceneManager.LoadScene("Level102");
@@ -65,66 +65,8 @@ public class LevelManager : MonoBehaviour
    }
 
 
-    // Temp fix, delete this later
-   public void LoadLevel100()
+   public Vector3 GetSpawnPos()
    {
-      LoadLevel(100, 0);
+      return newPosition;
    }
 }
-
-
-/*
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class LevelManager : MonoBehaviour
-{
-     public static LevelManager instance;
-    [SerializeField] GameObject player;
-
-    private void Awake()
-    {
-        if (player == null)
-        {
-            player = GameObject.Find("CharacterParent");
-        }
-    }
-    // maybe levels 1xx in first era, 2xx in second era, etc.
-    // accepts positive integers
-    // nextLevel is the level player is going to
-    // currentLevel is the level player is leaving
-    public void LoadLevel(int nextLevel, int currentLevel)
-    {
-        switch (nextLevel)
-        {
-            case 100:
-                SceneManager.LoadScene("SceneV1");
-                break;
-
-            case 101:
-                SceneManager.LoadScene("Level101");
-                // place player in appropriate position
-                if (player == null)
-                {
-                    if (currentLevel == 100)
-                    {
-                        player.transform.position = new Vector3(0.5f, 0.65f, 0.0f);
-                    }
-                    else
-                    {
-                        player.transform.position = new Vector3(3.0f, 0.65f, 0.0f);
-                    }
-                }
-                break;
-
-            case 102:
-                SceneManager.LoadScene("Level102");
-                break;
-
-            default:
-                SceneManager.LoadScene("MainMenu");
-                break;
-        }
-    }
-}
-*/

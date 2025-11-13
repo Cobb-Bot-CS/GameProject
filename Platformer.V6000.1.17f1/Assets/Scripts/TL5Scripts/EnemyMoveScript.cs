@@ -75,9 +75,6 @@ public class Playerawarness : MonoBehaviour
 
     private void AttackPlayer()
     {
-        if (animator != null)
-            animator.SetTrigger("attack");
-
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRadius, playerLayer);
         if (hit != null)
         {
@@ -111,8 +108,8 @@ public class Playerawarness : MonoBehaviour
 public class MovespeedSuper
 {
 
-   public virtual float speed()
-  // public float speed()
+  public virtual float speed()
+  //public float speed()
     {
         return 100f;
     }

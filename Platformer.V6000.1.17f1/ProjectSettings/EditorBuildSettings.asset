@@ -23,15 +23,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TestingScene.unity
     guid: ad0df868d924a1e418cf7d496aad39bd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PlayerTests.unity
     guid: 1a810d3599a6b814b84ffc19a74ec8cb
   - enabled: 0
     path: Assets/Scenes/Level100.unity
     guid: 06a50bd261bb6fa40ae116c40362f7e9
+  - enabled: 1
+    path: Assets/Scenes/Level100(Alex).unity
+    guid: a611129c50691424fa4176a1712f6dca
+  - enabled: 1
+    path: Assets/Scenes/Boss1.unity
+    guid: f014a8ee5f805774a81381d93ef44f7c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
