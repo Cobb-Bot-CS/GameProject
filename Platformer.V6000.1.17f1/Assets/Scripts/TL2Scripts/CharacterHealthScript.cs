@@ -10,15 +10,17 @@ public class CharacterHealthScript : MonoBehaviour
     public int currentHealth = 100;
 
     //Movement While Hurt / Animation
-    [SerializeField] private GameObject deathScreen; 
+    [SerializeField] private GameObject deathScreen;
+    [SerializeField] private GameObject winScreen; 
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterMove movement;
 
     void Start()
     {
         currentHealth = maxHealth;
-        if (deathScreen != null)
-            deathScreen.SetActive(false);
+
+        if (deathScreen != null) deathScreen.SetActive(false);
+        if (winScreen != null) winScreen.SetActive(false);
     }
 
     public void CharacterHurt(int amount)
@@ -52,6 +54,15 @@ public class CharacterHealthScript : MonoBehaviour
 
         if (deathScreen != null)
             deathScreen.SetActive(true);
+    }
+
+    public void Win()
+    {
+        Debug.Log("You Win!");
+        movement.enabled = false;
+        Time.timeScale = 0f;
+        if (winScreen != null)
+            winScreen.SetActive(true);
     }
 
     private void NoOverhealing()

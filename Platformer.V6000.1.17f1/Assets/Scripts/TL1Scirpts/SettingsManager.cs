@@ -17,6 +17,17 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
+       
+    }
+
+    /// <summary>
+    /// Sets the master audio volume based on slider input.
+    /// </summary>
+    /// <param name="volume">Slider value between -80 (mute) and 0 (max).</param>
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("Volume", volume);
+        PlayerPrefs.SetFloat("MasterVolume", volume); // Save preference
     }
 
     /// <summary>
@@ -36,4 +47,5 @@ public class SettingsManager : MonoBehaviour
         settingsMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }
+    
 }
