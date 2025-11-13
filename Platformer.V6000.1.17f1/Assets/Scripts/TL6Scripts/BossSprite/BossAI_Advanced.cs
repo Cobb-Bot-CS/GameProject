@@ -405,18 +405,30 @@ public class BossAI_Advanced : MonoBehaviour
     }
 
     private void Die()
-    {
-        currentState = State.Death;
-        UpdateStatusText("Defeated");
-        animator.SetTrigger("Death");
-        Debug.Log("Boss defeated!");
+{
 
-        rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<Collider2D>().enabled = false;
-        Destroy(gameObject, 5f);
+    currentState = State.Death;
+    UpdateStatusText("Defeated");
+    animator.SetTrigger("Death");
+    Debug.Log("Boss defeated!");
+
+    rb.linearVelocity = Vector2.zero;
+    rb.bodyType = RigidbodyType2D.Kinematic;
+    GetComponent<Collider2D>().enabled = false;
+
+    // Trigger win screen
+    WinScreen winScreen = FindAnyObjectByType<WinScreen>();
+    if (winScreen != null)
+    {
+        winScreen.ShowWinScreen();
+    }
+    else
+    {
+        Debug.LogWarning("No WinScreen found!");
     }
 
+    Destroy(gameObject, 5f);
+}
     private IEnumerator PhaseTransitionPushback()
     {
         State originalState = currentState;
