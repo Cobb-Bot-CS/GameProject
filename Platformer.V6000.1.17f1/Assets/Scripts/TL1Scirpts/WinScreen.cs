@@ -3,17 +3,25 @@ using UnityEngine.SceneManagement;
 
 public class WinScreen : MonoBehaviour
 {
-    public GameObject winScreenUI;
+    public GameObject winUI; // Assign your Panel here
 
-    void Start()
+    private void Start()
     {
-        winScreenUI.SetActive(false); // Hide by default
+        if (winUI != null)
+            winUI.SetActive(false); // Make sure it starts hidden
     }
 
     public void ShowWinScreen()
     {
-        winScreenUI.SetActive(true);
-        Time.timeScale = 0f; // Pause game
+        if (winUI != null)
+        {
+            winUI.SetActive(true);
+            Time.timeScale = .1f; // Freeze game
+        }
+        else
+        {
+            Debug.LogError("Win UI panel not assigned!");
+        }
     }
 
     public void RestartGame()
@@ -22,9 +30,9 @@ public class WinScreen : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void MainMenu()
+    public void GoToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu"); // Replace with your main menu scene name
+        SceneManager.LoadScene("MainMenuScene"); // Replace with your main menu scene
     }
 }
