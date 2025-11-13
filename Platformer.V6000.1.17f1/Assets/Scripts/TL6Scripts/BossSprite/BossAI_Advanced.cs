@@ -93,7 +93,9 @@ public class BossAI_Advanced : EnemyBase
 
         currentHealth = maxHealth;
        
-       
+
+
+
     }
 
     void Update()
@@ -387,7 +389,10 @@ public class BossAI_Advanced : EnemyBase
 
     public void TakeDamage(float damage)
     {
+      
+
         if (currentState == State.Death) return;
+
         currentHealth -= damage;
         healthBar.value = currentHealth / maxHealth;
 
@@ -408,6 +413,8 @@ public class BossAI_Advanced : EnemyBase
             }
         }
     }
+
+
 
     private void Die()
 {
