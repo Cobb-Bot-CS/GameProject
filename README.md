@@ -58,7 +58,8 @@ He needs to defeat the leaders of different eras to recover the ship fragments.
 -------------------------------------------------------
 
 **Download Link:**  
-https://drive.google.com/file/d/1fvkmlRFnUHNgRsmMFJm4wFjXm4BBc0_j/view?usp=drive_link
+1. Andriod: https://drive.google.com/file/d/1fvkmlRFnUHNgRsmMFJm4wFjXm4BBc0_j/view?usp=drive_link
+2. PC: https://drive.google.com/file/d/1fitSktHJQWwuil0IFNbmlRWFYXMJxc2f/view?usp=drive_link
 
 -------------------------------------------------------
 
