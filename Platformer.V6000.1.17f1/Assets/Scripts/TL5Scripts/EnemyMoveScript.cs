@@ -9,7 +9,7 @@ using UnityEngine;
 public class Playerawarness : MonoBehaviour
 {
     [Header("Detection Settings")]
-    private Transform player;                  // Player transform to detect
+    private Transform player;                  // Player Transform
     private float detectRadius = 6f;           // How far the enemy can see the player
     private float attackRadius = 1.5f;         // How close the enemy must be to attack
    // private float moveSpeed = 2f;              // Enemy movement speed
@@ -108,8 +108,8 @@ public class Playerawarness : MonoBehaviour
 public class MovespeedSuper
 {
 
-  public virtual float speed()  // Dynamic Binding
-  //public float speed()  // static Binding 
+  public virtual float speed()
+  //public float speed()
     {
         return 100f;
     }
@@ -118,10 +118,10 @@ public class MovespeedSuper
 public class Movespeed: MovespeedSuper
 {
 
-   public override  float speed()    // Dynamic Binding uses key word
+   public override  float speed()
   // public float speed()
     {
-        return 10f;
+        return 2f;
     }
 }
 
