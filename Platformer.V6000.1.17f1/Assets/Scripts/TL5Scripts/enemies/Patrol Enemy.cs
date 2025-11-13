@@ -26,7 +26,7 @@ public class PatrolEnemy : MonoBehaviour
 
     // ⭐ NEW: Prevent fast flipping
     private float lastFlipTime = 0f;
-    private float flipCooldown = 0.3f;
+    private float flipCooldown = 0.4f;
 
     void Awake() => EnsureCheckPoint();
 
