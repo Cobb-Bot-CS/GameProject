@@ -51,7 +51,7 @@ He needs to defeat the leaders of different eras to recover the ship fragments.
 
 -------------------------------------------------------
 
-**Game Version:** 1.1  
+**Game Version:** 1.2
 **Platform:** Android  
 **Engine:** Unity 6 (6000.1.17f1)
 
