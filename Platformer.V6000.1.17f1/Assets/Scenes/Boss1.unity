@@ -3286,7 +3286,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 394238907}
         m_TargetAssemblyTypeName: CharacterHealthScript, AllScripts
         m_MethodName: RestartGame
         m_Mode: 1
