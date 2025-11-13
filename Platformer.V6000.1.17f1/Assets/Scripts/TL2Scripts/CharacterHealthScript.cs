@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class CharacterHealthScript : MonoBehaviour
 {
     //Health Related Variables
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int minHealth = 0;
+    public int maxHealth = 100;
+    public int minHealth = 0;
     public int currentHealth = 100;
 
     //Movement While Hurt / Animation

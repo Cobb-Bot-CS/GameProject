@@ -1,3 +1,4 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
@@ -14,7 +15,8 @@ public class MenuManager : MonoBehaviour
     // Show Main Menu and hide Settings
     public void ShowMainMenu()
     {
-         AudioManager.Instance.Play("ButtonClick");
+        AudioManager.Instance.Play("ButtonClick");
+        Time.timeScale = 0f;
         mainMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
     }

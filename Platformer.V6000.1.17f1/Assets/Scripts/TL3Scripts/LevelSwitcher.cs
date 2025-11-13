@@ -5,6 +5,7 @@
  */
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Summary: A class that enables a GameObject to switch levels upon contact with the player
@@ -22,7 +23,6 @@ public class LevelSwitcher : MonoBehaviour
 
    [SerializeField] private GameObject levelManagerObject;
    private LevelManager levelManager;
-
 
    /*
     * Summary: Find the LevelManager object if needed and get the script from it
@@ -50,7 +50,6 @@ public class LevelSwitcher : MonoBehaviour
     */
    private void OnTriggerEnter2D(Collider2D other)
    {
-      Debug.Log("Collided");
       if (levelManager != null)
       {
          GameObject otherGameObject = other.gameObject;
@@ -61,7 +60,7 @@ public class LevelSwitcher : MonoBehaviour
       }
       else
       {
-         Debug.Log("Error: Couldn't find level manager");
+         Debug.LogWarning("Level Switcher couldn't find level manager");
       }
    }
 }
