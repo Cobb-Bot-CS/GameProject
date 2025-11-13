@@ -29,13 +29,7 @@ public class SettingsManager : MonoBehaviour
 
     private void Start()
     {
-        // Load saved volume preference or default to 0 dB
-        float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 0f);
-        audioMixer.SetFloat("Volume", savedVolume);
-        if (volumeSlider != null)
-        {
-            volumeSlider.value = savedVolume;
-        }
+       
     }
 
     /// <summary>
@@ -65,4 +59,5 @@ public class SettingsManager : MonoBehaviour
         settingsMenuUI.SetActive(false);
         Time.timeScale = 1f;
     }
+    
 }
