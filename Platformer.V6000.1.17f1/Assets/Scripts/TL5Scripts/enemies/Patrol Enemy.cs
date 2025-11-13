@@ -1,11 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 2f;
-    [SerializeField] private Transform checkPoint;     // auto-created if missing
-    public float checkDistance = 1f;
+    [SerializeField] private Transform checkPoint;
+    public float checkDistance = 1f;   // FIXED: 10f → 1f (normal ground check)
     public LayerMask groundMask;
     public LayerMask playerMask;
 
@@ -24,7 +24,10 @@ public class PatrolEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
-    // --- Make sure checkpoint exists in editor & playmode ---
+    // ⭐ NEW: Prevent fast flipping
+    private float lastFlipTime = 0f;
+    private float flipCooldown = 0.4f;
+
     void Awake() => EnsureCheckPoint();
 
     void OnValidate()
@@ -57,7 +60,7 @@ public class PatrolEnemy : MonoBehaviour
 
         var p = GameObject.FindGameObjectWithTag("Player");
         if (p != null) player = p.transform;
-        else Debug.LogWarning("[PatrolEnemy] No GameObject tagged 'Player' found. Chasing/attacking will be skipped.");
+        else Debug.LogWarning("[PatrolEnemy] No GameObject tagged 'Player' found.");
     }
 
     void Update()
@@ -74,20 +77,24 @@ public class PatrolEnemy : MonoBehaviour
             Patrol();
     }
 
-    // ---------- Behaviours ----------
+    // ---------- FIXED PATROL ----------
     void Patrol()
     {
-        // Horizontal move
         rb.linearVelocity = new Vector2((movingRight ? 1f : -1f) * moveSpeed, rb.linearVelocity.y);
 
-        // Ground/wall checks from checkpoint if available, else from current position
         Vector2 origin = checkPoint ? (Vector2)checkPoint.position : (Vector2)transform.position;
         RaycastHit2D groundInfo = Physics2D.Raycast(origin, Vector2.down, checkDistance, groundMask);
         RaycastHit2D wallInfo = Physics2D.Raycast(origin, transform.right, checkDistance, groundMask);
 
-        // Turn around if no ground ahead or a wall is hit
+        // ⭐ FIXED: Flip only if cooldown passed (no more shaking)
         if (!groundInfo.collider || wallInfo.collider)
-            Flip();
+        {
+            if (Time.time - lastFlipTime > flipCooldown)
+            {
+                Flip();
+                lastFlipTime = Time.time;
+            }
+        }
 
         if (animator) animator.SetBool("IsChasing", false);
     }
@@ -105,14 +112,12 @@ public class PatrolEnemy : MonoBehaviour
 
     void TryAttack()
     {
-        // stop horizontal motion while attacking
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
         if (Time.time - lastAttackTime < attackCooldown) return;
 
         if (animator) animator.SetTrigger("Attack");
 
-        // Detect player close enough
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerMask);
         if (hit != null)
         {
@@ -127,12 +132,10 @@ public class PatrolEnemy : MonoBehaviour
     {
         movingRight = !movingRight;
 
-        // flip sprite scale
         var s = transform.localScale;
         s.x *= -1f;
         transform.localScale = s;
 
-        // keep checkpoint in front after flip
         if (checkPoint)
         {
             var lp = checkPoint.localPosition;
