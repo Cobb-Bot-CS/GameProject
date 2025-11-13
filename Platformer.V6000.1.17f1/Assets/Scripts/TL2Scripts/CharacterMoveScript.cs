@@ -124,7 +124,9 @@ public class CharacterMove : MonoBehaviour
     {
         if (animator.GetBool("IsHurt") == true)
         {
+        
             AudioManager.Instance.Play("PlayerHurt");
+        
             moveAction.Disable();
             jumpAction.Disable();
 
