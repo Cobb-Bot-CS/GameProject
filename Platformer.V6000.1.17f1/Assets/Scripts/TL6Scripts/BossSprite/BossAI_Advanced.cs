@@ -29,7 +29,6 @@ public class BossAttack
 }
 
 public class BossAI_Advanced : EnemyBase
-
 {
     [Header("UI & Debugging")]
     [SerializeField] private TextMeshProUGUI statusText; // Text component for showing current state
@@ -245,7 +244,6 @@ public class BossAI_Advanced : EnemyBase
                 if (playerHealth != null)
                 {
                     playerHealth.CharacterHurt((int)((EnemyBase)this).GetMeleeDamage());
-
                     if (currentAttack.hitVFX != null)
                     {
                         Instantiate(currentAttack.hitVFX, hit.transform.position, Quaternion.identity);
@@ -386,7 +384,7 @@ public class BossAI_Advanced : EnemyBase
     public override float GetMeleeDamage()
     {
         Debug.Log("[BossAI] OVERRIDDEN melee damage");
-        return 100f;   
+        return 70f;
     }
 
     public void TakeDamage(float damage)
