@@ -28,7 +28,7 @@ public class BossAttack
     public float cooldown = 2f;
 }
 
-public class BossAI_Advanced : MonoBehaviour
+public class BossAI_Advanced : EnemyBase
 {
     [Header("UI & Debugging")]
     [SerializeField] private TextMeshProUGUI statusText; // Text component for showing current state
@@ -93,7 +93,9 @@ public class BossAI_Advanced : MonoBehaviour
 
         currentHealth = maxHealth;
        
-       
+
+
+
     }
 
     void Update()
@@ -241,7 +243,7 @@ public class BossAI_Advanced : MonoBehaviour
                 CharacterHealthScript playerHealth = hit.GetComponent<CharacterHealthScript>();
                 if (playerHealth != null)
                 {
-                    playerHealth.CharacterHurt((int)currentAttack.damage);
+                    playerHealth.CharacterHurt((int)((EnemyBase)this).GetMeleeDamage());
                     if (currentAttack.hitVFX != null)
                     {
                         Instantiate(currentAttack.hitVFX, hit.transform.position, Quaternion.identity);
@@ -379,10 +381,18 @@ public class BossAI_Advanced : MonoBehaviour
         currentState = State.Returning;
         Debug.Log("Target lost, returning to start position!");
     }
+    public override float GetMeleeDamage()
+    {
+        Debug.Log("[BossAI] OVERRIDDEN melee damage");
+        return 70f;
+    }
 
     public void TakeDamage(float damage)
     {
+      
+
         if (currentState == State.Death) return;
+
         currentHealth -= damage;
         healthBar.value = currentHealth / maxHealth;
 
@@ -404,19 +414,33 @@ public class BossAI_Advanced : MonoBehaviour
         }
     }
 
-    private void Die()
-    {
-        currentState = State.Death;
-        UpdateStatusText("Defeated");
-        animator.SetTrigger("Death");
-        Debug.Log("Boss defeated!");
 
-        rb.linearVelocity = Vector2.zero;
-        rb.bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<Collider2D>().enabled = false;
-        Destroy(gameObject, 5f);
+
+    private void Die()
+{
+
+    currentState = State.Death;
+    UpdateStatusText("Defeated");
+    animator.SetTrigger("Death");
+    Debug.Log("Boss defeated!");
+
+    rb.linearVelocity = Vector2.zero;
+    rb.bodyType = RigidbodyType2D.Kinematic;
+    GetComponent<Collider2D>().enabled = false;
+
+    // Trigger win screen
+    WinScreen winScreen = FindAnyObjectByType<WinScreen>();
+    if (winScreen != null)
+    {
+        winScreen.ShowWinScreen();
+    }
+    else
+    {
+        Debug.LogWarning("No WinScreen found!");
     }
 
+    Destroy(gameObject, 5f);
+}
     private IEnumerator PhaseTransitionPushback()
     {
         State originalState = currentState;
