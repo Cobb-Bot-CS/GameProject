@@ -2,27 +2,27 @@ using UnityEngine;
 
 public class ProjectileMover : MonoBehaviour
 {
-    public float speed = 10f; // ×Óµ¯ËÙ¶È
-    private float direction; // ×Óµ¯ÒÆ¶¯·½Ïò
+    public float speed = 10f; // ï¿½Óµï¿½ï¿½Ù¶ï¿½
+    private float direction; // ï¿½Óµï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
     private void Awake()
     {
 
 
-        // ÑÓ³ÙÏú»Ù×Óµ¯
+        // ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½
         Destroy(gameObject, 2f);
     }
 
-    // ÉèÖÃ×Óµ¯ÒÆ¶¯·½Ïò
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½
     public void SetDirection(float dir)
     {
         direction = dir;
     }
 
-    // Update Ã¿Ò»Ö¡µ÷ÓÃÒ»´Î
+    // Update Ã¿Ò»Ö¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
     void Update()
-    {// ¸ù¾Ý·½ÏòÖµÀ´·­×ª×Óµ¯µÄ³¯Ïò
+    {// ï¿½ï¿½ï¿½Ý·ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½×ªï¿½Óµï¿½ï¿½Ä³ï¿½ï¿½ï¿½
         transform.localScale = new Vector3(direction, transform.localScale.y, transform.localScale.z);
-        // ×Óµ¯ÑØ×Å·½ÏòÒÆ¶¯
+        // ï¿½Óµï¿½ï¿½ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½
         transform.Translate(Vector2.right * speed * direction * Time.deltaTime);
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,7 +30,7 @@ public class ProjectileMover : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             //  get(CharacterHealthScript)
-            CharacterHealthScript playerHealth = collision.gameObject.GetComponent<CharacterHealthScript>();
+            CharacterHealth playerHealth = collision.gameObject.GetComponent<CharacterHealth>();
 
            
             if (playerHealth != null)
@@ -38,13 +38,13 @@ public class ProjectileMover : MonoBehaviour
                 // (CharacterHurt)
                 playerHealth.CharacterHurt(10);
 
-                // »÷ÖÐºóÏú»Ù»ðÇò
+                // ï¿½ï¿½ï¿½Ðºï¿½ï¿½ï¿½ï¿½Ù»ï¿½ï¿½ï¿½
                 Destroy(gameObject);
             }
             else
             {
   
-                Debug.LogError("touched 'Player'£¬but he doesn't have 'CharacterHealthScript'");
+                Debug.LogError("touched 'Player'ï¿½ï¿½but he doesn't have 'CharacterHealth'");
             }
         }
     }

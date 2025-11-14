@@ -8,7 +8,7 @@ using UnityEngine.TextCore.Text;
 public class HealthBoundsTest : MonoBehaviour
 {
     private GameObject character;
-    private CharacterHealthScript characterHealth;
+    private CharacterHealth characterHealth;
 
     [UnityTest]
         public IEnumerator TestPositiveDamage()
@@ -17,7 +17,7 @@ public class HealthBoundsTest : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         character = GameObject.Find("PlayerCharacter");
-        characterHealth = character.GetComponent<CharacterHealthScript>();         
+        characterHealth = character.GetComponent<CharacterHealth>();         
         characterHealth.currentHealth = 100;       
        
         characterHealth.CharacterHurt(10);
@@ -31,7 +31,7 @@ public class HealthBoundsTest : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         character = GameObject.Find("PlayerCharacter");
-        characterHealth = character.GetComponent<CharacterHealthScript>();
+        characterHealth = character.GetComponent<CharacterHealth>();
         characterHealth.currentHealth = 100;
        
         characterHealth.CharacterHurt(0);
@@ -45,7 +45,7 @@ public class HealthBoundsTest : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         character = GameObject.Find("PlayerCharacter");
-        characterHealth = character.GetComponent<CharacterHealthScript>();
+        characterHealth = character.GetComponent<CharacterHealth>();
         characterHealth.currentHealth = 100;
        
         characterHealth.CharacterHurt(-5);

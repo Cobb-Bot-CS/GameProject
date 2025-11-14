@@ -48,7 +48,7 @@ public class BossAI_Advanced : EnemyBase
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private CharacterHealthScript playerHealth;
+    [SerializeField] private CharacterHealth playerHealth;
 
     [Header("Basic Stats")]
     public Slider healthBar;
@@ -240,7 +240,7 @@ public class BossAI_Advanced : EnemyBase
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, currentAttack.maxRange, LayerMask.GetMask("Player"));
             foreach (Collider2D hit in hits)
             {
-                CharacterHealthScript playerHealth = hit.GetComponent<CharacterHealthScript>();
+                CharacterHealth playerHealth = hit.GetComponent<CharacterHealth>();
                 if (playerHealth != null)
                 {
                     playerHealth.CharacterHurt((int)((EnemyBase)this).GetMeleeDamage());
