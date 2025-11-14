@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HurtTestScript : MonoBehaviour
 {
-    [SerializeField] private CharacterHealthScript health;
+    [SerializeField] private CharacterHealth health;
     private BoxCollider2D hurtBox;
 
     private int damage = 1;

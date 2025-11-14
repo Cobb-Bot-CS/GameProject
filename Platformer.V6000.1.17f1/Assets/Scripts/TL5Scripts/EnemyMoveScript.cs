@@ -78,7 +78,7 @@ public class Playerawarness : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRadius, playerLayer);
         if (hit != null)
         {
-            CharacterHealthScript playerHealth = hit.GetComponent<CharacterHealthScript>();
+            CharacterHealth playerHealth = hit.GetComponent<CharacterHealth>();
             if (playerHealth != null)
             {
                 // ? FIXED: call CharacterHurt instead of CharacterTakeDamage

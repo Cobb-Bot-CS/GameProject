@@ -4,16 +4,25 @@ using UnityEngine.UI;
 public class PlayerHealthBar : MonoBehaviour
 {
     [SerializeField] private Slider healthBarAmount;
-    [SerializeField] private CharacterHealthScript playerHealth;
+    [SerializeField] private CharacterHealth playerHealth;
 
     void Start()
     {
         healthBarAmount.maxValue = playerHealth.maxHealth;
         healthBarAmount.minValue = playerHealth.minHealth;
+
+        // Subscribe to health changes
+        playerHealth.OnHealthChanged += UpdateHealthBar;
     }
 
-    void Update()
+    void UpdateHealthBar(int newHealth)
     {
-        healthBarAmount.value = playerHealth.currentHealth; 
+        healthBarAmount.value = newHealth;
+    }
+
+    void OnDestroy()
+    {
+        // Unsubscribe to avoid memory leaks
+        playerHealth.OnHealthChanged -= UpdateHealthBar;
     }
 }

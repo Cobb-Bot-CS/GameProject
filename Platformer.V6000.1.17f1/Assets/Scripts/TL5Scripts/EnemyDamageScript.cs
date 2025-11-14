@@ -15,7 +15,7 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private int damageAmount = 5;
 
     // Reference to the player's health script (assign in Inspector)
-    [SerializeField] private CharacterHealthScript playerHealth;
+    [SerializeField] private CharacterHealth playerHealth;
 
 
     /// <summary>

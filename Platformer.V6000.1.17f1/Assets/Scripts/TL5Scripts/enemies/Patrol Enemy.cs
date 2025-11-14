@@ -121,7 +121,7 @@ public class PatrolEnemy : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRange, playerMask);
         if (hit != null)
         {
-            var health = hit.GetComponent<CharacterHealthScript>();
+            var health = hit.GetComponent<CharacterHealth>();
             if (health != null) health.CharacterHurt(damage);
         }
 
