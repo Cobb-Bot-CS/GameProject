@@ -12,7 +12,7 @@ public class EnemyDamageOnTouch : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            CharacterHealthScript playerHealth = other.GetComponent<CharacterHealthScript>();
+            CharacterHealth playerHealth = other.GetComponent<CharacterHealth>();
             if (playerHealth != null)
             {
                 playerHealth.CharacterHurt(Mathf.Max(0, damage));

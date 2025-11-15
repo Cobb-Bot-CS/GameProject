@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterMove : MonoBehaviour
 {
+//--------------------Character Components & Constraints-------------------------//
     private Rigidbody2D rb;
     private Vector2 movement;
     private float moveSpeed = 5f;
@@ -14,35 +15,44 @@ public class CharacterMove : MonoBehaviour
     private float jumpLimiter = .1f;
     public Joystick joystick;
 
+//--------------------Character Move Action Variables-------------------------//
     private InputAction moveAction;
     private InputAction jumpAction;
 
+//--------------------Character Attack Action Variables-------------------------//
     [SerializeField] private CharacterAttack attackScript;
     [SerializeField] private CapsuleCollider2D weaponHitbox;
     private float cooldownTime = 1f;
     private float nextClickTime = 0f;
 
+//--------------------Character Animation Variables-------------------------//
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    //  Footstep timing
+
+//--------------------Character Footstep Timing-------------------------//
     [SerializeField] private float footstepInterval = 0.35f;
     private float nextFootstepTime = 0f;
 
+//--------------------Enabling New Unity Movement Via Keyboard Input-------------------------//
     void OnEnable()
     {
+    //Produce a continuous value by using the binded buttons A and D for Left - Right//
         moveAction = new InputAction(type: InputActionType.Value, binding: "<Keyboard>/a");
         moveAction.AddBinding("<Keyboard>/d");
         moveAction.AddCompositeBinding("1DAxis")
             .With("Negative", "<Keyboard>/a")
             .With("Positive", "<Keyboard>/d");
 
+    //Produce a jump action, binded to the space bar//
         jumpAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/space");
 
+    //Enable both move and jump actions when function is called//
         moveAction.Enable();
         jumpAction.Enable();
     }
 
+//--------------------Disabling Movement (For Cooldowns, etc.)-------------------------//
     void OnDisable()
     {
         moveAction.Disable();
@@ -51,15 +61,17 @@ public class CharacterMove : MonoBehaviour
 
     void Start()
     {
+    //Grab Components of the Character for Movement and Animations//
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+//--------------------Movement Check Every Frame via Update Function-------------------------//
     void Update()
     {
         float moveX = 0f;
 
-        //  PC + Mobile movement input support
+    //Check for Joystick / Keyboard and Applies Vector Movement Based on Above Keybinds//
         if (joystick != null)
         {
             moveX = joystick.Horizontal();
@@ -69,20 +81,21 @@ public class CharacterMove : MonoBehaviour
 
         movement = new Vector2(moveX, rb.linearVelocity.y);
 
-        // Jump sound
+    //Apply sound(s) when jump is triggered and prevents double jumping via Jump Limiter//
         if (jumpAction.triggered && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
             AudioManager.Instance.Play("Jump");
         }
 
+    //Same as Above, but for Mobile Controls//
         if (joystick != null && joystick.Vertical() > 0.6f && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpStrength);
             AudioManager.Instance.Play("Jump");
         }
 
-        //  Facing direction + weapon flip
+    //Flip Character Sprite & Hitbox when Character Faces Opposing Directions//
         if (moveX != 0)
         {
             bool facingLeft = moveX > 0;
@@ -93,9 +106,10 @@ public class CharacterMove : MonoBehaviour
             weaponHitbox.offset = offset;
         }
 
+    //Animate the Character's Walking by calling on the animator bools//
         animator.SetBool("IsWalking", moveX != 0);
 
-        // FOOTSTEP LOOPING LOGIC
+    //Set Logic for Time Between Footsteps & Footstep Sounds//
         if (moveX != 0 && Mathf.Abs(rb.linearVelocity.y) < jumpLimiter)
         {
             if (Time.time >= nextFootstepTime)
@@ -105,7 +119,7 @@ public class CharacterMove : MonoBehaviour
             }
         }
 
-        // ✅ Attack + sound
+    //Logic for Playing Sounds On Character Attack//
         if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
             AudioManager.Instance.Play("SwordAttack");
@@ -114,12 +128,13 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
+//--------------------Smoother Movement Through FixedUpdate Function-------------------------//
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(movement.x * moveSpeed, rb.linearVelocity.y);
     }
 
-    // ✅ Hurt + sound
+    //Access Animator Bool To Play Hurt Animation, and Cooldown On Walking/Jumping//
     public IEnumerator CharacterHurtCooldown()
     {
         if (animator.GetBool("IsHurt") == true)
@@ -138,6 +153,7 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
+//--------------------Mobile Device Attacking Function-------------------------//
     public void MobileAttack()
     {
         if (Time.time >= nextClickTime)
@@ -148,6 +164,9 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
+//--------------------TESTING-------------------------//
+
+//Increasing Movement Speed For Unity Testing Purposes//
     public void IncreaseMoveSpeed(float amount)
     {
         moveSpeed = amount;

@@ -9,7 +9,7 @@ using UnityEngine;
 public class Playerawarness : MonoBehaviour
 {
     [Header("Detection Settings")]
-    private Transform player;                  // Player Transform
+    private Transform player;                  // Player transform to detect
     private float detectRadius = 6f;           // How far the enemy can see the player
     private float attackRadius = 1.5f;         // How close the enemy must be to attack
    // private float moveSpeed = 2f;              // Enemy movement speed
@@ -75,13 +75,10 @@ public class Playerawarness : MonoBehaviour
 
     private void AttackPlayer()
     {
-        if (animator != null)
-            animator.SetTrigger("attack");
-
         Collider2D hit = Physics2D.OverlapCircle(transform.position, attackRadius, playerLayer);
         if (hit != null)
         {
-            CharacterHealthScript playerHealth = hit.GetComponent<CharacterHealthScript>();
+            CharacterHealth playerHealth = hit.GetComponent<CharacterHealth>();
             if (playerHealth != null)
             {
                 // ? FIXED: call CharacterHurt instead of CharacterTakeDamage
@@ -111,8 +108,8 @@ public class Playerawarness : MonoBehaviour
 public class MovespeedSuper
 {
 
-   public virtual float speed()
-  // public float speed()
+  public virtual float speed()  // Dynamic Binding
+  //public float speed()  // static Binding 
     {
         return 100f;
     }
@@ -121,10 +118,10 @@ public class MovespeedSuper
 public class Movespeed: MovespeedSuper
 {
 
-   public override  float speed()
+   public override  float speed()    // Dynamic Binding uses key word
   // public float speed()
     {
-        return 2f;
+        return 10f;
     }
 }
 

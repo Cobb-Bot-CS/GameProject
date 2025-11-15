@@ -16,8 +16,11 @@ using UnityEngine;
 
 public class RespawnScript : MonoBehaviour
 {
-   [SerializeField] private float fadeTime = 1.5f;
+   [SerializeField] float fadeTime = 1.5f;
    [SerializeField] CanvasGroup fadePanel;
+   private GameObject LevelManagerObject;
+   private LevelManager levelManager;
+
 
    public IEnumerator Respawn(float xLocation, float yLocation)
    {
@@ -43,6 +46,7 @@ public class RespawnScript : MonoBehaviour
       }
    }
 
+
    private IEnumerator Fade(float startAlpha, float endAlpha)
    {
       float timer = 0f;
@@ -54,5 +58,26 @@ public class RespawnScript : MonoBehaviour
          yield return null;
       }
       fadePanel.alpha = endAlpha;
+   }
+
+
+   private void Awake()
+   {
+      LevelManagerObject = GameObject.Find("LevelManager");
+      if (LevelManagerObject != null)
+      {
+         levelManager = LevelManagerObject.GetComponent<LevelManager>();
+      }
+      else
+      {
+         Debug.LogWarning("Respawn script could not find Level Manager");
+      }
+      if (levelManager != null) {
+         transform.position = levelManager.GetSpawnPos();
+      }
+      else
+      {
+         Debug.LogWarning("Respawn script could not find Level Manager Script");
+      }
    }
 }

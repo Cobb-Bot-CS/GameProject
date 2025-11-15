@@ -18,7 +18,7 @@ public class Hazards : MonoBehaviour
    [SerializeField] private int hazardDamage;
 
    private GameObject player;
-   private CharacterHealthScript playerHealth;
+   private CharacterHealth playerHealth;
    private RespawnScript playerRespawn;
 
 
@@ -30,7 +30,7 @@ public class Hazards : MonoBehaviour
       player = GameObject.Find("Character");
       if (player != null)
       {
-         playerHealth = player.GetComponent<CharacterHealthScript>();
+         playerHealth = player.GetComponent<CharacterHealth>();
          playerRespawn = player.GetComponent<RespawnScript>();
       }
       else
@@ -49,8 +49,8 @@ public class Hazards : MonoBehaviour
    private void OnTriggerEnter2D(Collider2D other)
    {
       GameObject otherGameObject = other.gameObject;
-      // if player collided
-      if (otherGameObject.CompareTag("Player"))
+      // if player boxcollider collided
+      if (otherGameObject.CompareTag("Player") && other is BoxCollider2D)
       {
          if (playerHealth != null)
          {

@@ -7,10 +7,10 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     private RectTransform handle;
     private Vector2 inputVector;
 
-    //  ÐÂÔö£º¼ÇÂ¼ÊÇ·ñ´¥·¢ÌøÔ¾
+    //  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½Ç·ñ´¥·ï¿½ï¿½ï¿½Ô¾
     private bool jumpTriggered = false;
     [Header("Jump Settings")]
-    public float jumpThreshold = 0.6f;  // ÍÏ¶¯¶à¸ßËã¡°ÌøÔ¾¡±
+    public float jumpThreshold = 0.6f;  // ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½ï¿½ã¡°ï¿½ï¿½Ô¾ï¿½ï¿½
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
                 inputVector.y * (bg.sizeDelta.y / 3f)
             );
 
-            //  ¼ì²âÉÏÍÏÌøÔ¾
+            //  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾
             if (inputVector.y > jumpThreshold && !jumpTriggered)
             {
                 jumpTriggered = true;
@@ -59,12 +59,12 @@ public class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointer
     public float Horizontal() => inputVector.x;
     public float Vertical() => inputVector.y;
 
-    // ÐÂÔö·½·¨£º¹©Íæ¼Ò½Å±¾µ÷ÓÃÌøÔ¾ÐÅºÅ
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½Åºï¿½
     public bool JumpTriggered()
     {
         if (jumpTriggered)
         {
-            jumpTriggered = false; // ÖØÖÃ×´Ì¬
+            jumpTriggered = false; // ï¿½ï¿½ï¿½ï¿½×´Ì¬
             return true;
         }
         return false;
