@@ -9,6 +9,7 @@ public class SoundTriggers : MonoBehaviour
     public void PlayerDeath() => AudioManager.Instance.Play("PlayerDeath");
     public void PlayerPowerUp() => AudioManager.Instance.Play("PowerUp");
     public void WeaponPickup() => AudioManager.Instance.Play("WeaponPickup");
+    public void SwordAttack() => AudioManager.Instance.Play("SwordAttack");
     public void EnemyAttack() => AudioManager.Instance.Play("EnemyAttack");
     public void EnemyDie() => AudioManager.Instance.Play("EnemyDie");
     public void EnemyChase() => AudioManager.Instance.Play("EnemyChase");
