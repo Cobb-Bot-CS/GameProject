@@ -30,10 +30,7 @@ public class LevelSwitcher : MonoBehaviour
    private void Awake()
    {
       // Make sure we have level manager gameobject
-      if (levelManagerObject == null)
-      {
-         levelManagerObject = GameObject.Find("LevelManager");
-      }
+      levelManagerObject = GameObject.Find("LevelManager");
       // get the level manager script to use methods
       if (levelManagerObject != null)
       {

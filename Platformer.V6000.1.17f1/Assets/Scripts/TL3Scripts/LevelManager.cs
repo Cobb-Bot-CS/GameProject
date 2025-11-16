@@ -1,7 +1,7 @@
 /*
  * Filename: LevelManager.cs
  * Developer: Alex Johnson
- * Purpose: A class that can switch scenes to change levels
+ * Purpose: A singleton that can switch scenes to change levels
  */ 
 
 using UnityEngine;
@@ -18,14 +18,25 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
    private Vector3 newPosition;
-
+   // Static reference to the instance
+   public static LevelManager Instance { get; private set; }
 
    /*
     * Summary: Prevent gameobject from being destroyed on new scene
     */
    private void Awake()
    {
+      if (Instance != null && Instance != this)
+      {
+         // If another instance already exists, destroy this one
+         Destroy(gameObject);
+      }
+      else
+      {
+         // Set this instance as the singleton
+         Instance = this;
          DontDestroyOnLoad(gameObject);
+      }
    }
 
 
