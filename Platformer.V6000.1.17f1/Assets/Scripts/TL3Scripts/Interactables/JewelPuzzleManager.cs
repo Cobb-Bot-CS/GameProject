@@ -63,7 +63,7 @@ public class JewelPuzzleManager : MonoBehaviour
 
    private void PickupJewel()
    {
-      altarPuzzle.AddJewel();
+      altarPuzzle.SetCondition1(false);
       jewel.SetActive(false);
    }
 
@@ -105,21 +105,21 @@ public class JewelPuzzleManager : MonoBehaviour
    private void OnInteract(InputValue Button)
    {
       // jewel pickup
-      if (pickupPrompt.activeSelf && altarPuzzle.GetJewels() < 1)
+      if (pickupPrompt.activeSelf && !altarPuzzle.PickedUp1())
       {
          PickupJewel();
       }
       else
       {
          // altar1 interact
-         if ((interactPrompt.activeSelf || pickupPrompt.activeSelf) && interactPrompt.transform.position.x == altar1.transform.position.x)
+         if ((interactPrompt.activeSelf || pickupPrompt.activeSelf) && interactPrompt.transform.position.x == altar1.transform.position.x && altarPuzzle.PickedUp1())
          {
             AltarInteract1();
          }
          else
          {
             // altar2 interact
-            if ((interactPrompt.activeSelf || pickupPrompt.activeSelf) && interactPrompt.transform.position.x == altar2.transform.position.x)
+            if ((interactPrompt.activeSelf || pickupPrompt.activeSelf) && interactPrompt.transform.position.x == altar2.transform.position.x && altarPuzzle.PickedUp1())
             {
                AltarInteract2();
             }

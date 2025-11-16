@@ -3,6 +3,7 @@ using UnityEngine;
 public class PuzzleAltar : PuzzleSuper
 {
    private int numJewels = 0;
+   private bool pickedUp1 = false;
 
 
    public int GetJewels()
@@ -10,9 +11,9 @@ public class PuzzleAltar : PuzzleSuper
       return numJewels;
    }
 
-   public void AddJewel()
+   public bool PickedUp1()
    {
-      numJewels++;
+      return pickedUp1;
    }
 
    public override void SetCondition1(bool condition)
@@ -20,14 +21,15 @@ public class PuzzleAltar : PuzzleSuper
       base.SetCondition1(condition);
       if (condition == true)
       {
-         numJewels++;
-      }
-      else
-      {
          if (numJewels > 0)
          {
             numJewels--;
          }
       }
+      else
+      {
+         numJewels++;
+      }
+      pickedUp1 = true;
    }
 }
