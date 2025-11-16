@@ -48,7 +48,7 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
+            Debug.LogWarning("PauseMenuUI not found");
         }
 
         Time.timeScale = 1f;              // Resume normal time
@@ -66,10 +66,10 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
+            Debug.LogWarning("PauseMenuUI not found");
         }
 
-        Time.timeScale = 0f;              // Freeze all time-dependent systems
+        Time.timeScale = 0f;              // Freeze all  systems
         isPaused = true;                  // Update state flag
     }
 
@@ -78,16 +78,15 @@ public class PauseManager : MonoBehaviour
     ///
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f; // Ensure time is unfrozen
+        Time.timeScale = 1f; 
 
         // Safely check if the scene exists before loading
         if (Application.CanStreamedLevelBeLoaded("MainMenu"))
         {
-            SceneManager.LoadScene("MainMenu"); // Load main menu scene
-        }
+            SceneManager.LoadScene("MainMenu"); 
         else
         {
-            Debug.LogError("MainMenu scene not found! Ensure it’s added to Build Settings.");
+            Debug.LogError("MainMenu scene not found.");
         }
     }
 

@@ -8,9 +8,9 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-/// <summary>
+/// 
 /// Handles the game settings such as audio volume via buttons and menu navigation.
-/// </summary>
+///
 public class SettingsManager : MonoBehaviour
 {
     [Header("Audio Settings")]
@@ -21,18 +21,18 @@ public class SettingsManager : MonoBehaviour
     {
         
     }
-    /// <summary>
+    ///
     /// Opens the settings menu.
-    /// </summary>
+    /// 
     public void OpenSettings()
     {
         settingsMenuUI.SetActive(true);
         Time.timeScale = 0f; // Optional: freeze game while settings are open
     }
 
-    /// <summary>
+    /// 
     /// Closes the settings menu and resumes the game.
-    /// </summary>
+    /// 
     public void CloseSettings()
     {
         settingsMenuUI.SetActive(false);
