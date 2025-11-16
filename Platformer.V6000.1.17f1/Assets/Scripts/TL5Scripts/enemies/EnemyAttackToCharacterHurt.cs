@@ -10,7 +10,7 @@ public class EnemyAttackToCharacterHurt : MonoBehaviour
     private float _nextAttackTime = 0f;
 
     private Transform _player;
-    private CharacterHealthScript _playerHealth;
+    private CharacterHealth _playerHealth;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class EnemyAttackToCharacterHurt : MonoBehaviour
         if (playerObj != null)
         {
             _player = playerObj.transform;
-            _playerHealth = playerObj.GetComponent<CharacterHealthScript>();
+            _playerHealth = playerObj.GetComponent<CharacterHealth>();
         }
         else
         {

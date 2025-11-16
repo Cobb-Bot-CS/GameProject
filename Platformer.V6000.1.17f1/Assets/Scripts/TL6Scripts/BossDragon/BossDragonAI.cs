@@ -52,7 +52,7 @@ namespace BossOne
         [SerializeField] private Transform visualsTransform;
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody2D rb;
-        [SerializeField] private CharacterHealthScript playerHealth;
+        [SerializeField] private CharacterHealth playerHealth;
 
 
 
@@ -739,7 +739,7 @@ namespace BossOne
         public void EngageTarget(Transform target)
         {
             player = target;
-            playerHealth = target.GetComponent<CharacterHealthScript>();
+            playerHealth = target.GetComponent<CharacterHealth>();
 
 
             if (currentPhase == 0)
