@@ -21,6 +21,19 @@ public class PauseManager : MonoBehaviour
    private bool isPaused = false;
 
 
+    ///
+    /// Resumes the game by hiding the pause menu and restoring time flow.
+    ///
+    public void ResumeGame()
+    {
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(false); // Hide pause menu UI
+        }
+        else
+        {
+            Debug.LogWarning("PauseMenuUI not found");
+        }
 
    /*
     * Summary: Called every frame to detect player input for pausing or resuming
@@ -40,24 +53,40 @@ public class PauseManager : MonoBehaviour
       }
    }
 
+    ///
+    /// Pauses the game by displaying the pause menu and freezing time.
+    ///
+    private void PauseGame()
+    {
+        if (pauseMenuUI != null)
+        {
+            pauseMenuUI.SetActive(true);  // Show pause menu UI
+        }
+        else
+        {
+            Debug.LogWarning("PauseMenuUI not found");
+        }
 
+        Time.timeScale = 0f;              // Freeze all  systems
+        isPaused = true;                  // Update state flag
+    }
 
-   /*
-    * Summary: Resumes the game by hiding the pause menu and restoring time flow
-    */
-   public void ResumeGame()
-   {
-      // Play resume sound
-      AudioManager.Instance.PlayOneShot("PauseClose");
+    ///
+    /// Loads the Main Menu scene and ensures time resumes normally.
+    ///
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f; 
 
-      if (pauseMenuUI != null)
-      {
-         pauseMenuUI.SetActive(false);
-      }
-      else
-      {
-         Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
-      }
+        // Safely check if the scene exists before loading
+        if (Application.CanStreamedLevelBeLoaded("MainMenu"))
+        {
+            SceneManager.LoadScene("MainMenu"); 
+        else
+        {
+            Debug.LogError("MainMenu scene not found.");
+        }
+    }
 
       Time.timeScale = 1f;
       isPaused = false;

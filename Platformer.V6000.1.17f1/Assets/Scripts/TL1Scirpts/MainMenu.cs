@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            Debug.LogError("[MainMenu] No LevelManager found in the Main Menu scene!");
+            Debug.LogError("No LevelManager found");
         }
     }
 
