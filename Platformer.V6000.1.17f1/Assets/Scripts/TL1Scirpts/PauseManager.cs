@@ -7,173 +7,98 @@ using UnityEngine.SceneManagement;
  * Purpose: Handles pausing, resuming, and game state transitions with audio integration
  */
 
-/*
- * Summary: Manages the pause system for the game with audio feedback
- *
- * Member Variables:
- * pauseMenuUI - Reference to the Pause Menu Canvas object
- * isPaused - Indicates whether the game is currently paused
- */
 public class PauseManager : MonoBehaviour
 {
-   [Header("Pause Menu Settings")]
-   [SerializeField] private GameObject pauseMenuUI;
-   private bool isPaused = false;
+    [Header("Pause Menu Settings")]
+    [SerializeField] private GameObject pauseMenuUI;
+    private bool isPaused = false;
 
+    /*
+     * Summary: Called every frame to detect player input for pausing or resuming
+     */
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+                ResumeGame();
+            else
+                PauseGame();
+        }
+    }
 
-    ///
-    /// Resumes the game by hiding the pause menu and restoring time flow.
-    ///
+    /*
+     * Summary: Resumes the game by hiding the pause menu and restoring time flow
+     */
     public void ResumeGame()
     {
+        AudioManager.Instance.PlayOneShot("ButtonClick");
+
         if (pauseMenuUI != null)
-        {
-            pauseMenuUI.SetActive(false); // Hide pause menu UI
-        }
+            pauseMenuUI.SetActive(false);
         else
-        {
             Debug.LogWarning("PauseMenuUI not found");
-        }
 
-   /*
-    * Summary: Called every frame to detect player input for pausing or resuming
-    */
-   private void Update()
-   {
-      if (Input.GetKeyDown(KeyCode.Escape))
-      {
-         if (isPaused)
-         {
-            ResumeGame();
-         }
-         else
-         {
-            PauseGame();
-         }
-      }
-   }
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
 
-    ///
-    /// Pauses the game by displaying the pause menu and freezing time.
-    ///
+    /*
+     * Summary: Pauses the game by displaying the pause menu and freezing time
+     */
     private void PauseGame()
     {
-        if (pauseMenuUI != null)
-        {
-            pauseMenuUI.SetActive(true);  // Show pause menu UI
-        }
-        else
-        {
-            Debug.LogWarning("PauseMenuUI not found");
-        }
+        AudioManager.Instance.PlayOneShot("PauseOpen");
 
-        Time.timeScale = 0f;              // Freeze all  systems
-        isPaused = true;                  // Update state flag
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(true);
+        else
+            Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
+
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
-    ///
-    /// Loads the Main Menu scene and ensures time resumes normally.
-    ///
+    /*
+     * Summary: Loads the Main Menu scene and resumes time
+     */
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f; 
+        AudioManager.Instance.PlayOneShot("ButtonClick");
 
-        // Safely check if the scene exists before loading
+        Time.timeScale = 1f;
+
         if (Application.CanStreamedLevelBeLoaded("MainMenu"))
-        {
-            SceneManager.LoadScene("MainMenu"); 
+            SceneManager.LoadScene("MainMenu");
         else
-        {
-            Debug.LogError("MainMenu scene not found.");
-        }
+            Debug.LogError("MainMenu scene not found! Ensure it's added to Build Settings.");
     }
 
-      Time.timeScale = 1f;
-      isPaused = false;
-   }
+    /*
+     * Summary: Restarts the current scene
+     */
+    public void RestartGame()
+    {
+        AudioManager.Instance.PlayOneShot("ButtonClick");
 
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
+    /*
+     * Summary: Exits the application with audio feedback
+     */
+    public void QuitGame()
+    {
+        AudioManager.Instance.PlayOneShot("ButtonClick");
 
-   /*
-    * Summary: Pauses the game by displaying the pause menu and freezing time
-    */
-   private void PauseGame()
-   {
-      // Play pause sound
-      AudioManager.Instance.PlayOneShot("PauseOpen");
+        Debug.Log("Quitting Game...");
 
-      if (pauseMenuUI != null)
-      {
-         pauseMenuUI.SetActive(true);
-      }
-      else
-      {
-         Debug.LogWarning("PauseMenuUI reference not set in Inspector.");
-      }
+        Invoke(nameof(QuitApplication), 0.5f);
+    }
 
-      Time.timeScale = 0f;
-      isPaused = true;
-   }
-
-
-
-   /*
-    * Summary: Loads the Main Menu scene and ensures time resumes normally
-    */
-   public void LoadMainMenu()
-   {
-      // Play button click sound
-      AudioManager.Instance.PlayOneShot("ButtonClick");
-
-      Time.timeScale = 1f;
-
-      if (Application.CanStreamedLevelBeLoaded("MainMenu"))
-      {
-         SceneManager.LoadScene("MainMenu");
-      }
-      else
-      {
-         Debug.LogError("MainMenu scene not found! Ensure it's added to Build Settings.");
-      }
-   }
-
-
-
-   /*
-    * Summary: Restarts the current scene
-    */
-   public void RestartGame()
-   {
-      // Play button click sound
-      AudioManager.Instance.PlayOneShot("ButtonClick");
-
-      Time.timeScale = 1f;
-      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-   }
-
-
-
-   /*
-    * Summary: Exits the application with audio feedback
-    */
-   public void QuitGame()
-   {
-      // Play button click sound
-      AudioManager.Instance.PlayOneShot("ButtonClick");
-
-      Debug.Log("Quitting Game...");
-
-      // Optional: Add a delay for sound to play before quitting
-      Invoke(nameof(QuitApplication), 0.5f);
-   }
-
-
-
-   /*
-    * Summary: Actually quits the application (called via Invoke)
-    */
-   private void QuitApplication()
-   {
-      Application.Quit();
-   }
+    private void QuitApplication()
+    {
+        Application.Quit();
+    }
 }
