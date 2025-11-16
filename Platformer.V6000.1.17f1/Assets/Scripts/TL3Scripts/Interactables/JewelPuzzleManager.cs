@@ -23,11 +23,13 @@ public class JewelPuzzleManager : MonoBehaviour
       altar2 = GameObject.Find("Altar2");
       portal1 = GameObject.Find("Portal1");
       portal2 = GameObject.Find("Portal2");
+      portal1.SetActive(false);
+      portal2.SetActive(false);
    }
 
    private void Update()
    {
-      if (Mathf.Abs (jewel.transform.position.x - player.transform.position.x) < 4 && Mathf.Abs (jewel.transform.position.y - player.transform.position.y) < 2 && jewel.activeSelf)
+      if (Mathf.Abs (jewel.transform.position.x - player.transform.position.x) < 2 && Mathf.Abs (jewel.transform.position.y - player.transform.position.y) < 2 && jewel.activeSelf)
       {
          pickupPrompt.transform.position = new Vector3(jewel.transform.position.x, jewel.transform.position.y + 1, 0);
          pickupPrompt.SetActive(true);
@@ -37,20 +39,20 @@ public class JewelPuzzleManager : MonoBehaviour
          pickupPrompt.SetActive(false);
       }
 
-      if (Mathf.Abs(altar1.transform.position.x - player.transform.position.x) < 4 && Mathf.Abs(altar1.transform.position.y - player.transform.position.y) < 2 && !jewel.activeSelf)
-      {
-         interactPrompt.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 1, 0);
-         interactPrompt.SetActive(true);
-      }
-      else
-      {
-         interactPrompt.SetActive(false);
-      }
+      bool near1 = Mathf.Abs(altar1.transform.position.x - player.transform.position.x) < 2 && Mathf.Abs(altar1.transform.position.y - player.transform.position.y) < 2;
+      bool near2 = Mathf.Abs(altar2.transform.position.x - player.transform.position.x) < 2 && Mathf.Abs(altar2.transform.position.y - player.transform.position.y) < 2;
 
-      if (Mathf.Abs(altar2.transform.position.x - player.transform.position.x) < 4 && Mathf.Abs(altar2.transform.position.y - player.transform.position.y) < 2 && !jewel.activeSelf)
+      if ((near1 || near2)  && !jewel.activeSelf)
       {
-         interactPrompt.transform.position = new Vector3(altar2.transform.position.x, altar2.transform.position.y + 1, 0);
          interactPrompt.SetActive(true);
+         if (near1)
+         {
+            interactPrompt.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 2, 0);
+         }
+         else
+         {
+            interactPrompt.transform.position = new Vector3(altar2.transform.position.x, altar2.transform.position.y + 2, 0);
+         }
       }
       else
       {
@@ -67,11 +69,11 @@ public class JewelPuzzleManager : MonoBehaviour
 
    private void AltarInteract1()
    {
-      if (jewel.activeSelf)
+      if (!jewel.activeSelf)
       {
          jewel.SetActive(true);
          portal1.SetActive(true);
-         jewel.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 1, 0);
+         jewel.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
       }
       else
@@ -84,11 +86,11 @@ public class JewelPuzzleManager : MonoBehaviour
 
    private void AltarInteract2()
    {
-      if (jewel.activeSelf)
+      if (!jewel.activeSelf)
       {
          jewel.SetActive(true);
          portal2.SetActive(true);
-         jewel.transform.position = new Vector3(altar2.transform.position.x, altar2.transform.position.y + 1, 0);
+         jewel.transform.position = new Vector3(altar2.transform.position.x, altar2.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
       }
       else
@@ -100,29 +102,28 @@ public class JewelPuzzleManager : MonoBehaviour
    }
 
 
-   void OnInteract()
+   private void OnInteract(InputValue Button)
    {
       // jewel pickup
-      if (pickupPrompt.activeSelf)
+      if (pickupPrompt.activeSelf && altarPuzzle.GetJewels() < 1)
       {
          PickupJewel();
       }
       else
       {
          // altar1 interact
-         if (interactPrompt.activeSelf && interactPrompt.transform.position.x == altar1.transform.position.x)
+         if ((interactPrompt.activeSelf || pickupPrompt.activeSelf) && interactPrompt.transform.position.x == altar1.transform.position.x)
          {
             AltarInteract1();
          }
          else
          {
             // altar2 interact
-            if (interactPrompt.activeSelf && interactPrompt.transform.position.x == altar2.transform.position.x)
+            if ((interactPrompt.activeSelf || pickupPrompt.activeSelf) && interactPrompt.transform.position.x == altar2.transform.position.x)
             {
                AltarInteract2();
             }
          }
       }
-         gameObject.SetActive(false);
    }
 }
