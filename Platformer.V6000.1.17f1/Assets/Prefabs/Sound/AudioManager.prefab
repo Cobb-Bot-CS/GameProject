@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2924969307925581248}
   - component: {fileID: 376132918492273673}
   - component: {fileID: 1707743151591501154}
+  - component: {fileID: 8940607147207960809}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6660546788554662067}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -54,51 +55,23 @@ MonoBehaviour:
     pitch: 0.5
     loop: 0
     source: {fileID: 0}
-  - name: Footstep
-    type: 0
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0.8
-    loop: 0
-    source: {fileID: 0}
   - name: PlayerHurt
     type: 0
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 46ab3c963e06894458cbaa90cd5f8e27, type: 3}
     volume: 1
     pitch: 1.32
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: PlayerDeath
     type: 0
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 4bfe9a77d0d12cb41bfb4a7caed55bbb, type: 3}
     volume: 1
-    pitch: 0.1
-    loop: 0
-    source: {fileID: 0}
-  - name: Power-Up
-    type: 0
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: EnemyAttack
-    type: 1
-    clip: {fileID: 8300000, guid: 7d156b8a5b340cd46bcf0a76557dd2dd, type: 3}
-    volume: 1
-    pitch: 0
+    pitch: 1.63
     loop: 0
     source: {fileID: 0}
   - name: EnemyDie
     type: 1
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: EnemyChase
-    type: 1
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: f14a772520d36f4499a0dafb8aeae7b7, type: 3}
     volume: 1
     pitch: 0
     loop: 0
@@ -107,45 +80,145 @@ MonoBehaviour:
     type: 3
     clip: {fileID: 8300000, guid: 9d206b55baa499e4b91d9ffdcc6d6049, type: 3}
     volume: 1
-    pitch: 0
-    loop: 0
-    source: {fileID: 0}
-  - name: HealthPickup
-    type: 3
-    clip: {fileID: 0}
-    volume: 1
-    pitch: 0
+    pitch: 2.15
     loop: 0
     source: {fileID: 0}
   - name: ButtonClick
     type: 4
     clip: {fileID: 8300000, guid: 31606710d125b1e47b5517a7a5885d0a, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 2.35
     loop: 0
     source: {fileID: 0}
   - name: PauseOpen
     type: 4
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 537907bdccd6d8b41aac825c597e72c5, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 2.51
     loop: 0
     source: {fileID: 0}
   - name: PauseClose
     type: 4
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 537907bdccd6d8b41aac825c597e72c5, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 2.4
     loop: 0
     source: {fileID: 0}
-  - name: WeaponAttack
+  - name: WeaponPickup
     type: 2
     clip: {fileID: 8300000, guid: f1e85fa2fb90fce469bae7ee14355e82, type: 3}
     volume: 1
     pitch: 1.76
     loop: 0
     source: {fileID: 0}
+  - name: boss
+    type: 1
+    clip: {fileID: 8300000, guid: a8a5a6755c43bcc4e8707be8eb87fbb5, type: 3}
+    volume: 1
+    pitch: 1.76
+    loop: 0
+    source: {fileID: 0}
+  musicMixerGroup: {fileID: 4208457405371693260, guid: e2ef2765f68e7124c97a2c250b70477e, type: 2}
+  sfxMixerGroup: {fileID: -8905234529860441697, guid: d1176ec11c929d3458ea6e8406f77738, type: 2}
+  uiMixerGroup: {fileID: -5778022814998132445, guid: c2eb42487eee0f3469c4a383f6576ff4, type: 2}
 --- !u!82 &1707743151591501154
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660546788554662067}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &8940607147207960809
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

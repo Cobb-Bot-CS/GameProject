@@ -25,17 +25,6 @@ public class SoundTriggers : MonoBehaviour
    }
 
 
-
-   /*
-    * Summary: Plays player footstep sound effect
-    */
-   public void PlayerFootstep()
-   {
-      AudioManager.Instance.Play("Footstep");
-   }
-
-
-
    /*
     * Summary: Plays player hurt sound effect
     */
@@ -57,15 +46,6 @@ public class SoundTriggers : MonoBehaviour
 
 
    //==================== GAMEPLAY SOUNDS ====================//
-
-   /*
-    * Summary: Plays power-up collection sound effect
-    */
-   public void PlayerPowerUp()
-   {
-      AudioManager.Instance.Play("PowerUp");
-   }
-
 
 
    /*
@@ -89,16 +69,6 @@ public class SoundTriggers : MonoBehaviour
 
 
    //==================== ENEMY SOUNDS ====================//
-
-   /*
-    * Summary: Plays enemy attack sound effect
-    */
-   public void EnemyAttack()
-   {
-      AudioManager.Instance.Play("EnemyAttack");
-   }
-
-
 
    /*
     * Summary: Plays enemy death sound effect
@@ -128,16 +98,6 @@ public class SoundTriggers : MonoBehaviour
    public void CoinPickup()
    {
       AudioManager.Instance.Play("CoinPickup");
-   }
-
-
-
-   /*
-    * Summary: Plays health pickup sound effect
-    */
-   public void HealthPickup()
-   {
-      AudioManager.Instance.Play("HealthPickup");
    }
 
 
