@@ -26,6 +26,8 @@ public class RevisedWeaponCollect : MonoBehaviour
 //--------------------Collect Weapon On Touch-------------------------//
     void OnTriggerEnter2D(Collider2D collision)
     {
+        //If Player Touches Item Hitbox
+         AudioManager.Instance.Play("WeaponPickup");
         weaponAnimator.SetBool("IsCollected", true);
         inventory.CollectWeapon1();
 

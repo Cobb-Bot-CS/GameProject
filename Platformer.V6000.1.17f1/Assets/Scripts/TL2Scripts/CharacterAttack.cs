@@ -26,6 +26,7 @@ public class CharacterAttack : MonoBehaviour
 //--------------------Attack Function-------------------------//
     public IEnumerator Attack()
     {
+        AudioManager.Instance.Play("SwordAttack");
         //Contact Animator To Change Animation
         animator.SetBool("IsAttacking", true);
 

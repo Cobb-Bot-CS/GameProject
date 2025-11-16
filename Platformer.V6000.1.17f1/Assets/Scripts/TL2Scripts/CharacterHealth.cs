@@ -43,6 +43,7 @@ public class CharacterHealth : MonoBehaviour
         currentHealth = Mathf.Max(currentHealth, minHealth); 
         OnHealthChanged?.Invoke(currentHealth);
 
+        AudioManager.Instance.Play("PlayerHurt");
         //Animates When Damage Taken//
         animator.SetBool("IsHurt", true); 
 
@@ -63,23 +64,31 @@ public class CharacterHealth : MonoBehaviour
 
 
     //--------------------Character Death Function-------------------------//
-    private void Die()
+   //--------------------Character Death Function-------------------------//
+private void Die()
+{
+    Debug.Log("Character Died");
+    
+    // Play sound using method that works when timescale is 0
+    Sound deathSound = Array.Find(AudioManager.Instance.sounds, sound => sound.name == "PlayerDeath");
+    if (deathSound != null && deathSound.clip != null)
     {
-        Debug.Log("Character Died");
-
-        //Stop player movement//
-        movement.enabled = false;
-
-        //Pause Game Time//
-        Time.timeScale = 0f;
-
-        //Show Death Screen 
-        if (deathScreen != null)
-        {
-            deathScreen.SetActive(true);
-        }
-        OnDeath?.Invoke();
+        AudioSource.PlayClipAtPoint(deathSound.clip, transform.position, 1f);
     }
+    
+    //Stop player movement//
+    movement.enabled = false;
+
+    //Pause Game Time//
+    Time.timeScale = 0f;
+
+    //Show Death Screen 
+    if (deathScreen != null)
+    {
+        deathScreen.SetActive(true);
+    }
+    OnDeath?.Invoke();
+}
 
     //--------------------Character Win Function-------------------------//
     public void Win()
