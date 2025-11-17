@@ -24,8 +24,25 @@ public class MenuManager : MonoBehaviour
     // Show Settings Menu and hide Main Menu
     public void ShowSettingsMenu()
     {
-         AudioManager.Instance.Play("ButtonClick");
+        AudioManager.Instance.Play("ButtonClick");
         mainMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
     }
+    
+    // Overloaded functions -> Static Binding
+    public void OpenMenu()
+    {
+        Debug.Log("Opening default main menu");
+    }
+
+    public void OpenMenu(string menuName)
+    {
+        Debug.Log("Opening menu: " + menuName);
+    }
+
+    public void OpenMenu(int index)
+    {
+        Debug.Log("Opening menu by index: " + index);
+    }
+    
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public enum SpawnLocation { Self, OnPlayer } // Define two spawn locations: self or on the player
 
+//让这个类出现在 Inspector 里，可以直接在 Unity 面板中配置每一个技能
 [System.Serializable]
 public class BossAttack
 {
@@ -21,7 +22,7 @@ public class BossAttack
     public GameObject hitVFX;
 
     [Header("Properties")]
-    public SpawnLocation spawnLocation;
+    public SpawnLocation spawnLocation; //attack form where
     public float minRange = 0f;
     public float maxRange = 5f;
     public float damage = 10f; // Damage for melee attacks
@@ -32,8 +33,8 @@ public class BossAI_Advanced : EnemyBase
 {
     [Header("UI & Debugging")]
     [SerializeField] private TextMeshProUGUI statusText; // Text component for showing current state
-    [Tooltip("Projectile spawn point such as fireball position")]
-    [SerializeField] private Transform firePoint;
+    [Tooltip("Projectile spawn point such as fireball position")] //在inspector点击时有提示
+    [SerializeField] private Transform firePoint; //location of 子物体，生成fire
 
     // Boss state machine
     private enum State { Dormant, Returning, Idle, Bored, Fighting, Death }
@@ -87,14 +88,10 @@ public class BossAI_Advanced : EnemyBase
     void Start()
     {
         initialPosition = transform.position;
-        currentState = State.Idle;
-        UpdateStatusText("Idle");
-        //animator.Play("Idle");
-
+        currentState = State.Dormant;
+        UpdateStatusText("Dormant");
+        animator.Play("Bored");
         currentHealth = maxHealth;
-       
-
-
 
     }
 
@@ -105,6 +102,9 @@ public class BossAI_Advanced : EnemyBase
         // State machine logic
         switch (currentState)
         {
+            case State.Dormant:
+                BoredState();
+                break;
             case State.Idle:
                 IdleState();
                 break;
@@ -121,10 +121,11 @@ public class BossAI_Advanced : EnemyBase
     }
 
     #region --- State Logic ---
+    
 
     private void IdleState()
     {
-        //animator.Play("Idle");
+        animator.Play("Idle");
         timeSinceLostPlayer += Time.deltaTime;
         if (timeSinceLostPlayer > boredTimer)
         {
@@ -158,6 +159,7 @@ public class BossAI_Advanced : EnemyBase
         if (player == null) { DisengageTarget(); return; }
 
         LookAtPlayer();
+        //是否开始下一次攻击和跳跃
         timeSinceLastAction += Time.deltaTime;
         timeSinceLastJump += Time.deltaTime;
 
@@ -200,6 +202,7 @@ public class BossAI_Advanced : EnemyBase
             UpdateStatusText("Moving");
         }
 
+        //Boss 走得越快 → Speed 越大 → 播放走路动画越快
         if (timeSinceLastAction <= actionCooldown)
         {
             animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x) / moveSpeed);
@@ -217,16 +220,17 @@ public class BossAI_Advanced : EnemyBase
 
         if (attack.castVFX != null)
         {
+            //Instantiate Unity 用来生成一个物体 的函数，Quaternion.identity是默认旋转
             Instantiate(attack.castVFX, transform.position, Quaternion.identity);
         }
-
-        rb.linearVelocity = Vector2.zero;
+        
+        rb.linearVelocity = Vector2.zero;//在攻击时停止移动
         animator.SetFloat("AttackIndex", attack.animationIndex);
         animator.SetTrigger("Attack");
         timeSinceLastAction = 0f;
     }
 
-    public void SpawnAttackPrefab()
+    public void SpawnAttackPrefab() //判断攻击类型，处理近战伤害，生成远程攻击的 prefab，设置伤害脚本，设置 projectile 移动方向
     {
         if (currentAttack == null)
         {
@@ -234,7 +238,7 @@ public class BossAI_Advanced : EnemyBase
             return;
         }
 
-        if (currentAttack.attackPrefab == null)
+        if (currentAttack.attackPrefab == null)//判断是否melee attack，因为远程攻击有prefab
         {
             Debug.Log($"Performing melee damage check: {currentAttack.attackName}...");
             Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, currentAttack.maxRange, LayerMask.GetMask("Player"));
