@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using System;
 using UnityEngine.UI;
@@ -163,6 +164,7 @@ public class AudioManager : MonoBehaviour
    /*
     * Summary: Loads volume setting from player preferences
     */
+  
    public void Load()
    {
       volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
@@ -173,8 +175,11 @@ public class AudioManager : MonoBehaviour
    /*
     * Summary: Saves current volume setting to player preferences
     */
+   
+   
    public void Save()
    {
       PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
    }
 }
+
