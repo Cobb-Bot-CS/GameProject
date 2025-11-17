@@ -47,6 +47,9 @@ public class AudioManager : MonoBehaviour
 
       //DontDestroyOnLoad(gameObject);
 
+      Debug.Log("AudioManager: Starting sound initialization...");
+      Debug.Log($"AudioManager: Found {sounds.Length} sounds to load");
+
       foreach (Sound s in sounds)
       {
          s.source = gameObject.AddComponent<AudioSource>();
@@ -58,7 +61,19 @@ public class AudioManager : MonoBehaviour
 
          // Assign appropriate mixer group based on sound type
          AssignMixerGroup(s);
+         
+         // Log each sound that's loaded
+         if (s.clip != null)
+         {
+            Debug.Log($"AudioManager: Loaded sound '{s.name}' - Type: {s.type}, Clip: {s.clip.name}, Length: {s.clip.length}s");
+         }
+         else
+         {
+            Debug.LogWarning($"AudioManager: Sound '{s.name}' has no audio clip assigned!");
+         }
       }
+      
+      Debug.Log("AudioManager: Sound initialization completed successfully");
    }
 
 
@@ -95,13 +110,17 @@ public class AudioManager : MonoBehaviour
     */
    private void Start()
    {
+      Debug.Log("AudioManager: Initializing volume settings");
+      
       if (!PlayerPrefs.HasKey("musicVolume"))
       {
          PlayerPrefs.SetFloat("musicVolume", 1);
+         Debug.Log("AudioManager: No saved volume found, setting default volume to 1");
       }
       else
       {
          Load();
+         Debug.Log($"AudioManager: Loaded saved volume: {PlayerPrefs.GetFloat("musicVolume")}");
       }
    }
 
@@ -123,6 +142,7 @@ public class AudioManager : MonoBehaviour
          return;
       }
       
+      Debug.Log($"AudioManager: Playing sound '{name}' (Loop: {s.loop})");
       s.source.Play();
    }
 
@@ -144,6 +164,7 @@ public class AudioManager : MonoBehaviour
          return;
       }
       
+      Debug.Log($"AudioManager: Playing one-shot sound '{name}'");
       s.source.PlayOneShot(s.clip);
    }
 
@@ -154,7 +175,9 @@ public class AudioManager : MonoBehaviour
     */
    public void ChangeVolume()
    {
-      AudioListener.volume = volumeSlider.value;
+      float newVolume = volumeSlider.value;
+      AudioListener.volume = newVolume;
+      Debug.Log($"AudioManager: Volume changed to {newVolume}");
       Save();
    }
 
@@ -176,5 +199,45 @@ public class AudioManager : MonoBehaviour
    public void Save()
    {
       PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+   }
+   
+   
+   
+   /*
+    * Summary: Stops a playing sound by name
+    *
+    * Parameters:
+    * name - the name of the sound to stop
+    */
+   public void Stop(string name)
+   {
+      Sound s = Array.Find(sounds, sound => sound.name == name);
+      
+      if (s == null)
+      {
+         Debug.LogWarning("Sound: " + name + " not found!");
+         return;
+      }
+      
+      Debug.Log($"AudioManager: Stopping sound '{name}'");
+      s.source.Stop();
+   }
+   
+   
+   
+   /*
+    * Summary: Prints debug information about all loaded sounds
+    */
+   public void DebugSounds()
+   {
+      Debug.Log("=== AudioManager Sound Debug Info ===");
+      Debug.Log($"Total sounds: {sounds.Length}");
+      
+      foreach (Sound s in sounds)
+      {
+         string status = s.source.isPlaying ? "PLAYING" : "stopped";
+         Debug.Log($"- '{s.name}': Type={s.type}, Clip={(s.clip != null ? s.clip.name : "NULL")}, Status={status}");
+      }
+      Debug.Log("=====================================");
    }
 }
