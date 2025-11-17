@@ -28,4 +28,21 @@ public class MenuManager : MonoBehaviour
         mainMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
     }
+    
+    // Overloaded functions -> Static Binding
+    public void OpenMenu()
+    {
+        Debug.Log("Opening default main menu");
+    }
+
+    public void OpenMenu(string menuName)
+    {
+        Debug.Log("Opening menu: " + menuName);
+    }
+
+    public void OpenMenu(int index)
+    {
+        Debug.Log("Opening menu by index: " + index);
+    }
+    
 }
