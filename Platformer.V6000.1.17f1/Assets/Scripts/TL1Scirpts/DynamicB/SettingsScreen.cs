@@ -1,16 +1,32 @@
+/*
+ * File: SettingsScreen.cs
+ * Description: Controls the settings/options UI screen.
+ * Author: Adam Cobb
+ * Date: 11-16-2025
+ */
+
 using UnityEngine;
 
+/// <summary>
+/// Handles showing and hiding the Settings screen.
+/// </summary>
 public class SettingsScreen : UIScreen
 {
+    /// <summary>
+    /// Shows the Settings screen.
+    /// </summary>
     public override void Show()
     {
-        Debug.Log("Showing SETTINGS");
-        gameObject.SetActive(true);
+        base.Show();
+        Debug.Log("[SettingsScreen] Showing SETTINGS");
     }
 
+    /// <summary>
+    /// Hides the Settings screen.
+    /// </summary>
     public override void Hide()
     {
-        Debug.Log("Hiding SETTINGS");
-        gameObject.SetActive(false);
+        base.Hide();
+        Debug.Log("[SettingsScreen] Hiding SETTINGS");
     }
 }
