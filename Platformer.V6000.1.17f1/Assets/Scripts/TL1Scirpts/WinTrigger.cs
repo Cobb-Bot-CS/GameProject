@@ -6,14 +6,12 @@ public class WinTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player touched the win circle!");
-
             // Show the WinScreen
             WinScreen winScreen = FindAnyObjectByType<WinScreen>();
             if (winScreen != null)
                 winScreen.ShowWinScreen();
             else
-                Debug.LogError("WinScreen not found in scene!");
+                Debug.LogError("WinScreen not found in scene.");
         }
     }
 }
