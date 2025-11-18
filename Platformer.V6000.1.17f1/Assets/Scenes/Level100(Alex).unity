@@ -38783,9 +38783,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4208457405371693260, guid: e2ef2765f68e7124c97a2c250b70477e, type: 2}
     - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
+      propertyPath: musicVolumeSlider
+      value: 
+      objectReference: {fileID: 644179011}
+    - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
       propertyPath: sounds.Array.size
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
+      propertyPath: masterVolumeSlider
+      value: 
+      objectReference: {fileID: 644179011}
     - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
