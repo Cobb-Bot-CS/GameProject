@@ -18,6 +18,7 @@ public class CharacterMove : MonoBehaviour
 //--------------------Character Move Action Variables-------------------------//
     private InputAction moveAction;
     private InputAction jumpAction;
+    private InputAction attackAction;
 
 //--------------------Character Attack Action Variables-------------------------//
     [SerializeField] private CharacterAttack attackScript;
@@ -37,26 +38,38 @@ public class CharacterMove : MonoBehaviour
 //--------------------Enabling New Unity Movement Via Keyboard Input-------------------------//
     void OnEnable()
     {
-    //Produce a continuous value by using the binded buttons A and D for Left - Right//
-        moveAction = new InputAction(type: InputActionType.Value, binding: "<Keyboard>/a");
-        moveAction.AddBinding("<Keyboard>/d");
+    //Produce a continuous value by using the bounded buttons A and D for Left - Right//
+        moveAction = new InputAction(type: InputActionType.Value);
+        //moveAction.AddBinding("<Keyboard>/d");
         moveAction.AddCompositeBinding("1DAxis")
             .With("Negative", "<Keyboard>/a")
             .With("Positive", "<Keyboard>/d");
 
-    //Produce a jump action, binded to the space bar//
+    //Produce a jump action, bound to the space bar//
         jumpAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/space");
+
+    //Produce an attack action, bound to the left click
+    attackAction = new InputAction(type: InputActionType.Button, binding: "<Mouse>/leftButton");
+    attackAction.performed += PerformAttack;
+    
 
     //Enable both move and jump actions when function is called//
         moveAction.Enable();
         jumpAction.Enable();
+        attackAction.Enable();
     }
 
 //--------------------Disabling Movement (For Cooldowns, etc.)-------------------------//
     void OnDisable()
     {
-        moveAction.Disable();
-        jumpAction.Disable();
+        if (moveAction != null) moveAction.Disable();
+        if (jumpAction != null) jumpAction.Disable();
+
+    if (attackAction != null)
+    {
+        attackAction.performed -= PerformAttack; // unsubscribe properly
+        attackAction.Disable();
+    }
     }
 
     void Start()
@@ -120,12 +133,13 @@ public class CharacterMove : MonoBehaviour
         }
 
     //Logic for Playing Sounds On Character Attack//
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
+
+       /* if (Input.GetMouseButtonDown(0) && Time.time >= nextClickTime)
         {
             AudioManager.Instance.Play("SwordAttack");
             StartCoroutine(attackScript.Attack());
             nextClickTime = Time.time + cooldownTime;
-        }
+        }*/
     }
 
 //--------------------Smoother Movement Through FixedUpdate Function-------------------------//
@@ -153,7 +167,23 @@ public class CharacterMove : MonoBehaviour
         }
     }
 
-//--------------------Mobile Device Attacking Function-------------------------//
+//--------------------Mobile Device/Regular Attacking Functions-------------------------//
+
+private void PerformAttack(InputAction.CallbackContext ctx)
+{
+    if (this == null) return; // guard against destroyed object
+    if (attackScript == null) return; // guard against missing reference
+
+    if (Time.time >= nextClickTime)
+    {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.Play("SwordAttack");
+
+        StartCoroutine(attackScript.Attack());
+        nextClickTime = Time.time + cooldownTime;
+    }
+}
+
     public void MobileAttack()
     {
         if (Time.time >= nextClickTime)
