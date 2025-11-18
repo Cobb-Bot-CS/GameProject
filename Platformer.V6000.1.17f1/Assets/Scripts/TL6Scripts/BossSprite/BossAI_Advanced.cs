@@ -241,14 +241,14 @@ public class BossAI_Advanced : EnemyBase
         if (currentAttack.attackPrefab == null)//判断是否melee attack，因为远程攻击有prefab
         {
             Debug.Log($"Performing melee damage check: {currentAttack.attackName}...");
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, currentAttack.maxRange, LayerMask.GetMask("Player"));//圆形检测
-            foreach (Collider2D hit in hits) //hits 是一个 Collider2D 数组，里面是所有在攻击范围内的玩家碰撞体。 foreach：对每一个命中的对象做一次检查和处理。
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, currentAttack.maxRange, LayerMask.GetMask("Player"));
+            foreach (Collider2D hit in hits)
             {
                 CharacterHealth playerHealth = hit.GetComponent<CharacterHealth>();
                 if (playerHealth != null)
                 {
                     playerHealth.CharacterHurt((int)((EnemyBase)this).GetMeleeDamage());
-                    if (currentAttack.hitVFX != null)  //Boss 近战命中玩家时，会在玩家身上生成一个命中特效。
+                    if (currentAttack.hitVFX != null)
                     {
                         Instantiate(currentAttack.hitVFX, hit.transform.position, Quaternion.identity);
                     }
@@ -258,16 +258,15 @@ public class BossAI_Advanced : EnemyBase
         }
         else
         {
-            //创建一个变量 projectile，用于保存待会实例化出来的“远程攻击物体”
             GameObject projectile = null;
 
             switch (currentAttack.spawnLocation)
             {
-                case SpawnLocation.Self: //远程攻击(fire ball)需要从 Boss 身上发射出来。
-                    if (firePoint == null) //firePoint 是 Boss 脸上的一个点（例如嘴、手）,用于准确发射 projectile,r如果没生成;
+                case SpawnLocation.Self:
+                    if (firePoint == null)
                     {
                         Debug.LogError("Skill set to 'Self' but no FirePoint specified! Using boss center instead.");
-                        projectile = Instantiate(currentAttack.attackPrefab, transform.position, Quaternion.identity); //用 transform.position（Boss 中心）代替，避免技能无法生成。
+                        projectile = Instantiate(currentAttack.attackPrefab, transform.position, Quaternion.identity);
                     }
                     else
                     {
@@ -276,27 +275,27 @@ public class BossAI_Advanced : EnemyBase
                     Debug.Log($"Spawned projectile from fire point: {currentAttack.attackPrefab.name}");
                     break;
 
-                case SpawnLocation.OnPlayer:   //在玩家脚下生成技能
-                    if (player != null)        //用于 “范围攻击，firestorm，black hole，lighting
+                case SpawnLocation.OnPlayer:
+                    if (player != null)
                     {
-                        projectile = Instantiate(currentAttack.attackPrefab, player.position, Quaternion.identity);  //技能直接在玩家脚下出现
+                        projectile = Instantiate(currentAttack.attackPrefab, player.position, Quaternion.identity);
                         Debug.Log($"Spawned projectile on player: {currentAttack.attackPrefab.name}");
                     }
                     break;
             }
 
-            if (projectile != null)  //表示 skill prefab 已经成功实例化
+            if (projectile != null)
             {
-                DamagePlayer damageScript = projectile.GetComponent<DamagePlayer>();  //DamagePlayer 是挂在 projectile 上的脚本,它负责：projectile 碰到玩家 → 玩家扣血播。放命中特效（hitVFX）
+                DamagePlayer damageScript = projectile.GetComponent<DamagePlayer>();
                 if (damageScript != null)
                 {
-                    damageScript.Setup(currentAttack.damage, currentAttack.hitVFX); //Setup 会把：currentAttack.damage，currentAttack.hitVFX，传给 projectile。
+                    damageScript.Setup(currentAttack.damage, currentAttack.hitVFX);
                 }
-                //让 projectile 朝正确方向飞
-                ProjectileMover mover = projectile.GetComponent<ProjectileMover>(); 
+
+                ProjectileMover mover = projectile.GetComponent<ProjectileMover>();
                 if (mover != null && player != null)
                 {
-                    mover.SetDirection(visualsTransform.localScale.x);//SetDirection()，+1 → Boss 朝右，-1 → Boss 朝左，让 projectile。目的 朝向 Boss 面对的方向飞
+                    mover.SetDirection(visualsTransform.localScale.x);
                 }
             }
         }
@@ -316,25 +315,25 @@ public class BossAI_Advanced : EnemyBase
     {
         UpdateStatusText("Jump");
         animator.SetTrigger("Jump");
-        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse); //跳多高由 jumpForce 决定，Impulse = “瞬间爆发性的力”
-        timeSinceLastJump = Random.Range(-2f, 2f); //这是个亮点！Boss 跳跃频率带随机性，有时候跳得快
+        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        timeSinceLastJump = Random.Range(-2f, 2f);
         Debug.Log("Jump!");
     }
 
-    private BossAttack GetAvailableRangedAttack(float distance) //根据玩家距离与 Boss 当前阶段，从对应的远程技能池中挑选所有“符合距离条件”的技能，再从中随机选一个返回。
+    private BossAttack GetAvailableRangedAttack(float distance)
     {
-        BossAttack[] currentRangedPool;  //声明一个 BossAttack[] 类型的数组变量 currentRangedPool，用来保存“当前阶段要使用的远程技能池”
-        string phaseInfo;       //用于记录当前是“Phase 1 / Phase 2 / Phase 3”，后面会写进日志里
+        BossAttack[] currentRangedPool;
+        string phaseInfo;
 
-        if (currentPhase == 1) { currentRangedPool = rangedPhase1Attacks; phaseInfo = "Phase 1"; }  //当前远程技能池 = 第一阶段的远程技能数组
+        if (currentPhase == 1) { currentRangedPool = rangedPhase1Attacks; phaseInfo = "Phase 1"; }
         else if (currentPhase == 2) { currentRangedPool = rangedPhase2Attacks; phaseInfo = "Phase 2"; }
         else { currentRangedPool = rangedPhase3Attacks; phaseInfo = "Phase 3"; }
 
-        var logBuilder = new StringBuilder();    //var：让编译器自动推断类型，这里是 StringBuilder。new StringBuilder()：创建一个新的 StringBuilder 实例。
+        var logBuilder = new StringBuilder();
         logBuilder.AppendLine($"Searching ranged skills ({phaseInfo})... Player distance: {distance}");
 
-        List<BossAttack> validAttacks = new List<BossAttack>();  //用来存放 所有“距离符合条件”的远程技能，后面会从这个列表中随机选一个
-        foreach (var attack in currentRangedPool)    //foreach：遍历数组 currentRangedPool 里的每一个元素。对当前阶段所有远程技能，一个一个检查是否“适合当前距离”。
+        List<BossAttack> validAttacks = new List<BossAttack>();
+        foreach (var attack in currentRangedPool)
         {
             logBuilder.Append($"  - Checking '{attack.attackName}' (range: {attack.minRange}-{attack.maxRange})... ");
             if (distance >= attack.minRange && distance <= attack.maxRange)
@@ -356,34 +355,31 @@ public class BossAI_Advanced : EnemyBase
         }
         else
         {
-            //validAttacks.ToArray()：把 List 转成数组，传给 GetRandomAttack()
-            //GetRandomAttack()：从可用技能列表里随机挑选一个技能。
-            //BossAttack chosenAttack：保存最终被选中的远程攻击技能。
-            BossAttack chosenAttack = GetRandomAttack(validAttacks.ToArray());  
+            BossAttack chosenAttack = GetRandomAttack(validAttacks.ToArray());
             logBuilder.AppendLine($"Chosen '{chosenAttack.attackName}' from {validAttacks.Count} valid skills.");
             Debug.Log(logBuilder.ToString());
             return chosenAttack;
         }
     }
 
-    private BossAttack GetRandomAttack(BossAttack[] attackArray) //在一堆技能里面随机挑一个出来
+    private BossAttack GetRandomAttack(BossAttack[] attackArray)
     {
         if (attackArray == null || attackArray.Length == 0) return null;
-        return attackArray[Random.Range(0, attackArray.Length)];  //shuffle意思是打乱，random是随机pickone
+        return attackArray[Random.Range(0, attackArray.Length)];
     }
 
     #endregion
 
     #region --- State Changes and Damage ---
 
-    public void EngageTarget(Transform newTarget) //newTarget 是玩家的 Transform，也就是玩家位置
+    public void EngageTarget(Transform newTarget)
     {
         player = newTarget;
         currentState = State.Fighting;
         Debug.Log("Target found, entering combat!");
     }
 
-    public void DisengageTarget() //离开战斗
+    public void DisengageTarget()
     {
         player = null;
         currentState = State.Returning;
@@ -392,7 +388,7 @@ public class BossAI_Advanced : EnemyBase
     public override float GetMeleeDamage()
     {
         Debug.Log("[BossAI] OVERRIDDEN melee damage");
-        return 60f;
+        return 70f;
     }
 
     public void TakeDamage(float damage)
@@ -411,11 +407,11 @@ public class BossAI_Advanced : EnemyBase
         else
         {
             animator.SetTrigger("Hurt");
-            int previousPhase = currentPhase;  //比较是否进入下一阶段
+            int previousPhase = currentPhase;
             if (currentHealth / maxHealth <= phase3Threshold) currentPhase = 3;
             else if (currentHealth / maxHealth <= phase2Threshold) currentPhase = 2;
 
-            if (currentPhase > previousPhase) //如果阶段提升，触发特殊推开攻击pushback
+            if (currentPhase > previousPhase)
             {
                 StartCoroutine(PhaseTransitionPushback());
             }
@@ -433,8 +429,8 @@ public class BossAI_Advanced : EnemyBase
     Debug.Log("Boss defeated!");
 
     rb.linearVelocity = Vector2.zero;
-    rb.bodyType = RigidbodyType2D.Kinematic;  //不受物理影响
-    GetComponent<Collider2D>().enabled = false;  //禁用碰撞体
+    rb.bodyType = RigidbodyType2D.Kinematic;
+    GetComponent<Collider2D>().enabled = false;
 
     // Trigger win screen
     WinScreen winScreen = FindAnyObjectByType<WinScreen>();
@@ -447,11 +443,10 @@ public class BossAI_Advanced : EnemyBase
         Debug.LogWarning("No WinScreen found!");
     }
 
-    Destroy(gameObject, 5f);//5秒后销毁
+    Destroy(gameObject, 5f);
 }
-    private IEnumerator PhaseTransitionPushback() //IEnumerator 是协程（Coroutine）函数，可以等待暂停分步骤执行不卡死游戏。核心是yield return 是“暂停点”
+    private IEnumerator PhaseTransitionPushback()
     {
-        //Boss 变身时让它停止动作，播放一个“推开玩家”的动画。
         State originalState = currentState;
         currentState = State.Dormant;
         UpdateStatusText("Phase Transition!");
@@ -460,7 +455,6 @@ public class BossAI_Advanced : EnemyBase
 
         yield return new WaitForSeconds(0.5f);
 
-        //推开玩家
         if (player != null && playerHealth != null)
         {
             Vector2 pushDirection = (player.position - transform.position).normalized;
@@ -468,7 +462,6 @@ public class BossAI_Advanced : EnemyBase
         }
 
         yield return new WaitForSeconds(1f);
-        //回到战斗
         currentState = originalState;
         UpdateStatusText("Fighting");
     }
@@ -476,13 +469,13 @@ public class BossAI_Advanced : EnemyBase
     #endregion
 
     #region --- Utility Functions ---
-    private void LookAtPlayer() //给玩家写的专用快捷方式（内含防错机制）
+    private void LookAtPlayer()
     {
         if (player == null) return;
-        LookAtPosition(player.position);//ever face to player
+        LookAtPosition(player.position);
     }
 
-    private void LookAtPosition(Vector3 targetPosition) //给所有情况都能用的通用数学函数
+    private void LookAtPosition(Vector3 targetPosition)
     {
         if (visualsTransform == null)
         {
