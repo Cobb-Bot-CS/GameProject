@@ -1,26 +1,8 @@
-
 using UnityEngine;
 using System;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
-/*
- * filename: AudioManager.cs
- * Developer: Urvashi Gupta
- * Purpose: Manages audio playback, volume settings, and sound effects throughout the game
- */
-
-/*
- * Summary: Singleton class that handles all audio operations including playback, volume control, and persistence
- *
- * Member Variables:
- * volumeSlider - UI slider for controlling master volume
- * Instance - singleton instance of AudioManager
- * sounds - array of Sound objects containing audio clips and settings
- * musicMixerGroup - AudioMixerGroup for music and ambient sounds
- * sfxMixerGroup - AudioMixerGroup for sound effects
- * uiMixerGroup - AudioMixerGroup for UI sounds
- */
 public class AudioManager : MonoBehaviour
 {
    [SerializeField] private Slider volumeSlider;
@@ -31,8 +13,6 @@ public class AudioManager : MonoBehaviour
    [SerializeField] private AudioMixerGroup musicMixerGroup;
    [SerializeField] private AudioMixerGroup sfxMixerGroup;
    [SerializeField] private AudioMixerGroup uiMixerGroup;
-
-
 
    private void Awake()
    {
@@ -45,8 +25,6 @@ public class AudioManager : MonoBehaviour
          Destroy(gameObject);
          return;
       }
-
-      //DontDestroyOnLoad(gameObject);
 
       Debug.Log("AudioManager: Starting sound initialization...");
       Debug.Log($"AudioManager: Found {sounds.Length} sounds to load");
@@ -77,14 +55,6 @@ public class AudioManager : MonoBehaviour
       Debug.Log("AudioManager: Sound initialization completed successfully");
    }
 
-
-
-   /*
-    * Summary: Assigns the correct AudioMixerGroup based on the sound type
-    *
-    * Parameters:
-    * sound - the Sound object to assign mixer group to
-    */
    private void AssignMixerGroup(Sound sound)
    {
       switch (sound.type)
@@ -104,35 +74,30 @@ public class AudioManager : MonoBehaviour
       }
    }
 
-
-
-   /*
-    * Summary: Initializes volume settings from player preferences
-    */
    private void Start()
    {
       Debug.Log("AudioManager: Initializing volume settings");
       
-      if (!PlayerPrefs.HasKey("musicVolume"))
+      // Only initialize volume if we have a volume slider
+      if (volumeSlider != null)
       {
-         PlayerPrefs.SetFloat("musicVolume", 1);
-         Debug.Log("AudioManager: No saved volume found, setting default volume to 1");
+         if (!PlayerPrefs.HasKey("musicVolume"))
+         {
+            PlayerPrefs.SetFloat("musicVolume", 1);
+            Debug.Log("AudioManager: No saved volume found, setting default volume to 1");
+         }
+         else
+         {
+            Load();
+            Debug.Log($"AudioManager: Loaded saved volume: {PlayerPrefs.GetFloat("musicVolume")}");
+         }
       }
       else
       {
-         Load();
-         Debug.Log($"AudioManager: Loaded saved volume: {PlayerPrefs.GetFloat("musicVolume")}");
+         Debug.LogWarning("AudioManager: No volume slider assigned, skipping volume initialization");
       }
    }
 
-
-
-   /*
-    * Summary: Plays a sound by name with looping capability
-    *
-    * Parameters:
-    * name - the name of the sound to play
-    */
    public void Play(string name)
    {
       Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -143,18 +108,16 @@ public class AudioManager : MonoBehaviour
          return;
       }
       
+      if (s.source == null)
+      {
+         Debug.LogError($"AudioManager: Sound source for '{name}' is null!");
+         return;
+      }
+      
       Debug.Log($"AudioManager: Playing sound '{name}' (Loop: {s.loop})");
       s.source.Play();
    }
 
-
-
-   /*
-    * Summary: Plays a sound once without looping
-    *
-    * Parameters:
-    * name - the name of the sound to play once
-    */
    public void PlayOneShot(string name)
    {
       Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -165,52 +128,44 @@ public class AudioManager : MonoBehaviour
          return;
       }
       
+      if (s.clip == null)
+      {
+         Debug.LogError($"AudioManager: Audio clip for '{name}' is null!");
+         return;
+      }
+      
       Debug.Log($"AudioManager: Playing one-shot sound '{name}'");
       s.source.PlayOneShot(s.clip);
    }
 
-
-
-   /*
-    * Summary: Changes the master volume based on slider value and saves preference
-    */
    public void ChangeVolume()
    {
-      float newVolume = volumeSlider.value;
-      AudioListener.volume = newVolume;
-      Debug.Log($"AudioManager: Volume changed to {newVolume}");
-      Save();
+      // Only change volume if we have a slider
+      if (volumeSlider != null)
+      {
+         float newVolume = volumeSlider.value;
+         AudioListener.volume = newVolume;
+         Debug.Log($"AudioManager: Volume changed to {newVolume}");
+         Save();
+      }
    }
 
-
-
-   /*
-    * Summary: Loads volume setting from player preferences
-    */
-  
    public void Load()
    {
-      volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+      if (volumeSlider != null)
+      {
+         volumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+      }
    }
-   
 
-
-   /*
-    * Summary: Saves current volume setting to player preferences
-    */
-   
-   
    public void Save()
    {
-      PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+      if (volumeSlider != null)
+      {
+         PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
+      }
    }
-      
-   /*
-    * Summary: Stops a playing sound by name
-    *
-    * Parameters:
-    * name - the name of the sound to stop
-    */
+
    public void Stop(string name)
    {
       Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -224,12 +179,7 @@ public class AudioManager : MonoBehaviour
       Debug.Log($"AudioManager: Stopping sound '{name}'");
       s.source.Stop();
    }
-   
-   
-   
-   /*
-    * Summary: Prints debug information about all loaded sounds
-    */
+
    public void DebugSounds()
    {
       Debug.Log("=== AudioManager Sound Debug Info ===");
@@ -237,7 +187,7 @@ public class AudioManager : MonoBehaviour
       
       foreach (Sound s in sounds)
       {
-         string status = s.source.isPlaying ? "PLAYING" : "stopped";
+         string status = s.source != null && s.source.isPlaying ? "PLAYING" : "stopped";
          Debug.Log($"- '{s.name}': Type={s.type}, Clip={(s.clip != null ? s.clip.name : "NULL")}, Status={status}");
       }
       Debug.Log("=====================================");

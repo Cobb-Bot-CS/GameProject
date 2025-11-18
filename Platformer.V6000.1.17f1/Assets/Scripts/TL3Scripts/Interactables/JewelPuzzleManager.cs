@@ -60,11 +60,17 @@ public class JewelPuzzleManager : MonoBehaviour
       }
    }
 
-
    private void PickupJewel()
    {
       altarPuzzle.SetCondition1(false);
       jewel.SetActive(false);
+      
+      // Play coin pickup sound through Audio Manager
+      AudioManager audioManager = FindFirstObjectByType<AudioManager>();
+      if (audioManager != null)
+      {
+         audioManager.Play("CoinPickup");
+      }
    }
 
    private void AltarInteract1()
@@ -75,6 +81,13 @@ public class JewelPuzzleManager : MonoBehaviour
          portal1.SetActive(true);
          jewel.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
+         
+         // Play sound for placing jewel - using WeaponPickup sound
+         AudioManager audioManager = FindFirstObjectByType<AudioManager>();
+         if (audioManager != null)
+         {
+            audioManager.Play("WeaponPickup");
+         }
       }
       else
       {
@@ -92,6 +105,13 @@ public class JewelPuzzleManager : MonoBehaviour
          portal2.SetActive(true);
          jewel.transform.position = new Vector3(altar2.transform.position.x, altar2.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
+         
+         // Play sound for placing jewel - using WeaponPickup sound
+         AudioManager audioManager = FindFirstObjectByType<AudioManager>();
+         if (audioManager != null)
+         {
+            audioManager.Play("WeaponPickup");
+         }
       }
       else
       {
@@ -100,7 +120,6 @@ public class JewelPuzzleManager : MonoBehaviour
          altarPuzzle.SetCondition1(false);
       }
    }
-
 
    private void OnInteract(InputValue Button)
    {
