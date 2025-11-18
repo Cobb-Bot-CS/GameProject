@@ -204,10 +204,7 @@ public class AudioManager : MonoBehaviour
    {
       PlayerPrefs.SetFloat("musicVolume", volumeSlider.value);
    }
-<<<<<<< HEAD
-   
-   
-   
+      
    /*
     * Summary: Stops a playing sound by name
     *
