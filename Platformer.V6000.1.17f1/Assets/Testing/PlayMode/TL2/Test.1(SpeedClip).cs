@@ -31,7 +31,7 @@ public class SpeedStressTest : InputTestFixture
 
         //Find Character And Wall
         character = GameObject.Find("PlayerCharacter");
-        wall = GameObject.Find("Wall");
+        wall = GameObject.Find("SolidWall");
 
         //Find Character Components
         rb = character.GetComponent<Rigidbody2D>();
@@ -58,9 +58,9 @@ public class SpeedStressTest : InputTestFixture
 
             float playerX = character.transform.position.x;
             float wallX = wall.transform.position.x;
-            float wallWidth = wall.GetComponent<Collider2D>().bounds.extents.x;
+            float wallWidth = wall.GetComponent<BoxCollider2D>().bounds.extents.x;
 
-            Debug.Log($"Iteration {i + 1}: Speed = {speed}, Player X = {playerX}");
+            Debug.Log($"Iteration {i + 1}: Speed = {speed}, Player X = {playerX}, WallX = {wallX}");
 
             if (playerX > wallX + wallWidth)
             {
