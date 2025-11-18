@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: f0cc9a747ccea83428db3589191fa4bb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - volumeSlider: {instanceID: 0}
+  - musicMixerGroup: {fileID: 4208457405371693260, guid: e2ef2765f68e7124c97a2c250b70477e, type: 2}
+  - sfxMixerGroup: {fileID: -8905234529860441697, guid: d1176ec11c929d3458ea6e8406f77738, type: 2}
+  - uiMixerGroup: {fileID: 6013240006505639080, guid: d6be4536ea6969a4cb8cbebd865d5502, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
