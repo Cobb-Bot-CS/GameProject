@@ -1,5 +1,12 @@
 using UnityEngine;
 
+/*
+ * Filename: BossArenaController.cs
+ * Developer: Qiwei Liang
+ * Purpose: This file is to identify whether player is in arena
+ */
+
+
 public class BossArenaController : MonoBehaviour
 {
     [Header("Boss ÒýÓÃ")]

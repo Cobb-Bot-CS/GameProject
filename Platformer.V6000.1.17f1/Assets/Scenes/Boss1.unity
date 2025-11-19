@@ -3342,7 +3342,7 @@ MonoBehaviour:
   bossScript: {fileID: 714366617}
   bossHitbox: {fileID: 7091698733405992516}
   baseDamage: 200
-  weapon1Damage: 3000
+  weapon1Damage: 300
   typeAttack: 0
 --- !u!114 &394238913
 MonoBehaviour:

@@ -1,5 +1,11 @@
 using UnityEngine;
 
+/*
+ * Filename: ProjectileMover.cs
+ * Developer: Qiwei Liang
+ * Purpose: This file is to controll projectile
+ */
+
 public class ProjectileMover : MonoBehaviour
 {
     public float speed = 10f; 
