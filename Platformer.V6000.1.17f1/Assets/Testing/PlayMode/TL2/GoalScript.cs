@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class GoalScript : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D collision)
+    public bool reachedGoal = false;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Player Went Through Wall And Made It To Goal");
-    }
+        if (other.CompareTag("Player"))
+        {
+            reachedGoal = true;
+            Debug.Log("Player reached a goal!");
+        }
 }
+}
+
+

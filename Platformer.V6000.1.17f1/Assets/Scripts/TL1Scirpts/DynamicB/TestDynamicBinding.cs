@@ -44,7 +44,7 @@ public class TestDynamicBinding : MonoBehaviour
 {
     if (Input.GetKeyDown(KeyCode.LeftControl))
     {
-        Debug.Log("[TestDynamicBinding] Left Control detected");
+       
         if (currentScreen != null)
         {
             currentScreen.Hide();
