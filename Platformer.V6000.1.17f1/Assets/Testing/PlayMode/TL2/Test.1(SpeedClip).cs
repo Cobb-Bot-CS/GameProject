@@ -37,9 +37,6 @@ public class SpeedStressTest : InputTestFixture
         rb = character.GetComponent<Rigidbody2D>();
         movescript = character.GetComponent<CharacterMove>();
 
-        //Set Character Position On Correct Platform
-        character.transform.position = new Vector3(-9.15f, 0.09f, character.transform.position.z);
-
         //Reset Position
         Vector3 startpos = character.transform.position;
         float speed = 2f;
