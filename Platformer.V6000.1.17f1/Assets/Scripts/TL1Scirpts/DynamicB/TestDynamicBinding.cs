@@ -7,6 +7,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TestDynamicBinding : MonoBehaviour
 {
@@ -39,20 +40,21 @@ public class TestDynamicBinding : MonoBehaviour
         }
     }
 
-    private void Update()
+  private void Update()
+{
+    if (Input.GetKeyDown(KeyCode.LeftControl))
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+       
+        if (currentScreen != null)
         {
-            if (currentScreen != null)
-            {
-                currentScreen.Hide();
-                currentScreen = (currentScreen == pauseMenuScreen) ? settingsScreen : pauseMenuScreen;
-                currentScreen.Show();          // dynamic binding
-                currentScreen.StaticExample(); // static binding
-                UpdateStatusText();
-            }
+            currentScreen.Hide();
+            currentScreen = (currentScreen == pauseMenuScreen) ? settingsScreen : pauseMenuScreen;
+            currentScreen.Show();
+            currentScreen.StaticExample();
+            UpdateStatusText();
         }
     }
+}
 
     private void UpdateStatusText()
     {
