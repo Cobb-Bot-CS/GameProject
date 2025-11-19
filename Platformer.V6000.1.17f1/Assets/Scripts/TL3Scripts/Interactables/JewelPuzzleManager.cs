@@ -85,10 +85,10 @@ public class JewelPuzzleManager : MonoBehaviour
          jewel.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
          
-         // Play sound for placing jewel - using WeaponPickup sound
+         // Play sound for placing jewel 
          if (audioManager != null)
          {
-            audioManager.Play("WeaponPickup");
+             audioManager.Play("CoinPickup");
          }
       }
       else
@@ -117,7 +117,7 @@ public class JewelPuzzleManager : MonoBehaviour
          // Play sound for placing jewel - using WeaponPickup sound
          if (audioManager != null)
          {
-            audioManager.Play("WeaponPickup");
+             audioManager.Play("CoinPickup");
          }
       }
       else

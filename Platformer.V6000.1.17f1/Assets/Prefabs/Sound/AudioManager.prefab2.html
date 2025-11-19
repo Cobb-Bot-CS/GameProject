@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Manager - Unity Asset</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .author-badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background: #FF6B6B;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .card h2 {
+            color: #4a5568;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2em;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .requirement-badge {
+            display: inline-block;
+            background: #4299e1;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .api-method {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .method-name {
+            color: #2d3748;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Video Section Styles */
+        .video-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .video-placeholder i {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .video-caption {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .video-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .video-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-btn:hover {
+            background: #5a6fd8;
+        }
+
+        .video-btn i {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+
+            .video-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .video-btn {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        /* Font Awesome Icons (using Unicode) */
+        .icon::before {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 900;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Audio Manager</h1>
+            <div class="author-badge">Author: Urvashi Gupta</div>
+            <div class="price-tag">$2.99</div>
+            <p><strong>Version:</strong> 1.0</p>
+        </div>
+
+        <!-- Video Demonstration Section -->
+        <div class="video-section">
+            <h2>Video Demonstration</h2>
+                
+                <iframe src="https://somup.com/cTXqnT9Rur" 
+                        title="Audio Manager Demo" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+
+            <div class="video-controls">
+                <button class="video-btn" onclick="playVideo()">
+                    <i class="icon icon-play">▶</i> Play Demo
+                </button>
+                <button class="video-btn" onclick="pauseVideo()">
+                    <i class="icon icon-pause">⏸</i> Pause
+                </button>
+                <button class="video-btn" onclick="showCodeDemo()">
+                    <i class="icon icon-demo">🎮</i> Code Examples
+                </button>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2>Description</h2>
+                <p>This asset provides a comprehensive audio management system for Unity games, handling background music, sound effects, and UI sounds with advanced features.</p>
+                <p>It offers robust audio control with minimal coding required while maintaining flexibility for complex audio scenarios.</p>
+                
+                <div class="section">
+                    <h3>Includes:</h3>
+                    <ul class="feature-list">
+                        <li>Audio Manager Prefab </li>
+                        <li>AudioManager Class Script</li>
+                        <li>Sound Class Script</li>
+                        <li>AudioScheduler Integration</li>
+                        <li>Documentation and examples</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Features</h2>
+                <ul class="feature-list">
+                    <li>Single-line audio playback</li>
+                    <li>Multiple mixer groups (SFX, UI, Music)</li>
+                    <li>Cross-scene persistence</li>
+                    <li>Volume persistence between sessions</li>
+                    <li>One-shot playback support</li>
+                    <li>Dynamic audio routing</li>
+                    <li>Comprehensive debugging tools</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Quick Start</h2>
+                <div class="code-block">
+// Play background music<br>
+AudioManager.Instance.Play("BackgroundMusic");<br><br>
+
+// Play UI sound effect<br>
+AudioManager.Instance.Play("ButtonClick");<br><br>
+
+// Play Player Hurt sound<br>
+AudioManager.Instance.PlayOneShot("PlayerHurt");<br><br>
+
+// Fade out music smoothly<br>
+StartCoroutine(AudioManager.Instance.FadeOut("BackgroundMusic", 2f));
+                </div>
+                
+                <p>Easy drag and drop of Audio Clips with manual naming required.</p>
+            </div>
+
+            <div class="card">
+                <h2>Requirements</h2>
+                <div class="requirement-badge">Unity 2022.3.42f1 or later</div>
+                <div class="requirement-badge">.NET 4.x Scripting Runtime</div>
+                <div class="requirement-badge">Audio Mixer System</div>
+                
+                <div class="section">
+                    <h3>Sound Types Supported:</h3>
+                    <p>
+                        <span class="highlight">UI</span>
+                        <span class="highlight">Player</span>
+                        <span class="highlight">Enemy</span>
+                        <span class="highlight">Weapon</span>
+                        <span class="highlight">Item</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="grid-column: 1 / -1;">
+                <h2>API Reference</h2>
+                <div class="content-grid">
+                    <div>
+                        <h3>Core Methods</h3>
+                        <div class="api-method">
+                            <span class="method-name">Play(string name)</span><br>
+                            Play sound with cooldown checks
+                        </div>
+                        <div class="api-method">
+                            <span class="method-name">PlayOneShot(string name)</span><br>
+                            Play sound without cooldown checks
+                        </div>
+                        <div class="api-method">
+                            <span class="method-name">Stop(string name)</span><br>
+                            Stop playing sound
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Installation & Configuration</h2>
+            <ol style="padding-left: 20px; margin: 15px 0;">
+                <li>Import the Audio Manager package into your Unity project</li>
+                <li>Drag the AudioManager prefab into your initial scene</li>
+                <li>Configure your sounds in the Inspector window</li>
+                <li>Set up Audio Mixer groups for SFX, UI, and Music</li>
+                <li>Start playing sounds with simple API calls</li>
+            </ol>
+            
+            <p><strong>Best Practice:</strong> Use descriptive names for sounds (e.g., "Player_Jump" not "Sound1")</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025  Urvashi Gupta. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Video control functions
+        function playVideo() {
+            alert('Video playback would start here. Replace with actual video control logic.');
+            // Actual implementation would control the video player
+        }
+
+        function pauseVideo() {
+            alert('Video playback would pause here. Replace with actual video control logic.');
+            // Actual implementation would control the video player
+        }
+
+        function showCodeDemo() {
+            // Scroll to the code examples section
+            document.querySelector('.card:nth-child(3)').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Highlight the code section
+            const codeBlock = document.querySelector('.code-block');
+            codeBlock.style.animation = 'highlightFlash 2s';
+            
+            // Remove animation after it completes
+            setTimeout(() => {
+                codeBlock.style.animation = '';
+            }, 2000);
+        }
+
+        // Add highlight animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes highlightFlash {
+                0% { background-color: #2d3748; }
+                50% { background-color: #4a5568; }
+                100% { background-color: #2d3748; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
