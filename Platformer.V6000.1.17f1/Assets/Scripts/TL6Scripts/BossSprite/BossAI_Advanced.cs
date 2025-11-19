@@ -1,9 +1,16 @@
-using System.Collections;
+using System.Collections;//主要是为了使用 IEnumerator
 using System.Collections.Generic;
 using System.Text;
+//用来在 Boss 头顶或者 UI 上显示它当前在干嘛（Thinking, Moving, Attacking 等），方便调试。
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; //控制 Boss 的血条显示
+
+/*
+ * Filename: BossAI_Advanced.cs
+ * Developer: Qiwei Liang
+ * Purpose: This file is to controll boss
+ */
 
 public enum SpawnLocation { Self, OnPlayer } // Define two spawn locations: self or on the player
 

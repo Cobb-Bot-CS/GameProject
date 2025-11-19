@@ -1,4 +1,9 @@
 using UnityEngine;
+/*
+ * Filename: DamagePlayer.cs
+ * Developer: Qiwei Liang
+ * Purpose: This file is to damage player
+ */
 
 public class DamagePlayer : MonoBehaviour
 {

@@ -1,4 +1,9 @@
 using UnityEngine;
+/*
+ * Filename: EnemyBase.cs
+ * Developer: Qiwei Liang
+ * Purpose: This file is for dynamic binding specially
+ */
 
 public class EnemyBase : MonoBehaviour
 {
