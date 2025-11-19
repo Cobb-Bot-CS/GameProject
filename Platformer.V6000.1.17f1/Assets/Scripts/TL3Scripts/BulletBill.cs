@@ -14,7 +14,7 @@ public class BulletBill : MonoBehaviour
       }
       else
       {
-         transform.Translate(Vector3.right * speed * Time.deltaTime);
+         transform.Translate(speed * Time.deltaTime * Vector3.right);
       }
     }
 }
