@@ -4298,13 +4298,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1833773248}
     m_Modifications:
     - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: d1176ec11c929d3458ea6e8406f77738, type: 2}
+    - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
       propertyPath: uiMixerGroup
       value: 
       objectReference: {fileID: -5778022814998132445, guid: c2eb42487eee0f3469c4a383f6576ff4, type: 2}
     - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
       propertyPath: volumeSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1906787321}
     - target: {fileID: 376132918492273673, guid: f5b09ca4639f1f64e91ff116b9b7a5c8, type: 3}
       propertyPath: sfxMixerGroup
       value: 
