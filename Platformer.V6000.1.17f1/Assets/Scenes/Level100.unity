@@ -16351,7 +16351,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1888140655}
   m_BodyType: 0
   m_Simulated: 1
@@ -16899,8 +16898,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 789fbdca6621ed89301c7ead3d9061da79681007
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908086677}

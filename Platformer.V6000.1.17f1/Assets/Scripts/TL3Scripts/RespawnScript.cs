@@ -47,7 +47,7 @@ public class RespawnScript : MonoBehaviour
    }
 
 
-   private IEnumerator Fade(float startAlpha, float endAlpha)
+   public IEnumerator Fade(float startAlpha, float endAlpha)
    {
       float timer = 0f;
       while (timer < fadeTime)

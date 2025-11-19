@@ -7,15 +7,18 @@ public class MenuManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject settingsMenuUI;
 
-    void Start()
+   private AudioManager audioManager;
+
+   void Start()
     {
-        ShowMainMenu();
+      audioManager = FindFirstObjectByType<AudioManager>();
+      ShowMainMenu();
     }
 
     // Show Main Menu and hide Settings
     public void ShowMainMenu()
     {
-        AudioManager.Instance.Play("ButtonClick");
+        audioManager.Play("ButtonClick");
         Time.timeScale = 0f;
         mainMenuUI.SetActive(true);
         settingsMenuUI.SetActive(false);
@@ -24,7 +27,7 @@ public class MenuManager : MonoBehaviour
     // Show Settings Menu and hide Main Menu
     public void ShowSettingsMenu()
     {
-        AudioManager.Instance.Play("ButtonClick");
+        audioManager.Play("ButtonClick");
         mainMenuUI.SetActive(false);
         settingsMenuUI.SetActive(true);
     }

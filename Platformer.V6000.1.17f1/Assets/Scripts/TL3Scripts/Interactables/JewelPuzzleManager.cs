@@ -13,6 +13,8 @@ public class JewelPuzzleManager : MonoBehaviour
    private GameObject portal2;
    private PuzzleAltar altarPuzzle = new PuzzleAltar();
 
+   private AudioManager audioManager;
+
    private void Awake()
    {
       pickupPrompt = GameObject.Find("PickupPrompt");
@@ -25,6 +27,8 @@ public class JewelPuzzleManager : MonoBehaviour
       portal2 = GameObject.Find("Portal2");
       portal1.SetActive(false);
       portal2.SetActive(false);
+
+      audioManager = FindFirstObjectByType<AudioManager>();
    }
 
    private void Update()
@@ -60,11 +64,16 @@ public class JewelPuzzleManager : MonoBehaviour
       }
    }
 
-
    private void PickupJewel()
    {
       altarPuzzle.SetCondition1(false);
       jewel.SetActive(false);
+      
+      // Play coin pickup sound through Audio Manager
+      if (audioManager != null)
+      {
+         audioManager.Play("CoinPickup");
+      }
    }
 
    private void AltarInteract1()
@@ -75,12 +84,24 @@ public class JewelPuzzleManager : MonoBehaviour
          portal1.SetActive(true);
          jewel.transform.position = new Vector3(altar1.transform.position.x, altar1.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
+         
+         // Play sound for placing jewel - using WeaponPickup sound
+         if (audioManager != null)
+         {
+            audioManager.Play("WeaponPickup");
+         }
       }
       else
       {
          jewel.SetActive(false);
          portal1.SetActive(false);
          altarPuzzle.SetCondition1(false);
+
+         // Play coin pickup sound through Audio Manager
+         if (audioManager != null)
+         {
+            audioManager.Play("CoinPickup");
+         }
       }
    }
 
@@ -92,15 +113,26 @@ public class JewelPuzzleManager : MonoBehaviour
          portal2.SetActive(true);
          jewel.transform.position = new Vector3(altar2.transform.position.x, altar2.transform.position.y + 1.5f, 0);
          altarPuzzle.SetCondition1(true);
+         
+         // Play sound for placing jewel - using WeaponPickup sound
+         if (audioManager != null)
+         {
+            audioManager.Play("WeaponPickup");
+         }
       }
       else
       {
          jewel.SetActive(false);
          portal2.SetActive(false);
          altarPuzzle.SetCondition1(false);
+
+         // Play coin pickup sound through Audio Manager
+         if (audioManager != null)
+         {
+            audioManager.Play("CoinPickup");
+         }
       }
    }
-
 
    private void OnInteract(InputValue Button)
    {
