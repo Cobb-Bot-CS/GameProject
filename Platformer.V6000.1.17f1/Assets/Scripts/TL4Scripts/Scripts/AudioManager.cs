@@ -15,9 +15,8 @@ public class AudioManager : MonoBehaviour
    public Sound[] sounds;
 
    [Header("Audio Mixer Groups")]
-   [SerializeField] private AudioMixerGroup musicMixerGroup;
-   [SerializeField] private AudioMixerGroup sfxMixerGroup;
-   [SerializeField] private AudioMixerGroup uiMixerGroup;
+
+   [SerializeField] public AudioMixerGroup sfxMixerGroup;
 
    [Header("Audio Mixer")]
    [SerializeField] private AudioMixer audioMixer;
@@ -93,9 +92,7 @@ public class AudioManager : MonoBehaviour
          case SoundType.Item:
             sound.source.outputAudioMixerGroup = sfxMixerGroup;
             break;
-         case SoundType.UI:
-            sound.source.outputAudioMixerGroup = uiMixerGroup;
-            break;
+         
          default:
             sound.source.outputAudioMixerGroup = sfxMixerGroup;
             break;
