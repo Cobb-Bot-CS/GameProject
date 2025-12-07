@@ -204,6 +204,7 @@ public class BossAI_Advanced : EnemyBase
             rb.linearVelocity = new Vector2((player.position.x > transform.position.x ? 1 : -1) * moveSpeed, rb.linearVelocity.y);
         }
 
+        //当 Boss 冷却中 + 正在移动 → 显示：Moving
         if (timeSinceLastAction <= actionCooldown && currentState == State.Fighting && rb.linearVelocity.magnitude > 0.1f)
         {
             UpdateStatusText("Moving");
@@ -399,7 +400,7 @@ public class BossAI_Advanced : EnemyBase
     public override float GetMeleeDamage()
     {
         Debug.Log("[BossAI] OVERRIDDEN melee damage");
-        return 60f;
+        return 20f;
     }
 
     public void TakeDamage(float damage)
