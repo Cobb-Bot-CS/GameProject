@@ -400,7 +400,7 @@ public class BossAI_Advanced : EnemyBase
     public override float GetMeleeDamage()
     {
         Debug.Log("[BossAI] OVERRIDDEN melee damage");
-        return 20f;
+        return 15f;
     }
 
     public void TakeDamage(float damage)
