@@ -277,7 +277,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 80
+        width: 81
         height: 448
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: Orc_64x80_1
       rect:
         serializedVersion: 2
-        x: 93
-        y: 384
-        width: 38
-        height: 40
+        x: 92
+        y: 383
+        width: 40
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +319,10 @@ TextureImporter:
       name: Orc_64x80_2
       rect:
         serializedVersion: 2
-        x: 173
-        y: 384
-        width: 38
-        height: 40
+        x: 172
+        y: 383
+        width: 40
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: Orc_64x80_3
       rect:
         serializedVersion: 2
-        x: 253
-        y: 384
-        width: 38
-        height: 39
+        x: 252
+        y: 383
+        width: 40
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +363,10 @@ TextureImporter:
       name: Orc_64x80_4
       rect:
         serializedVersion: 2
-        x: 333
-        y: 384
-        width: 38
-        height: 39
+        x: 332
+        y: 383
+        width: 40
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +385,10 @@ TextureImporter:
       name: Orc_64x80_5
       rect:
         serializedVersion: 2
-        x: 104
-        y: 320
-        width: 27
-        height: 40
+        x: 103
+        y: 319
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +407,10 @@ TextureImporter:
       name: Orc_64x80_6
       rect:
         serializedVersion: 2
-        x: 186
-        y: 320
-        width: 25
-        height: 40
+        x: 185
+        y: 319
+        width: 27
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,10 +429,10 @@ TextureImporter:
       name: Orc_64x80_7
       rect:
         serializedVersion: 2
-        x: 266
-        y: 320
-        width: 28
-        height: 40
+        x: 265
+        y: 319
+        width: 30
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +451,10 @@ TextureImporter:
       name: Orc_64x80_8
       rect:
         serializedVersion: 2
-        x: 347
-        y: 320
-        width: 38
-        height: 40
+        x: 346
+        y: 319
+        width: 40
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,10 +473,10 @@ TextureImporter:
       name: Orc_64x80_9
       rect:
         serializedVersion: 2
-        x: 107
-        y: 256
-        width: 35
-        height: 40
+        x: 106
+        y: 255
+        width: 37
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +495,10 @@ TextureImporter:
       name: Orc_64x80_10
       rect:
         serializedVersion: 2
-        x: 187
-        y: 256
-        width: 36
-        height: 40
+        x: 186
+        y: 255
+        width: 38
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +517,10 @@ TextureImporter:
       name: Orc_64x80_11
       rect:
         serializedVersion: 2
-        x: 271
-        y: 256
-        width: 30
-        height: 41
+        x: 270
+        y: 255
+        width: 32
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,10 +539,10 @@ TextureImporter:
       name: Orc_64x80_12
       rect:
         serializedVersion: 2
-        x: 349
-        y: 256
-        width: 28
-        height: 41
+        x: 348
+        y: 255
+        width: 30
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,10 +561,10 @@ TextureImporter:
       name: Orc_64x80_13
       rect:
         serializedVersion: 2
-        x: 427
-        y: 256
-        width: 28
-        height: 41
+        x: 426
+        y: 255
+        width: 30
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,10 +583,10 @@ TextureImporter:
       name: Orc_64x80_14
       rect:
         serializedVersion: 2
-        x: 505
-        y: 256
-        width: 29
-        height: 40
+        x: 504
+        y: 255
+        width: 31
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,10 +605,10 @@ TextureImporter:
       name: Orc_64x80_15
       rect:
         serializedVersion: 2
-        x: 586
-        y: 256
-        width: 31
-        height: 40
+        x: 585
+        y: 255
+        width: 33
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,10 +627,10 @@ TextureImporter:
       name: Orc_64x80_16
       rect:
         serializedVersion: 2
-        x: 671
-        y: 256
-        width: 30
-        height: 41
+        x: 670
+        y: 255
+        width: 32
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,10 +649,10 @@ TextureImporter:
       name: Orc_64x80_17
       rect:
         serializedVersion: 2
-        x: 750
-        y: 256
-        width: 33
-        height: 41
+        x: 749
+        y: 255
+        width: 35
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,10 +671,10 @@ TextureImporter:
       name: Orc_64x80_18
       rect:
         serializedVersion: 2
-        x: 831
-        y: 256
-        width: 31
-        height: 41
+        x: 830
+        y: 255
+        width: 33
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,10 +693,10 @@ TextureImporter:
       name: Orc_64x80_19
       rect:
         serializedVersion: 2
-        x: 105
-        y: 192
-        width: 34
-        height: 40
+        x: 104
+        y: 191
+        width: 36
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,10 +715,10 @@ TextureImporter:
       name: Orc_64x80_20
       rect:
         serializedVersion: 2
-        x: 185
-        y: 192
-        width: 34
-        height: 40
+        x: 184
+        y: 191
+        width: 36
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -737,10 +737,10 @@ TextureImporter:
       name: Orc_64x80_21
       rect:
         serializedVersion: 2
-        x: 265
-        y: 192
-        width: 36
-        height: 42
+        x: 264
+        y: 191
+        width: 38
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -759,10 +759,10 @@ TextureImporter:
       name: Orc_64x80_22
       rect:
         serializedVersion: 2
-        x: 345
-        y: 192
-        width: 31
-        height: 42
+        x: 344
+        y: 191
+        width: 33
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -781,10 +781,10 @@ TextureImporter:
       name: Orc_64x80_23
       rect:
         serializedVersion: 2
-        x: 425
-        y: 192
-        width: 26
-        height: 40
+        x: 424
+        y: 191
+        width: 28
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -803,10 +803,10 @@ TextureImporter:
       name: Orc_64x80_24
       rect:
         serializedVersion: 2
-        x: 505
-        y: 192
-        width: 26
-        height: 40
+        x: 504
+        y: 191
+        width: 28
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -825,10 +825,10 @@ TextureImporter:
       name: Orc_64x80_25
       rect:
         serializedVersion: 2
-        x: 576
-        y: 192
-        width: 35
-        height: 40
+        x: 575
+        y: 191
+        width: 37
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -847,10 +847,10 @@ TextureImporter:
       name: Orc_64x80_26
       rect:
         serializedVersion: 2
-        x: 653
-        y: 192
-        width: 38
-        height: 40
+        x: 652
+        y: 191
+        width: 40
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -869,10 +869,10 @@ TextureImporter:
       name: Orc_64x80_27
       rect:
         serializedVersion: 2
-        x: 105
-        y: 128
-        width: 36
-        height: 53
+        x: 104
+        y: 127
+        width: 38
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -891,10 +891,10 @@ TextureImporter:
       name: Orc_64x80_28
       rect:
         serializedVersion: 2
-        x: 184
-        y: 128
-        width: 37
-        height: 51
+        x: 183
+        y: 127
+        width: 39
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -913,10 +913,10 @@ TextureImporter:
       name: Orc_64x80_29
       rect:
         serializedVersion: 2
-        x: 255
-        y: 128
-        width: 46
-        height: 41
+        x: 254
+        y: 127
+        width: 48
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -935,10 +935,10 @@ TextureImporter:
       name: Orc_64x80_30
       rect:
         serializedVersion: 2
-        x: 320
-        y: 64
-        width: 80
-        height: 105
+        x: 319
+        y: 63
+        width: 82
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -957,10 +957,10 @@ TextureImporter:
       name: Orc_64x80_31
       rect:
         serializedVersion: 2
-        x: 414
-        y: 128
-        width: 47
-        height: 39
+        x: 413
+        y: 127
+        width: 49
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -979,10 +979,10 @@ TextureImporter:
       name: Orc_64x80_32
       rect:
         serializedVersion: 2
-        x: 495
-        y: 128
-        width: 47
-        height: 48
+        x: 494
+        y: 127
+        width: 49
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1001,10 +1001,10 @@ TextureImporter:
       name: Orc_64x80_33
       rect:
         serializedVersion: 2
-        x: 582
-        y: 128
-        width: 31
-        height: 56
+        x: 581
+        y: 127
+        width: 33
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1023,10 +1023,10 @@ TextureImporter:
       name: Orc_64x80_34
       rect:
         serializedVersion: 2
-        x: 665
-        y: 128
-        width: 43
-        height: 48
+        x: 664
+        y: 127
+        width: 45
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,10 +1045,10 @@ TextureImporter:
       name: Orc_64x80_35
       rect:
         serializedVersion: 2
-        x: 745
-        y: 128
-        width: 42
-        height: 38
+        x: 744
+        y: 127
+        width: 44
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1067,10 +1067,10 @@ TextureImporter:
       name: Orc_64x80_36
       rect:
         serializedVersion: 2
-        x: 825
-        y: 128
-        width: 43
-        height: 36
+        x: 824
+        y: 127
+        width: 45
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1089,10 +1089,10 @@ TextureImporter:
       name: Orc_64x80_37
       rect:
         serializedVersion: 2
-        x: 905
-        y: 128
-        width: 41
-        height: 35
+        x: 904
+        y: 127
+        width: 43
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1111,10 +1111,10 @@ TextureImporter:
       name: Orc_64x80_38
       rect:
         serializedVersion: 2
-        x: 985
-        y: 128
-        width: 41
-        height: 36
+        x: 984
+        y: 127
+        width: 43
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1133,10 +1133,10 @@ TextureImporter:
       name: Orc_64x80_39
       rect:
         serializedVersion: 2
-        x: 1065
-        y: 128
-        width: 41
-        height: 35
+        x: 1064
+        y: 127
+        width: 43
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1155,10 +1155,10 @@ TextureImporter:
       name: Orc_64x80_40
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 128
-        width: 41
-        height: 36
+        x: 1144
+        y: 127
+        width: 43
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1177,10 +1177,10 @@ TextureImporter:
       name: Orc_64x80_41
       rect:
         serializedVersion: 2
-        x: 1227
-        y: 128
-        width: 31
-        height: 39
+        x: 1226
+        y: 127
+        width: 33
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1199,10 +1199,10 @@ TextureImporter:
       name: Orc_64x80_42
       rect:
         serializedVersion: 2
-        x: 103
-        y: 64
-        width: 30
-        height: 40
+        x: 102
+        y: 63
+        width: 32
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1221,10 +1221,10 @@ TextureImporter:
       name: Orc_64x80_43
       rect:
         serializedVersion: 2
-        x: 180
-        y: 64
-        width: 29
-        height: 39
+        x: 179
+        y: 63
+        width: 31
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1243,10 +1243,10 @@ TextureImporter:
       name: Orc_64x80_44
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
-        width: 29
-        height: 39
+        x: 255
+        y: 63
+        width: 31
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1265,10 +1265,10 @@ TextureImporter:
       name: Orc_64x80_45
       rect:
         serializedVersion: 2
-        x: 423
-        y: 64
-        width: 29
-        height: 39
+        x: 422
+        y: 63
+        width: 31
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1287,10 +1287,10 @@ TextureImporter:
       name: Orc_64x80_46
       rect:
         serializedVersion: 2
-        x: 507
-        y: 64
-        width: 29
-        height: 40
+        x: 506
+        y: 63
+        width: 31
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1309,10 +1309,10 @@ TextureImporter:
       name: Orc_64x80_47
       rect:
         serializedVersion: 2
-        x: 588
-        y: 64
-        width: 27
-        height: 40
+        x: 587
+        y: 63
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1331,10 +1331,10 @@ TextureImporter:
       name: Orc_64x80_48
       rect:
         serializedVersion: 2
-        x: 101
+        x: 100
         y: 0
-        width: 29
-        height: 39
+        width: 31
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1353,10 +1353,10 @@ TextureImporter:
       name: Orc_64x80_49
       rect:
         serializedVersion: 2
-        x: 168
+        x: 167
         y: 0
-        width: 28
-        height: 39
+        width: 30
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1375,10 +1375,10 @@ TextureImporter:
       name: Orc_64x80_50
       rect:
         serializedVersion: 2
-        x: 248
+        x: 247
         y: 0
-        width: 30
-        height: 35
+        width: 32
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1397,10 +1397,10 @@ TextureImporter:
       name: Orc_64x80_51
       rect:
         serializedVersion: 2
-        x: 327
+        x: 326
         y: 0
-        width: 33
-        height: 33
+        width: 35
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1419,10 +1419,10 @@ TextureImporter:
       name: Orc_64x80_52
       rect:
         serializedVersion: 2
-        x: 408
+        x: 407
         y: 0
-        width: 36
-        height: 27
+        width: 38
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1441,10 +1441,10 @@ TextureImporter:
       name: Orc_64x80_53
       rect:
         serializedVersion: 2
-        x: 488
+        x: 487
         y: 0
-        width: 47
-        height: 15
+        width: 49
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1463,7 +1463,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 28700504773e465438229ce096436ac3
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -1471,9 +1471,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       Orc_64x80_0: 781926173014414289
       Orc_64x80_1: 2277915591615029431
