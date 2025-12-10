@@ -18,7 +18,7 @@ public class BossArenaController : MonoBehaviour
         if (bossAI == null)
         {
             //如果你忘了拖 BossAI，会报错提醒你
-            Debug.LogError("BossArenaController 没有指定 BossAI 的引用！", this);
+            Debug.LogError("BossArenaController There is no reference to BossAI!", this);
         }
     }
 
