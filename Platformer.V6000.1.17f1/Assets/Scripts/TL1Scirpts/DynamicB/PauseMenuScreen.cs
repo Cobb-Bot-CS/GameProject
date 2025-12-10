@@ -13,20 +13,23 @@ public class PauseMenuScreen : UIScreen
 
     private void Awake()
     {
-        fader = gameObject.AddComponent<FadeHelper>();
-    }
+      canvasGroup.alpha = 1f;
+      fader = gameObject.AddComponent<FadeHelper>();
+      canvasGroup.alpha = 1f;
+   }
 
     public override void Show()
     {
         base.Show();  // static binding :)
         canvasGroup.alpha = 1f;
-        StartCoroutine(fader.FadeCanvas(canvasGroup, 0.5f));
-    }
+        StartCoroutine(fader.FadeCanvas(canvasGroup, 1f));
+      canvasGroup.alpha = 1f;
+   }
 
     public override void Hide()
     {
         base.Hide();  // static binding :)
-        canvasGroup.alpha = 0f;
+        canvasGroup.alpha = 1f;
         gameObject.SetActive(false);
     }
 }
