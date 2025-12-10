@@ -67,6 +67,15 @@ public class SoundTriggers : MonoBehaviour
    }
 
 
+   /*
+ * Summary: Plays teleport sound effect
+ */
+   public void Teleport()
+   {
+      AudioManager.Instance.Play("Teleport");
+   }
+
+
 
    //==================== ENEMY SOUNDS ====================//
 
@@ -76,6 +85,12 @@ public class SoundTriggers : MonoBehaviour
    public void EnemyDie()
    {
       AudioManager.Instance.Play("EnemyDie");
+   }
+
+
+   public void WingFlap()
+   {
+      AudioManager.Instance.Play("WingFlap");
    }
 
 

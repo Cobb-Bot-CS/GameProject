@@ -23,13 +23,16 @@ public class Playerawarness : MonoBehaviour
     private Animator animator;
     private bool facingRight = true;
 
-    private void Start()
+   private AudioManager audioManager;
+
+   private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+      audioManager = FindFirstObjectByType<AudioManager>();
 
-        // Auto-find the player if not assigned
-        if (player == null)
+      // Auto-find the player if not assigned
+      if (player == null)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
             if (p != null)
@@ -42,16 +45,23 @@ public class Playerawarness : MonoBehaviour
         if (player == null) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
+      if (distance <= detectRadius)
+      {
+         if (!audioManager.IsSoundPlaying("WingFlap"))
+         {
+            audioManager.Play("WingFlap");
+         }
+      }
 
-        // Detect & Chase
-        if (distance <= detectRadius && distance > attackRadius)
+         // Detect & Chase
+         if (distance <= detectRadius && distance > attackRadius)
         {
             ChasePlayer();
-        }
+         }
         else
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        }
+      }
 
         // Attack
         if (distance <= attackRadius && Time.time >= nextAttackTime)

@@ -28,6 +28,9 @@ public class PatrolEnemy : MonoBehaviour
     private float lastFlipTime = 0f;
     private float flipCooldown = 0.4f;
 
+   private AudioManager audioManager;
+   private bool roared = false;
+
     void Awake() => EnsureCheckPoint();
 
     void OnValidate()
@@ -57,24 +60,33 @@ public class PatrolEnemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+      audioManager = FindFirstObjectByType<AudioManager>();
 
-        var p = GameObject.FindGameObjectWithTag("Player");
+      var p = GameObject.FindGameObjectWithTag("Player");
         if (p != null) player = p.transform;
         else Debug.LogWarning("[PatrolEnemy] No GameObject tagged 'Player' found.");
     }
 
-    void Update()
-    {
-        if (player == null) { Patrol(); return; }
+   void Update()
+   {
+      if (player == null) { Patrol(); return; }
 
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+      float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
-            ChasePlayer();
+      if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange) {
+      if (!roared)
+      {
+         audioManager.Play("Roar");
+         roared = true;
+      }
+      ChasePlayer();
+   }
         else if (distanceToPlayer <= attackRange)
-            TryAttack();
-        else
-            Patrol();
+         TryAttack();
+      else {
+         Patrol();
+         roared = false;
+      }
     }
 
     // ---------- FIXED PATROL ----------
