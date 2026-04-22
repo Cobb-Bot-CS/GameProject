@@ -20,7 +20,6 @@ public class Hazards : MonoBehaviour
    private GameObject player;
    private CharacterHealth playerHealth;
    private RespawnScript playerRespawn;
-   private AudioManager audioManager;
 
 
    /*
@@ -38,7 +37,6 @@ public class Hazards : MonoBehaviour
       {
          Debug.LogWarning("Hazard couldn't find player");
       }
-      audioManager = FindFirstObjectByType<AudioManager>();
    }
 
 
@@ -56,14 +54,7 @@ public class Hazards : MonoBehaviour
       {
          if (playerHealth != null)
          {
-            if (hazardDamage > 0)
-            {
-               playerHealth.CharacterHurt(hazardDamage);
-            }
-            else
-            {
-               audioManager.Play("Teleport");
-            }
+            playerHealth.CharacterHurt(hazardDamage);
          }
          // respawn
          StartCoroutine(playerRespawn.Respawn(respawnX, respawnY));
